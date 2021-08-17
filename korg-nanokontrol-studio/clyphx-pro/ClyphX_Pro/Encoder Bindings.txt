@@ -1,0 +1,157 @@
+VERSION = v1.0.5
+
+#********************************** [SETTINGS NOTES] **********************************
+
+# Please DO NOT change any of the spacing in this file.
+
+# Please DO NOT change the name of this file or its file extension.  When done making
+# your changes to the settings below, just save the file.
+
+# After saving this file, you will need to load a new Live Set/reload the
+# current Live Set for your changes to take effect.
+
+
+#********************************** [SETTINGS] *****************************************
+
+# Below you can specify a list of MIDI Encoder/Knobs/Faders to bind parameters to.
+
+# The entry format is: NAME = CHANNEL, CC, MAPPING_MODE, NEEDS_TAKEOVER, BINDING
+
+# --------------------------------------------------------------------------------------
+# | ENTRY          |  DESCRIPTION      
+# --------------------------------------------------------------------------------------
+# | NAME           |  A unique one-word name for the control.
+# --------------------------------------------------------------------------------------
+# | CHANNEL        |  The MIDI Channel number in the range of 1-16.
+# --------------------------------------------------------------------------------------
+# | CC             |  The CC number in the range of 0-127.
+# --------------------------------------------------------------------------------------
+# | MAPPING_MODE   |  The type of mapping mode the control uses.  See the MAPPING MODES
+# |                |  section below for information on mapping modes.
+# --------------------------------------------------------------------------------------
+# | NEEDS_TAKEOVER |  Either TRUE or FALSE. This specifies whether the control needs
+# |                |  takeover, which will typically be TRUE for standard knobs and faders
+# |                |  with a fixed range of motion that aren't motorized.
+# --------------------------------------------------------------------------------------
+# | BINDING        |  The parameter to bind the control to.  See the BINDING OPTIONS
+# |                |  section below for information on the available bindings.
+# --------------------------------------------------------------------------------------
+
+# Example: MY_KNOB = 1, 10, ABSOLUTE, TRUE, SEL/VOL
+
+
+#********************************** [MAPPING MODES] ************************************
+
+# This specifies the type of values the control sends. If you're not sure what values
+# your control sends, you can find out like so:
+#   -   In Live's preferences, turn on the Remote switch for the controller.
+#   -   Go into MIDI mapping mode and map the control to a parameter while looking in the
+#       lower left hand corner of Live's window. The mapping mode will be displayed there.
+
+
+# The names of the available mapping modes are as follows:
+
+# ABSOLUTE
+# ABSOLUTE_14_BIT
+# RELATIVE_BINARY_OFFSET
+# RELATIVE_SIGNED_BIT
+# RELATIVE_SIGNED_BIT2
+# RELATIVE_SMOOTH_BINARY_OFFSET
+# RELATIVE_SMOOTH_SIGNED_BIT
+# RELATIVE_SMOOTH_SIGNED_BIT2
+# RELATIVE_SMOOTH_TWO_COMPLIMENT
+# RELATIVE_TWO_COMPLIMENT
+
+
+#********************************** [BINDING OPTIONS] **********************************
+
+# All Continuous Parameters that ClyphX Pro Actions can control are able to be bound to.
+# You specify the parameters in the same way you would in Actions.  The only difference
+# is that you always need to specify the object to bind to.  For example, if you wanted
+# to control the volume of the selected Track, you'd use SEL/VOL.  If you wanted to
+# control the on/off switch of the selected Device on the Track named "My Track", you'd
+# use "My Track"/DEV(SEL) "Device On".
+
+# Below are the names of the parameters that can be bound to.
+
+# --------------------------------------------------------------------------------------
+# | NAME         |  APPLIES TO                                   |  EXAMPLE
+# --------------------------------------------------------------------------------------
+# | CUE          |  Master Track.                                |  MST/CUE
+# --------------------------------------------------------------------------------------
+# | DEV(d) CS    |  The Chain Selector of any Rack on any Track  |  1/DEV(SEL) CS
+# |              |  where d specifies the Device.                |
+# --------------------------------------------------------------------------------------
+# | DEV(d) x     |  Any parameter of any Device on any Track     |  1/DEV(1) "Macro 1"
+# |              |  where d specifies the Device and x specifies |
+# |              |  the name of the parameter. *                 |
+# --------------------------------------------------------------------------------------
+# | DEV(d) Bb Pp |  Device Bank parameter of any Device on any   |  1/DEV(SEL) B4 P5
+# |              |  Track where d specifies the Device, b        |
+# |              |  specifies the bank number and p specifies    |
+# |              |  the number of the parameter within the       |
+# |              |  bank. *                                      |
+# --------------------------------------------------------------------------------------
+# | DEV(d) Pp    |  Device Best-of-Bank parameter of any Device  |  1/DEV(SEL) P4
+# |              |  on any Track where d specifies the Device    |
+# |              |  and p specifies the number of the parameter  |
+# |              |  or Macro in the case of Racks. *             |
+# --------------------------------------------------------------------------------------
+# | DEV(d) CH(c) |  Any Chain of any Rack on any Track where d   |  1/DEV(1) CH(1) PAN
+# | PAN          |  specifies the Device and c specifies the     |
+# |              |  Chain.                                       |
+# --------------------------------------------------------------------------------------
+# | DEV(d) CH(c) |  Any Chain of any Rack on any Track where d   |  1/DEV(1) CH(1) SEND A
+# | SEND ltr     |  specifies the Device, c specifies the Chain  |
+# |              |  and ltr specifies the letter of the send to  |
+# |              |  control.                                     |
+# --------------------------------------------------------------------------------------
+# | DEV(d) CH(c) |  Any Chain of any Rack on any Track where d   |  1/DEV(1) CH(1) VOL
+# | VOL          |  specifies the Device and c specifies the     |
+# |              |  Chain.                                       |
+# --------------------------------------------------------------------------------------
+# | PAN          |  Any Track.                                   |  "My Track"/PAN
+# --------------------------------------------------------------------------------------
+# | SELP         |  The last parameter in Live that was clicked  |  SELP
+# |              |  on with your mouse.                          |
+# --------------------------------------------------------------------------------------
+# | SEND ltr     |  Regular Tracks and Return Tracks where ltr   |  SEL/SEND C
+# |              |  specifies the letter of the send to control. |
+# --------------------------------------------------------------------------------------
+# | VOL          |  Any Track.                                   |  A/VOL
+# --------------------------------------------------------------------------------------
+# | XFADER       |  Master Track.                                |  MST/XFADER
+# --------------------------------------------------------------------------------------
+# | NONE         |  Empty binding.                               |  NONE
+# --------------------------------------------------------------------------------------
+
+# * See the Device Parameter Reference and/or the Device Parameter Name Reference section
+# of the ClyphX Pro Live Lessons for more information on the parameters of Live's builtin
+# Devices. In the case of non-native Devices, the parameter names you should use are defined
+# in the Device itself. For example, for a Plug-in Device, you can find its parameter names
+# by clicking the Unfold Device Parameters button for the Plug-in.
+
+
+#****************************************************************************************
+# Below is an example list that has been commented out (the #  at the beginning of
+# a line makes the line a comment). Your list should be formatted  in the same way
+# except without the # at the beginning of each line.
+
+
+# FADER_1 = 1, 0, ABSOLUTE, TRUE, "My Track"/SEND A
+
+# KNOB_1 = 1, 1, ABSOLUTE, TRUE, SELP
+
+# ENC_1 = 9, 2, RELATIVE_TWO_COMPLIMENT, FALSE, SEL/DEV(SEL) CH(SEL) VOL
+
+# --------------------------------------------------------------------------------------
+
+# Traktor TSI v2.3 - Encoder bindings.
+# CC numbers reference those assigned in the KORG KONTROL Editor
+
+# Track device control: Utility
+
+TRACK_5_UTILITY_GAIN = 1, 17, ABSOLUTE, TRUE, 5/DEV(2) "Gain"
+TRACK_6_UTILITY_GAIN = 1, 18, ABSOLUTE, TRUE, 6/DEV(2) "Gain"
+TRACK_7_UTILITY_GAIN = 1, 19, ABSOLUTE, TRUE, 7/DEV(2) "Gain"
+TRACK_8_UTILITY_GAIN = 1, 20, ABSOLUTE, TRUE, 8/DEV(2) "Gain"

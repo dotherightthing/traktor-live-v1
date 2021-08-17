@@ -22,14 +22,14 @@ X-Clips can trigger actions like X-Controls, but are verbose and difficult to ed
 SOLUTION:
 
 Button Bindings.txt maps the eight 'Select' MIDI controls to CXP's track SEL actions. This provides the best LED control.
-TRACK_SELECT_1 = CC, 1, 46, 0, 127, 1/SEL
-TRACK_SELECT_2 = CC, 1, 47, 0, 127, 2/SEL
-TRACK_SELECT_3 = CC, 1, 48, 0, 127, 3/SEL
-TRACK_SELECT_4 = CC, 1, 49, 0, 127, 4/SEL
-TRACK_SELECT_5 = CC, 1, 50, 0, 127, 5/SEL
-TRACK_SELECT_6 = CC, 1, 51, 0, 127, 6/SEL
-TRACK_SELECT_7 = CC, 1, 52, 0, 127, 7/SEL
-TRACK_SELECT_8 = CC, 1, 53, 0, 127, 8/SEL
+TRACK_1_SELECT = CC, 1, 46, 0, 127, 1/SEL
+TRACK_2_SELECT = CC, 1, 47, 0, 127, 2/SEL
+TRACK_3_SELECT = CC, 1, 48, 0, 127, 3/SEL
+TRACK_4_SELECT = CC, 1, 49, 0, 127, 4/SEL
+TRACK_5_SELECT = CC, 1, 50, 0, 127, 5/SEL
+TRACK_6_SELECT = CC, 1, 51, 0, 127, 6/SEL
+TRACK_7_SELECT = CC, 1, 52, 0, 127, 7/SEL
+TRACK_8_SELECT = CC, 1, 53, 0, 127, 8/SEL
 
 X-Controls.txt maps the 'Set' MIDI control to CXP's CLIP LOOP action.
 (Specifying on and off actions prevents having to push the button twice for each state).

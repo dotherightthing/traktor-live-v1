@@ -81,21 +81,42 @@
 # when the command below is commented out, the LED feedback works, but the record action does not
 # see https://forum.nativekontrol.com/thread/4416/button-binding-control-trigger-action
 #
-X_CLIP_REC = CC, 1, 81, 0, 127, MSG "Recording new clip" ; SEL/ARM ; SEL/sel empty ; srecfix 4 ; WAITS 4B ; SEL/arm off ; MSG "Recorded new clip"
+X_CLIP_REC = CC, 1, 81, 0, 127,
+ MSG "Recording new clip";
+ SEL/ARM;
+ SEL/SEL EMPTY;
+ SRECFIX 4;
+ WAITS 4B;
+ SEL/ARM OFF;
+ MSG "Recorded new clip"
 
 # LED feedback is handled by user_actions/SelectedTrackLedStates.py
 # button type is set to toggle
 # specifying on and off actions prevents having to push the button twice for each state
-CLIP_LOOP = CC, 1, 55, 0, 127, SEL/CLIP LOOP ON : SEL/CLIP LOOP OFF
+CLIP_LOOP = CC, 1, 55, 0, 127,
+ SEL/CLIP LOOP ON :
+ SEL/CLIP LOOP OFF
 
-CLIP_LOOP_SIZE_LEFT = CC, 1, 56, 0, 127, SEL/CLIP LOOP *.5 ; MSG "Halved loop size"
+CLIP_LOOP_SIZE_LEFT = CC, 1, 56, 0, 127,
+ SEL/CLIP LOOP *.5;
+ MSG "Halved loop size"
 
-CLIP_LOOP_SIZE_RIGHT = CC, 1, 57, 0, 127, SEL/CLIP LOOP *2 ; MSG "Doubled loop size"
+CLIP_LOOP_SIZE_RIGHT = CC, 1, 57, 0, 127,
+ SEL/CLIP LOOP *2;
+ MSG "Doubled loop size"
 
-CLIP_MOVE_LEFT = CC, 1, 58, 0, 127, SEL/CLIP START <1B ; MSG "Moved clip start back 1 bar"
+CLIP_MOVE_LEFT = CC, 1, 58, 0, 127,
+ SEL/CLIP START <1B;
+ MSG "Moved clip start back 1 bar"
 
-CLIP_MOVE_RIGHT = CC, 1, 59, 0, 127, SEL/CLIP START >1B ; MSG "Moved clip start forward 1 bar"
+CLIP_MOVE_RIGHT = CC, 1, 59, 0, 127,
+ SEL/CLIP START >1B;
+ MSG "Moved clip start forward 1 bar"
 
-CLIP_NUDGE_LEFT = CC, 1, 60, 0, 127, SEL/JUMP < ; MSG "Jumped clip back"
+CLIP_NUDGE_LEFT = CC, 1, 60, 0, 127,
+ SEL/JUMP <;
+ MSG "Jumped clip back"
 
-CLIP_NUDGE_RIGHT = CC, 1, 61, 0, 127, SEL/JUMP > ; MSG "Jumped clip forward"
+CLIP_NUDGE_RIGHT = CC, 1, 61, 0, 127,
+ SEL/JUMP >;
+ MSG "Jumped clip forward"

@@ -173,31 +173,31 @@ CLIP_REC = CC, 1, 81, 0, 127, SEL/ARM
 
 # Track device control: EQ Three
 
-TRACK_EQ_5_HI = CC, 1, 25, 0, 127, 5/DEV(1) "GainHi"
-TRACK_EQ_5_MD = CC, 1, 34, 0, 127, 5/DEV(1) "GainMid"
-TRACK_EQ_5_LO = CC, 1, 42, 0, 127, 5/DEV(1) "GainLo"
+TRACK_5_EQTHREE_HI = CC, 1, 25, 0, 127, 5/DEV(1) "GainHi"
+TRACK_5_EQTHREE_MD = CC, 1, 34, 0, 127, 5/DEV(1) "GainMid"
+TRACK_5_EQTHREE_LO = CC, 1, 42, 0, 127, 5/DEV(1) "GainLo"
 
-TRACK_EQ_6_HI = CC, 1, 26, 0, 127, 6/DEV(1) "GainHi"
-TRACK_EQ_6_MD = CC, 1, 35, 0, 127, 6/DEV(1) "GainMid"
-TRACK_EQ_6_LO = CC, 1, 43, 0, 127, 6/DEV(1) "GainLo"
+TRACK_6_EQTHREE_HI = CC, 1, 26, 0, 127, 6/DEV(1) "GainHi"
+TRACK_6_EQTHREE_MD = CC, 1, 35, 0, 127, 6/DEV(1) "GainMid"
+TRACK_6_EQTHREE_LO = CC, 1, 43, 0, 127, 6/DEV(1) "GainLo"
 
-TRACK_EQ_7_HI = CC, 1, 27, 0, 127, 7/DEV(1) "GainHi"
-TRACK_EQ_7_MD = CC, 1, 36, 0, 127, 7/DEV(1) "GainMid"
-TRACK_EQ_7_LO = CC, 1, 44, 0, 127, 7/DEV(1) "GainLo"
+TRACK_7_EQTHREE_HI = CC, 1, 27, 0, 127, 7/DEV(1) "GainHi"
+TRACK_7_EQTHREE_MD = CC, 1, 36, 0, 127, 7/DEV(1) "GainMid"
+TRACK_7_EQTHREE_LO = CC, 1, 44, 0, 127, 7/DEV(1) "GainLo"
 
-TRACK_EQ_8_HI = CC, 1, 28, 0, 127, 8/DEV(1) "GainHi"
-TRACK_EQ_8_MD = CC, 1, 37, 0, 127, 8/DEV(1) "GainMid"
-TRACK_EQ_8_LO = CC, 1, 45, 0, 127, 8/DEV(1) "GainLo"
+TRACK_8_EQTHREE_HI = CC, 1, 28, 0, 127, 8/DEV(1) "GainHi"
+TRACK_8_EQTHREE_MD = CC, 1, 37, 0, 127, 8/DEV(1) "GainMid"
+TRACK_8_EQTHREE_LO = CC, 1, 45, 0, 127, 8/DEV(1) "GainLo"
 
 
 # Track selection
 # Additional select actions and LED feedback are handled by user_actions/SelectedTrackLedStates.py
 
-TRACK_SELECT_1 = CC, 1, 46, 0, 127, 1/SEL
-TRACK_SELECT_2 = CC, 1, 47, 0, 127, 2/SEL
-TRACK_SELECT_3 = CC, 1, 48, 0, 127, 3/SEL
-TRACK_SELECT_4 = CC, 1, 49, 0, 127, 4/SEL
-TRACK_SELECT_5 = CC, 1, 50, 0, 127, 5/SEL
-TRACK_SELECT_6 = CC, 1, 51, 0, 127, 6/SEL
-TRACK_SELECT_7 = CC, 1, 52, 0, 127, 7/SEL
-TRACK_SELECT_8 = CC, 1, 53, 0, 127, 8/SEL
+TRACK_1_SELECT = CC, 1, 46, 0, 127, 1/SEL
+TRACK_2_SELECT = CC, 1, 47, 0, 127, 2/SEL
+TRACK_3_SELECT = CC, 1, 48, 0, 127, 3/SEL
+TRACK_4_SELECT = CC, 1, 49, 0, 127, 4/SEL
+TRACK_5_SELECT = CC, 1, 50, 0, 127, 5/SEL
+TRACK_6_SELECT = CC, 1, 51, 0, 127, 6/SEL
+TRACK_7_SELECT = CC, 1, 52, 0, 127, 7/SEL
+TRACK_8_SELECT = CC, 1, 53, 0, 127, 8/SEL

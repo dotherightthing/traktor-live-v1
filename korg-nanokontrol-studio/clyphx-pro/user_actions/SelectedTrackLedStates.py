@@ -6,8 +6,9 @@ ________________________________________________________________________________
 
 PROBLEM:
 
-A MIDI message can be used as an X-Control or binding - not both.
-(v1.2.0 manual)
+A button / MIDI message can be used for EITHER X-Controls OR Button Bindings OR G-Controls.
+See v.1.2.0 manual.
+See https://forum.nativekontrol.com/thread/3906/beta-controls-accessory-clyphx-pro.
 
 Button Bindings automatically handle LED feedback, but can't be used to trigger actions.
 TRACK_SELECT_1 = CC, 1, 46, 0, 127, 1/SEL

@@ -171,6 +171,25 @@ CLIP_PLAY = CC, 1, 80, 0, 127, SEL/PLAY
 CLIP_REC = CC, 1, 81, 0, 127, SEL/ARM
 
 
+# Track device control: EQ Three
+
+TRACK_EQ_5_HI = CC, 1, 25, 0, 127, 5/DEV(1) "GainHi"
+TRACK_EQ_5_MD = CC, 1, 34, 0, 127, 5/DEV(1) "GainMid"
+TRACK_EQ_5_LO = CC, 1, 42, 0, 127, 5/DEV(1) "GainLo"
+
+TRACK_EQ_6_HI = CC, 1, 26, 0, 127, 6/DEV(1) "GainHi"
+TRACK_EQ_6_MD = CC, 1, 35, 0, 127, 6/DEV(1) "GainMid"
+TRACK_EQ_6_LO = CC, 1, 43, 0, 127, 6/DEV(1) "GainLo"
+
+TRACK_EQ_7_HI = CC, 1, 27, 0, 127, 7/DEV(1) "GainHi"
+TRACK_EQ_7_MD = CC, 1, 36, 0, 127, 7/DEV(1) "GainMid"
+TRACK_EQ_7_LO = CC, 1, 44, 0, 127, 7/DEV(1) "GainLo"
+
+TRACK_EQ_8_HI = CC, 1, 28, 0, 127, 8/DEV(1) "GainHi"
+TRACK_EQ_8_MD = CC, 1, 37, 0, 127, 8/DEV(1) "GainMid"
+TRACK_EQ_8_LO = CC, 1, 45, 0, 127, 8/DEV(1) "GainLo"
+
+
 # Track selection
 # Additional select actions and LED feedback are handled by user_actions/SelectedTrackLedStates.py
 

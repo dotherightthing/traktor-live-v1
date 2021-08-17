@@ -149,7 +149,7 @@ VERSION = v1.0.5
 # Traktor TSI v2.3 - Encoder bindings.
 # CC numbers reference those assigned in the KORG KONTROL Editor
 
-# Track device control: Utility
+# Track device 2: Utility
 
 TRACK_5_UTILITY_GAIN = 1, 17, ABSOLUTE, TRUE, 5/DEV(2) "Gain"
 TRACK_6_UTILITY_GAIN = 1, 18, ABSOLUTE, TRUE, 6/DEV(2) "Gain"

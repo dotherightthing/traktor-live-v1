@@ -149,10 +149,20 @@ VERSION = v1.0.5
 
 # BTN_3 = CC, 9, 2, 127, 0, SEL/DEV(SEL) "Device On"
 
+# --------------------------------------------------------------------------------------
+
 # Traktor TSI v2.3 - Button bindings.
 # CC numbers reference those assigned in the KORG KONTROL Editor
 # See also X-Controls.txt which sets up buttons which don't require LED feedback.
 # Note: MSG actions are not supported/output
+
+
+# Track clip playback
+
+CLIP_PLAY = CC, 1, 80, 0, 127, SEL/PLAY
+
+
+# Track clip record
 
 # 'srecfix 4' is in X-Controls.txt
 # when the command below is commented out, the record action works, but the LED feedback does not
@@ -160,8 +170,10 @@ VERSION = v1.0.5
 #
 CLIP_REC = CC, 1, 81, 0, 127, SEL/ARM
 
-# track select buttons
-# Additional select actions and corresponding LED feedback are handled by user_actions/SelectedTrackLedStates.py
+
+# Track selection
+# Additional select actions and LED feedback are handled by user_actions/SelectedTrackLedStates.py
+
 TRACK_SELECT_1 = CC, 1, 46, 0, 127, 1/SEL
 TRACK_SELECT_2 = CC, 1, 47, 0, 127, 2/SEL
 TRACK_SELECT_3 = CC, 1, 48, 0, 127, 3/SEL
@@ -170,5 +182,3 @@ TRACK_SELECT_5 = CC, 1, 50, 0, 127, 5/SEL
 TRACK_SELECT_6 = CC, 1, 51, 0, 127, 6/SEL
 TRACK_SELECT_7 = CC, 1, 52, 0, 127, 7/SEL
 TRACK_SELECT_8 = CC, 1, 53, 0, 127, 8/SEL
-
-CLIP_PLAY = CC, 1, 80, 0, 127, SEL/PLAY

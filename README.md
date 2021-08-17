@@ -69,7 +69,7 @@ Some web tutorials use Jack Audio instead. I prefer Loopback’s routing UI.
 These channels will be used as follows:
 
 1. 1+2: Traktor Master Out
-2. 3+4: Traktor Rec Out to Live In 
+2. 3+4: Traktor Rec Out to Live In
 3. 5+6: Live Out to Traktor In
 4. 7+8: Traktor metronome to Traktor In (to Master Out doesn’t work for some reason)
 
@@ -239,7 +239,7 @@ TOOD: I believe this only works / shows up in Traktor because Traktor Virtual In
 
 Mapped via the Traktor TSI Korg nanoKEY Studio v1
 
-#### ClyphX Pro
+#### ClyphX Pro (Optional)
 
 ClyphX Pro can be used to trigger MIDI control value changes in Traktor, e.g.
 
@@ -255,7 +255,7 @@ Setup in Traktor:
 
 1. Use my Traktor-ClyphX.tsi
 2. In-Port: Traktor Virtual Input
-3. Out-Port: None 
+3. Out-Port: None
 4. Map controller input to Traktor element in this TSI
 
 Setup in Ableton Live:

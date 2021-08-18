@@ -83,10 +83,11 @@
 #
 X_CLIP_REC = CC, 1, 81, 0, 127,
  MSG "Recording new clip";
- SEL/ARM;
+ ALL/ARM OFF;
+ SEL/ARM ON;
  SEL/SEL EMPTY;
  SRECFIX 4;
- WAITS 4B;
+ WAITS 5B;
  SEL/ARM OFF;
  MSG "Recorded new clip"
 

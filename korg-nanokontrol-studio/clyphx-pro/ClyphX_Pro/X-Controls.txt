@@ -91,11 +91,9 @@ X_CLIP_REC = CC, 1, 81, 0, 127,
  MSG "Recorded new clip"
 
 # LED feedback is handled by user_actions/SelectedTrackLedStates.py
-# button type is set to toggle
-# specifying on and off actions prevents having to push the button twice for each state
 CLIP_LOOP = CC, 1, 55, 0, 127,
- SEL/CLIP LOOP ON :
- SEL/CLIP LOOP OFF
+ user_clip action_if_live_onpress SEL/CLIP LOOP :
+ user_clip action_if_live_onrelease NONE
 
 CLIP_LOOP_SIZE_LEFT = CC, 1, 56, 0, 127,
  SEL/CLIP LOOP *.5;

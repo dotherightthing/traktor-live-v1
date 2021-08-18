@@ -164,7 +164,7 @@ CLIP_PLAY = CC, 1, 80, 0, 127, SEL/PLAY
 
 # Track clip record
 
-# 'srecfix 4' is in X-Controls.txt
+# 'SRECFIX 4' is in X-Controls.txt
 # when the command below is commented out, the record action works, but the LED feedback does not
 # see https://forum.nativekontrol.com/thread/4416/button-binding-control-trigger-action
 #
@@ -172,6 +172,7 @@ CLIP_REC = CC, 1, 81, 0, 127, SEL/ARM
 
 
 # Track device 1: EQ Three
+# LEDs work best with Button Behaviour = Momentary
 
 TRACK_5_EQTHREE_HI = CC, 1, 25, 0, 127, 5/DEV(1) "GainHi"
 TRACK_5_EQTHREE_MD = CC, 1, 34, 0, 127, 5/DEV(1) "GainMid"

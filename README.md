@@ -287,7 +287,7 @@ Configuration file for the control surface editor.
 
 SVG designs which can be print and cut to create custom overlays for the hardware.
 
-These are based on the PDF manuals avaiable from Korg:
+These are based on the PDF manuals available from Korg:
 
 * nanoKEY_studio_OM_E1b.pdf
 * nanoKONTROL_Studio_OM_E1.pdf

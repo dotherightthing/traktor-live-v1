@@ -115,6 +115,8 @@ class SelectedTrackLedStates(UserActionsBase):
                     action_list += action_list_on
                 else:
                     action_list += action_list_off
+            else:
+                action_list += action_list_off
 
-            # self.canonical_parent.log_message('update_loop_led: ' + action_list)
-            self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
+        # self.canonical_parent.log_message('update_loop_led: ' + action_list)
+        self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

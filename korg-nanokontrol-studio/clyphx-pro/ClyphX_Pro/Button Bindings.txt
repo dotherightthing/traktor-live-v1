@@ -171,6 +171,11 @@ CLIP_PLAY = CC, 1, 80, 0, 127, SEL/PLAY
 CLIP_REC = CC, 1, 81, 0, 127, SEL/ARM
 
 
+# Track clip stop
+
+CLIP_STOP = CC, 1, 63, 0, 0, SEL/STOP
+
+
 # Track device 1: EQ Three
 # LEDs work best with Button Behaviour = Momentary
 

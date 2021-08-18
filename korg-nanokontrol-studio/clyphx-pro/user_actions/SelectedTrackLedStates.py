@@ -41,6 +41,23 @@ update_loop_led() is called here to update the lit state of the 'Set' control's 
 KORG KONTROL Editor sets the corresponding Button Behaviors (for nanoKONTROL Studio):
 * 'clip loop' button/indicator = 'Set' button = Button Behavior = Toggle
 * 'track select' button/indicator = 'Select' buttons = Button Behavior = Momentary
+
+TESTING:
+
+```sh
+# note: the version string will change if Live auto-updates itself
+tail -f '/Users/dan/Library/Preferences/Ableton/Live 10.1.41/Log.txt'
+```
+
+```py
+self.canonical_parent.log_message('Hello world')
+```
+
+IMPORTANT!
+
+This file is not symlinked to the installation folder.
+Manually copy changes to:
+'/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions'
 _________________________________________________________________________________________
 
 """

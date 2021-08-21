@@ -48,7 +48,7 @@ Some web tutorials use Jack Audio instead. I prefer Loopback’s routing UI.
 
 #### Screenshot
 
-![Screenshot of Loopback configuration](/screenshots/loopback-config.png).
+![Screenshot of Loopback configuration](/screenshots/loopback-config.png)
 
 #### Devices
 
@@ -195,7 +195,7 @@ Then review other devices and make sure none are using an Out-Port of Traktor Vi
 
 ##### Screenshot
 
-![Screenshot of Loopback configuration](/screenshots/live-config.png).
+![Screenshot of Loopback configuration](/screenshots/live-config.png)
 
 ##### Table
 

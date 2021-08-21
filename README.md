@@ -278,6 +278,7 @@ Configuration files for Isotonik Studios / Stray's ClyphX Pro, which map MIDI co
 * `/Users/Dan/NativeKONTROL/ClyphX_Pro/Button Bindings.txt`
 * `/Users/Dan/NativeKONTROL/ClyphX_Pro/X-Controls.txt`
 * `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py`
+* `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SetInputSource.py`
 
 ### korg-kontrol-editor
 

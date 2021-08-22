@@ -1,7 +1,7 @@
 """
 Class: SelectedTrackLedStates
 Source: https://gist.github.com/dotherightthing/ece5b2baf955f7e969fc932d71fd753c
-Package: Traktor TSI v2.3
+Package: Traktor TSI v3.0
 _________________________________________________________________________________________
 
 PROBLEM:
@@ -101,7 +101,7 @@ class SelectedTrackLedStates(UserActionsBase):
 
         # tracks 1-4 are Traktor
         # tracks 5-8 are Live
-        if (selected_track_index + 1) > 4:
+        if (selected_track_index + 1) > 3:
             self.canonical_parent.clyphx_pro_component.trigger_action_list(args)
 
     def action_if_live_onrelease(self, action_def, args):

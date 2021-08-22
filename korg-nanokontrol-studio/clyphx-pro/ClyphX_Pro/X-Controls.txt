@@ -73,7 +73,7 @@
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v2.3 - KORG nanoKONTROL - X-Controls
+# Traktor TSI v3.0 - KORG nanoKONTROL - X-Controls
 # An X-Control is a control on a MIDI controller.
 # CC numbers reference those assigned in the KORG KONTROL Editor
 
@@ -83,7 +83,7 @@
 # TODO select INPUT track after starting recording
 X_CLIP_REC = CC, 1, 81, 0, 127,
  MSG "Recording new clip";
- 5-8/ARM OFF;
+ 4-8/ARM OFF;
  SEL/ARM ON;
  SEL/SEL EMPTY;
  SRECFIX 4;

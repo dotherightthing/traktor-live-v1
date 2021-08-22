@@ -146,19 +146,23 @@ VERSION = v1.0.5
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v2.3 - KORG nanoKONTROL - Encoder bindings
+# Traktor TSI v3.0 - KORG nanoKONTROL - Encoder bindings
 # CC numbers reference those assigned in the KORG KONTROL Editor
 
 # Track device 2: Utility
 
-TRACK_5_UTILITY_GAIN = 1, 17, ABSOLUTE, TRUE, 5/DEV(2) "Gain"
-TRACK_6_UTILITY_GAIN = 1, 18, ABSOLUTE, TRUE, 6/DEV(2) "Gain"
-TRACK_7_UTILITY_GAIN = 1, 19, ABSOLUTE, TRUE, 7/DEV(2) "Gain"
-TRACK_8_UTILITY_GAIN = 1, 20, ABSOLUTE, TRUE, 8/DEV(2) "Gain"
+TRACK_1_UTILITY_GAIN = 1, 13, ABSOLUTE, TRUE, 1/DEV("Traktor-EQ+Utility") P1
+TRACK_3_UTILITY_GAIN = 1, 15, ABSOLUTE, TRUE, 3/DEV("Traktor-EQ+Utility") P1
+TRACK_4_UTILITY_GAIN = 1, 16, ABSOLUTE, TRUE, 4/DEV("Traktor-EQ+Utility") P1
+TRACK_5_UTILITY_GAIN = 1, 17, ABSOLUTE, TRUE, 5/DEV("Traktor-EQ+Utility") P1
+TRACK_6_UTILITY_GAIN = 1, 18, ABSOLUTE, TRUE, 6/DEV("Traktor-EQ+Utility") P1
+TRACK_7_UTILITY_GAIN = 1, 19, ABSOLUTE, TRUE, 7/DEV("Traktor-EQ+Utility") P1
+TRACK_8_UTILITY_GAIN = 1, 20, ABSOLUTE, TRUE, 8/DEV("Traktor-EQ+Utility") P1
 
 # Track volume
 
 TRACK_1_VOLUME = 1, 2, ABSOLUTE, TRUE, 1/VOL
+TRACK_3_VOLUME = 1, 4, ABSOLUTE, TRUE, 3/VOL
 TRACK_4_VOLUME = 1, 5, ABSOLUTE, TRUE, 4/VOL
 TRACK_5_VOLUME = 1, 6, ABSOLUTE, TRUE, 5/VOL
 TRACK_6_VOLUME = 1, 8, ABSOLUTE, TRUE, 6/VOL

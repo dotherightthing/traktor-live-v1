@@ -1,7 +1,7 @@
 """
 Class: SetInputSource
 Source: https://gist.github.com/dotherightthing/ece5b2baf955f7e969fc932d71fd753c
-Package: Traktor TSI v2.3
+Package: Traktor TSI v3.0
 _________________________________________________________________________________________
 
 DESCRIPTION:
@@ -54,8 +54,8 @@ class SetInputSource(UserActionsBase):
         input = selected_track_index + 1
         action_list = ''
 
-        if input < 5:
-            for track_index in [5, 6, 7, 8]:
+        if input < 4:
+            for track_index in [4, 5, 6, 7, 8]:
                 action_list += str(track_index) + '/IN "' + str(input) + '"; '
 
             # self.canonical_parent.log_message(action_list)

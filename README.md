@@ -2,7 +2,7 @@
 
 Traktor template for KORG nanoKONTROL + nanoKEY Studio.
 
-Includes a four channel sampler using Ableton Live.
+Includes Live starter file with Traktor mixer and 5 channel Live sampler.
 
 This is a private project, documented here for my own benefit and shared in case any part proves useful.
 
@@ -199,13 +199,12 @@ Then review other devices and make sure none are using an Out-Port of Traktor Vi
 
 ##### Table
 
-| Channel      | 1                            | 2          | 3          | 4                            | 5      | 6      | 7      | 8      | Master       |
-|--------------|------------------------------|------------|------------|------------------------------|--------|--------|--------|--------|--------------|
-| Audio From   | Ext. In: 3/4 Traktor Deck A  | -          | -          | Ext. In: 5/6 Traktor Deck B  | 1      | 1      | 1      | 1      | -            |
-| Audio To     | Master                       | Sends Only | Sends Only | Master                       | Master | Master | Master | Master | 1/2 Live Out |
-| Monitor      | In                           | -          | -          | In                           | Off    | Off    | Off    | Off    | -            |
-| XFade assign | A                            | -          | -          | B                            | -      | -      | -      | -      | -            |
-
+| Channel      | 1                           | FX       | 3                           | 4      | 5      | 6      | 7      | 8      | Master       |
+|--------------|-----------------------------|----------|-----------------------------|--------|--------|--------|--------|--------|--------------|
+| Audio From   | Ext. In: 3/4 Traktor Deck A | No Input | Ext. In: 5/6 Traktor Deck B | 1      | 1      | 1      | 1      | 1      | -            |
+| Audio To     | Master                      | Master   | Master                      | Master | Master | Master | Master | Master | 1/2 Live Out |
+| Monitor      | In                          | -        | In                          | Off    | Off    | Off    | Off    | Off    | -            |
+| XFade assign | A                           | -        | B                           | -      | -      | -      | -      | -      | -            |
 
 #### Record from Traktor to Live
 
@@ -266,7 +265,7 @@ Setup in Ableton Live:
 
 ### ableton-live
 
-Starter file for four channel sampler.
+Starter file with Traktor mixer and 5 channel Live sampler.
 
 ### clyphx-pro
 
@@ -294,3 +293,9 @@ These are based on the PDF manuals available from Korg:
 ### traktor-template
 
 `.tsi` templates which map the control surface to Traktor's interface / API.
+
+---
+
+## Troubleshooting
+
+1. Recording clips not heard in Live - Press the sync button to sync playback with Traktor.

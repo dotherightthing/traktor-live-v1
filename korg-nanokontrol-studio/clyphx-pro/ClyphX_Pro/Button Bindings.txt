@@ -151,7 +151,7 @@ VERSION = v1.0.5
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v2.3 - KORG nanoKONTROL - Button bindings
+# Traktor TSI v3.0 - KORG nanoKONTROL - Button bindings
 # CC numbers reference those assigned in the KORG KONTROL Editor
 # See also X-Controls.txt which sets up buttons which don't require LED feedback.
 # Note: MSG actions are not supported/output
@@ -179,21 +179,34 @@ CLIP_STOP = CC, 1, 63, 0, 0, SEL/STOP
 # Track device 1: EQ Three
 # LEDs work best with Button Behaviour = Momentary
 
-TRACK_5_EQTHREE_HI = CC, 1, 25, 0, 127, 5/DEV(1) "GainHi"
-TRACK_5_EQTHREE_MD = CC, 1, 34, 0, 127, 5/DEV(1) "GainMid"
-TRACK_5_EQTHREE_LO = CC, 1, 42, 0, 127, 5/DEV(1) "GainLo"
 
-TRACK_6_EQTHREE_HI = CC, 1, 26, 0, 127, 6/DEV(1) "GainHi"
-TRACK_6_EQTHREE_MD = CC, 1, 35, 0, 127, 6/DEV(1) "GainMid"
-TRACK_6_EQTHREE_LO = CC, 1, 43, 0, 127, 6/DEV(1) "GainLo"
+TRACK_1_EQTHREE_HI = CC, 1, 21, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainHi"
+TRACK_1_EQTHREE_MD = CC, 1, 29, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainMid"
+TRACK_1_EQTHREE_LO = CC, 1, 38, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainLo"
 
-TRACK_7_EQTHREE_HI = CC, 1, 27, 0, 127, 7/DEV(1) "GainHi"
-TRACK_7_EQTHREE_MD = CC, 1, 36, 0, 127, 7/DEV(1) "GainMid"
-TRACK_7_EQTHREE_LO = CC, 1, 44, 0, 127, 7/DEV(1) "GainLo"
+TRACK_3_EQTHREE_HI = CC, 1, 23, 127, 0, 3/DEV("Traktor-EQ+Utility".1) "GainHi"
+TRACK_3_EQTHREE_MD = CC, 1, 31, 127, 0, 3/DEV("Traktor-EQ+Utility".1) "GainMid"
+TRACK_3_EQTHREE_LO = CC, 1, 40, 127, 0, 3/DEV("Traktor-EQ+Utility".1) "GainLo"
 
-TRACK_8_EQTHREE_HI = CC, 1, 28, 0, 127, 8/DEV(1) "GainHi"
-TRACK_8_EQTHREE_MD = CC, 1, 37, 0, 127, 8/DEV(1) "GainMid"
-TRACK_8_EQTHREE_LO = CC, 1, 45, 0, 127, 8/DEV(1) "GainLo"
+TRACK_4_EQTHREE_HI = CC, 1, 24, 127, 0, 4/DEV("Traktor-EQ+Utility".1) "GainHi"
+TRACK_4_EQTHREE_MD = CC, 1, 33, 127, 0, 4/DEV("Traktor-EQ+Utility".1) "GainMid"
+TRACK_4_EQTHREE_LO = CC, 1, 41, 127, 0, 4/DEV("Traktor-EQ+Utility".1) "GainLo"
+
+TRACK_5_EQTHREE_HI = CC, 1, 25, 127, 0, 5/DEV("Traktor-EQ+Utility".1) "GainHi"
+TRACK_5_EQTHREE_MD = CC, 1, 34, 127, 0, 5/DEV("Traktor-EQ+Utility".1) "GainMid"
+TRACK_5_EQTHREE_LO = CC, 1, 42, 127, 0, 5/DEV("Traktor-EQ+Utility".1) "GainLo"
+
+TRACK_6_EQTHREE_HI = CC, 1, 26, 127, 0, 6/DEV("Traktor-EQ+Utility".1) "GainHi"
+TRACK_6_EQTHREE_MD = CC, 1, 35, 127, 0, 6/DEV("Traktor-EQ+Utility".1) "GainMid"
+TRACK_6_EQTHREE_LO = CC, 1, 43, 127, 0, 6/DEV("Traktor-EQ+Utility".1) "GainLo"
+
+TRACK_7_EQTHREE_HI = CC, 1, 27, 127, 0, 7/DEV("Traktor-EQ+Utility".1) "GainHi"
+TRACK_7_EQTHREE_MD = CC, 1, 36, 127, 0, 7/DEV("Traktor-EQ+Utility".1) "GainMid"
+TRACK_7_EQTHREE_LO = CC, 1, 44, 127, 0, 7/DEV("Traktor-EQ+Utility".1) "GainLo"
+
+TRACK_8_EQTHREE_HI = CC, 1, 28, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainHi"
+TRACK_8_EQTHREE_MD = CC, 1, 37, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainMid"
+TRACK_8_EQTHREE_LO = CC, 1, 45, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainLo"
 
 
 # Track selection

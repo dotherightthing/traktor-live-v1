@@ -1,5 +1,7 @@
 # traktor-template-nk
 
+[![GitHub release](https://img.shields.io/github/v/tag/dotherightthing/traktor-template-nk)](https://github.com/dotherightthing/traktor-template-nk/releases) [![GitHub issues](https://img.shields.io/github/issues/dotherightthing/traktor-template-nk.svg)](https://github.com/dotherightthing/traktor-template-nk/issues)
+
 Traktor template for KORG nanoKONTROL + nanoKEY Studio.
 
 Includes Live starter file with Traktor mixer and 5 channel Live sampler.

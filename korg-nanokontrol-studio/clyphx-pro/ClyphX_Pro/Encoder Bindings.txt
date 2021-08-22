@@ -146,7 +146,7 @@ VERSION = v1.0.5
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v2.3 - Encoder bindings.
+# Traktor TSI v2.3 - KORG nanoKONTROL - Encoder bindings
 # CC numbers reference those assigned in the KORG KONTROL Editor
 
 # Track device 2: Utility

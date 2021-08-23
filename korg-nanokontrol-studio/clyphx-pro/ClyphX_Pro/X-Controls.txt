@@ -129,7 +129,7 @@ FX_RACK_1_SELECT = CC, 1, 22, 0, 127,
  SEL/DEV("Traktor-FX1") SEL
 
 FX_RACK_2_SELECT = CC, 1, 30, 0, 127, 
- A/DEV("Traktor-FX2") SEL
+ user_clip select_track_fx "Traktor-FX2"
 
 FX_RACK_3_SELECT = CC, 1, 39, 0, 127, 
- A/DEV("Traktor-FX3") SEL
+ user_clip select_track_fx "Traktor-FX3"

@@ -121,3 +121,15 @@ CLIP_NUDGE_LEFT = CC, 1, 60, 0, 127,
 CLIP_NUDGE_RIGHT = CC, 1, 61, 0, 127,
  SEL/JUMP >;
  MSG "Jumped clip forward"
+
+
+# FX rack selection
+
+FX_RACK_1_SELECT = CC, 1, 22, 0, 127, 
+ SEL/DEV("Traktor-FX1") SEL
+
+FX_RACK_2_SELECT = CC, 1, 30, 0, 127, 
+ A/DEV("Traktor-FX2") SEL
+
+FX_RACK_3_SELECT = CC, 1, 39, 0, 127, 
+ A/DEV("Traktor-FX3") SEL

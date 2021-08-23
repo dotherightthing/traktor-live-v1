@@ -150,6 +150,11 @@ VERSION = v1.0.5
 # CC numbers reference those assigned in the KORG KONTROL Editor
 
 
+# All FX on Send A
+
+SEND_A = 1, 14, ABSOLUTE, TRUE, SEL/SEND A
+
+
 # Track device 2: Utility
 
 TRACK_1_UTILITY_GAIN = 1, 13, ABSOLUTE, TRUE, 1/DEV("Traktor-EQ+Utility") P1

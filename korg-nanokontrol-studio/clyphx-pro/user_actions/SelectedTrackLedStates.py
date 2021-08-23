@@ -126,29 +126,32 @@ class SelectedTrackLedStates(UserActionsBase):
         song_view = live_set.view
         tracks = list(live_set.tracks)
         selected_track = song_view.selected_track
-        selected_track_index = list(tracks).index(selected_track)
-        track = list(tracks)[selected_track_index]
+        selected_track_name = selected_track.name
 
-        action_list = ''
-        action_list_off = cc + ' 0' # MIDI CC X Y 0
-        action_list_on = cc + ' 127' # MIDI CC X Y 127
+        if (selected_track_name != 'A-Global FX'):
+            selected_track_index = list(tracks).index(selected_track)
+            track = list(tracks)[selected_track_index]
 
-        # see https://docs.cycling74.com/max8/vignettes/live_object_model > playing_slot_index
-        clip_stop_slot_fired_in_session_view = -2
+            action_list = ''
+            action_list_off = cc + ' 0' # MIDI CC X Y 0
+            action_list_on = cc + ' 127' # MIDI CC X Y 127
 
-        # tracks 1-4 are Traktor
-        # tracks 5-8 are Live
-        if (selected_track_index + 1) > 4:
-            if track.playing_slot_index > clip_stop_slot_fired_in_session_view:
-                playing_slot = list(track.clip_slots)[track.playing_slot_index]
-                playing_clip = playing_slot.clip
+            # see https://docs.cycling74.com/max8/vignettes/live_object_model > playing_slot_index
+            clip_stop_slot_fired_in_session_view = -2
 
-                if playing_clip and playing_clip.looping:
-                    action_list += action_list_on
+            # tracks 1-4 are Traktor
+            # tracks 5-8 are Live
+            if (selected_track_index + 1) > 4:
+                if track.playing_slot_index > clip_stop_slot_fired_in_session_view:
+                    playing_slot = list(track.clip_slots)[track.playing_slot_index]
+                    playing_clip = playing_slot.clip
+
+                    if playing_clip and playing_clip.looping:
+                        action_list += action_list_on
+                    else:
+                        action_list += action_list_off
                 else:
                     action_list += action_list_off
-            else:
-                action_list += action_list_off
 
-        # self.canonical_parent.log_message('update_loop_led: ' + action_list)
-        self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
+            # self.canonical_parent.log_message('update_loop_led: ' + action_list)
+            self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

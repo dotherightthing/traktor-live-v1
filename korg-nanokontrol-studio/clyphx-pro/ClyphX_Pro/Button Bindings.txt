@@ -179,7 +179,6 @@ CLIP_STOP = CC, 1, 63, 0, 0, SEL/STOP
 # Track device 1: EQ Three
 # LEDs work best with Button Behaviour = Momentary
 
-
 TRACK_1_EQTHREE_HI = CC, 1, 21, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainHi"
 TRACK_1_EQTHREE_MD = CC, 1, 29, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainMid"
 TRACK_1_EQTHREE_LO = CC, 1, 38, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainLo"

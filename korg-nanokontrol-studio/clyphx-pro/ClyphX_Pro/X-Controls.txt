@@ -77,6 +77,7 @@
 # An X-Control is a control on a MIDI controller.
 # CC numbers reference those assigned in the KORG KONTROL Editor
 
+
 # 'arm' is also in Button Bindings.txt
 # when the command below is commented out, the LED feedback works, but the record action does not
 # see https://forum.nativekontrol.com/thread/4416/button-binding-control-trigger-action
@@ -90,6 +91,7 @@ X_CLIP_REC = CC, 1, 81, 0, 127,
  WAITS 5B;
  SEL/ARM OFF;
  MSG "Recorded new clip"
+
 
 # LED feedback is handled by user_actions/SelectedTrackLedStates.py
 CLIP_LOOP = CC, 1, 55, 0, 127,

@@ -50,5 +50,5 @@ class SelectFxForSelectedTrack(UserActionsBase):
         if (selected_track_name == '1') or (selected_track_name == '3'):
             action_list = '"' + selected_track_name + ' FX' + '"/DEV(' + fx + ') SEL'
 
-            self.canonical_parent.log_message(action_list)
+            # self.canonical_parent.log_message(action_list)
             self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

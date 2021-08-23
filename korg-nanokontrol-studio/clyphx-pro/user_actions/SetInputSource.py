@@ -1,6 +1,5 @@
 """
 Class: SetInputSource
-Source: https://gist.github.com/dotherightthing/ece5b2baf955f7e969fc932d71fd753c
 Package: Traktor TSI v3.0
 _________________________________________________________________________________________
 
@@ -46,20 +45,16 @@ class SetInputSource(UserActionsBase):
         # the current Live set object
         # see also https://docs.cycling74.com/max8/vignettes/live_object_model
         live_set = self.song()
-
         song_view = live_set.view
-        tracks = list(live_set.tracks)
         selected_track = song_view.selected_track
         selected_track_name = selected_track.name
+        action_list = ''
 
-        if (selected_track_name != 'A-Global FX'):
-            selected_track_index = list(tracks).index(selected_track)
-            input = selected_track_index + 1
-            action_list = ''
+        if (selected_track_name == '1') or (selected_track_name == '3'):
+            for track_index in [4, 5, 6, 7, 8]:
+                # FX are on their own audio channel to allow them to be recorded with the channel audio
+                # for xfader cut FX trails
+                action_list += str(track_index) + '/IN "' + str(input) + ' FX' + '"; '
 
-            if input < 4:
-                for track_index in [4, 5, 6, 7, 8]:
-                    action_list += str(track_index) + '/IN "' + str(input) + '"; '
-
-                # self.canonical_parent.log_message(action_list)
-                self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
+            # self.canonical_parent.log_message(action_list)
+            self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

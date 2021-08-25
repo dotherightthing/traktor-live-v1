@@ -207,8 +207,8 @@ TRACK_8_EQTHREE_LO = CC, 1, 45, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainLo"
 # Additional select actions and LED feedback are handled by user_actions/SelectedTrackLedStates.py
 
 TRACK_1_SELECT = CC, 1, 46, 0, 127, 1/SEL
-TRACK_2_SELECT = CC, 1, 47, 0, 127, "1FX"/SEL
-TRACK_3_SELECT = CC, 1, 48, 0, 127, "4FX"/SEL
+TRACK_1FX_SELECT = CC, 1, 47, 0, 127, 1/SEL
+TRACK_4FX_SELECT = CC, 1, 48, 0, 127, 4/SEL
 TRACK_4_SELECT = CC, 1, 49, 0, 127, 4/SEL
 TRACK_5_SELECT = CC, 1, 50, 0, 127, 5/SEL
 TRACK_6_SELECT = CC, 1, 51, 0, 127, 6/SEL

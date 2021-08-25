@@ -183,10 +183,6 @@ TRACK_1_EQTHREE_HI = CC, 1, 21, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainHi"
 TRACK_1_EQTHREE_MD = CC, 1, 29, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainMid"
 TRACK_1_EQTHREE_LO = CC, 1, 38, 127, 0, 1/DEV("Traktor-EQ+Utility".1) "GainLo"
 
-TRACK_3_EQTHREE_HI = CC, 1, 23, 127, 0, 3/DEV("Traktor-EQ+Utility".1) "GainHi"
-TRACK_3_EQTHREE_MD = CC, 1, 31, 127, 0, 3/DEV("Traktor-EQ+Utility".1) "GainMid"
-TRACK_3_EQTHREE_LO = CC, 1, 40, 127, 0, 3/DEV("Traktor-EQ+Utility".1) "GainLo"
-
 TRACK_4_EQTHREE_HI = CC, 1, 24, 127, 0, 4/DEV("Traktor-EQ+Utility".1) "GainHi"
 TRACK_4_EQTHREE_MD = CC, 1, 33, 127, 0, 4/DEV("Traktor-EQ+Utility".1) "GainMid"
 TRACK_4_EQTHREE_LO = CC, 1, 41, 127, 0, 4/DEV("Traktor-EQ+Utility".1) "GainLo"
@@ -207,13 +203,12 @@ TRACK_8_EQTHREE_HI = CC, 1, 28, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainHi"
 TRACK_8_EQTHREE_MD = CC, 1, 37, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainMid"
 TRACK_8_EQTHREE_LO = CC, 1, 45, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainLo"
 
-
 # Track selection
 # Additional select actions and LED feedback are handled by user_actions/SelectedTrackLedStates.py
 
 TRACK_1_SELECT = CC, 1, 46, 0, 127, 1/SEL
-TRACK_2_SELECT = CC, 1, 47, 0, 127, 2/SEL
-TRACK_3_SELECT = CC, 1, 48, 0, 127, 3/SEL
+TRACK_2_SELECT = CC, 1, 47, 0, 127, "1FX"/SEL
+TRACK_3_SELECT = CC, 1, 48, 0, 127, "4FX"/SEL
 TRACK_4_SELECT = CC, 1, 49, 0, 127, 4/SEL
 TRACK_5_SELECT = CC, 1, 50, 0, 127, 5/SEL
 TRACK_6_SELECT = CC, 1, 51, 0, 127, 6/SEL

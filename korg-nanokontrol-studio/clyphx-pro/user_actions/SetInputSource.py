@@ -50,8 +50,8 @@ class SetInputSource(UserActionsBase):
         selected_track_name = selected_track.name
         action_list = ''
 
-        if (selected_track_name == '1') or (selected_track_name == '3'):
-            for track_index in [4, 5, 6, 7, 8]:
+        if (selected_track_name == '1') or (selected_track_name == '4'):
+            for track_index in [5, 6, 7, 8]:
                 # FX are on their own audio channel to allow them to be recorded with the channel audio
                 # for xfader cut FX trails
                 action_list += str(track_index) + '/IN "' + str(input) + ' FX' + '"; '

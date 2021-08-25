@@ -122,14 +122,19 @@ CLIP_NUDGE_RIGHT = CC, 1, 61, 0, 127,
  SEL/JUMP >;
  MSG "Jumped clip forward"
 
+# Track FX selection
+# [] WAIT 5; "4FX"/DEV("Traktor-FX3") SEL
 
-# FX rack selection
+TRACK_1_FX_1_SELECT = CC, 1, 22, 0, 127,
+ "1FX"/DEV("Traktor-FX1") SEL
+TRACK_1_FX_2_SELECT = CC, 1, 30, 0, 127,
+ "1FX"/DEV("Traktor-FX2") SEL
+TRACK_1_FX_3_SELECT = CC, 1, 39, 0, 127,
+ "1FX"/DEV("Traktor-FX3") SEL
 
-FX_RACK_1_SELECT = CC, 1, 22, 0, 127, 
- SEL/DEV("Traktor-FX1") SEL
-
-FX_RACK_2_SELECT = CC, 1, 30, 0, 127, 
- user_clip select_track_fx "Traktor-FX2"
-
-FX_RACK_3_SELECT = CC, 1, 39, 0, 127, 
- user_clip select_track_fx "Traktor-FX3"
+TRACK_4_FX_1_SELECT = CC, 1, 23, 0, 127,
+ "4FX"/DEV("Traktor-FX1") SEL
+TRACK_4_FX_2_SELECT = CC, 1, 31, 0, 127,
+ "4FX"/DEV("Traktor-FX2") SEL
+TRACK_4_FX_3_SELECT = CC, 1, 40, 0, 127,
+ "4FX"/DEV("Traktor-FX3") SEL

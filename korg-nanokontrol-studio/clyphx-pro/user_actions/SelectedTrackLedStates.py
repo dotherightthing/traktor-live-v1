@@ -94,7 +94,7 @@ class SelectedTrackLedStates(UserActionsBase):
 
         # tracks 1-4 are Traktor
         # tracks 5-8 are Live
-        if (selected_track_name != '1') and (selected_track_name != '3'):
+        if (selected_track_name != '1') and (selected_track_name != '4'):
             self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
 
     def action_if_live_onrelease(self, action_def, args):
@@ -123,8 +123,8 @@ class SelectedTrackLedStates(UserActionsBase):
 
         # tracks 1-4 are Traktor
         # tracks 5-8 are Live
-        if (selected_track_name != '1') and (selected_track_name != '3'):
-            # track = action_def['track'] # KeyError 'track'
+        if (selected_track_name != '1') and (selected_track_name != '4'):
+            # track = action_def['track'] # not working
             tracks = list(live_set.tracks)
             selected_track_index = list(tracks).index(selected_track)
             track = list(tracks)[selected_track_index]

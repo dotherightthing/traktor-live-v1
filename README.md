@@ -204,7 +204,7 @@ Then review other devices and make sure none are using an Out-Port of Traktor Vi
 | Channel      | 1                           | 1FX      | 4FX      | 4                           | 5      | 6      | 7      | 8      | Master       |
 |--------------|-----------------------------|----------|----------|-----------------------------|--------|--------|--------|--------|--------------|
 | Audio From   | Ext. In: 3/4 Traktor Deck A | No Input | No Input | Ext. In: 5/6 Traktor Deck B | 1 PM   | 1 PM   | 1 PM   | 1 PM   | -            |
-| Monitor      | In                          | Off      | Off      | In                          | Off    | Off    | Off    | Off    | -            |
+| Monitor      | In                          | In       | In       | In                          | Off    | Off    | Off    | Off    | -            |
 | Audio To     | 1FX                         | Master   | Master   | 4FX                         | Master | Master | Master | Master | 1/2 Live Out |
 | XFade assign | A                           | -        | -        | B                           | -      | -      | -      | -      | -            |
 

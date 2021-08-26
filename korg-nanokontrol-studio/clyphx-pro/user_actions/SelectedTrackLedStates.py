@@ -149,13 +149,14 @@ class SelectedTrackLedStates(UserActionsBase):
 
         song_view = live_set.view
         selected_track = song_view.selected_track
+        input_name = selected_track.input_routing_type.display_name
         action_list = ''
 
         # TODO: is it possible to use a variable + a conditional instead?
-        if (selected_track.input_routing_type.display_name == '1FX'):
+        if (input_name == '1FX'):
             action_list += 'MIDI %MIDI_CC_SELECT_1% 127;'
             action_list += 'MIDI %MIDI_CC_SELECT_2% 127'
-        elif (selected_track.input_routing_type.display_name == '4FX'):
+        elif (input_name == '4FX'):
             action_list += 'MIDI %MIDI_CC_SELECT_3% 127;'
             action_list += 'MIDI %MIDI_CC_SELECT_4% 127'
 

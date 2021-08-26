@@ -182,3 +182,14 @@ $LOOP_RECORD$ =
 $LOOP_RIGHT$ =
  SEL/CLIP START >1B;
  MSG "Moved clip start forward 1 bar"
+$INPUT_DECK_A$ =
+ 5/IN "1FX";
+ 6/IN "1FX";
+ 7/IN "1FX";
+ 8/IN "1FX"
+
+$INPUT_DECK_B$ =
+ 5/IN "4FX";
+ 6/IN "4FX";
+ 7/IN "4FX";
+ 8/IN "4FX"

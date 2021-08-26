@@ -182,9 +182,16 @@ Then review other devices and make sure none are using an Out-Port of Traktor Vi
 
 ##### MIDI
 
-1. Input: Traktor Virtual Output
-   1. Track: On, Sync: On, Remote: On
-   2. MIDI Clock Sync Delay: this was initially set using Traktor's internal mixer, with Cue out used to sync Traktor and Live's metronomes. However as Live now functions as the external mixer, syncing does not seem to be an issue anymore.
+This controls MIDI sync, allowing Live's clock to sync to Traktor's clock.
+
+* Control Surface: None
+* Input: Traktor Virtual Output
+  * Track: Off
+  * Sync: On
+  * Remote: Off
+* Output: None
+
+Note: `MIDI Clock Sync Delay` was initially set using Traktor's internal mixer, with *Cue out* used to sync Traktor and Live's metronomes. Live now functions as the external mixer and syncing does not appear to be an issue anymore.
 
 #### UI (top left)
 
@@ -229,37 +236,96 @@ Current workflow:
 
 #### nanoKONTROL Studio
 
-Mapped via the Traktor TSI Korg nanoKONTROL Studio v2.2 and Korg KONTROL Editor config.nktrl_st_set
+Traktor config:
 
-Controls in channels 1, 4, 5, 6, 7, 8 are mapped directly to Ableton Live. Buttons automatically light up to match the corresponding state in Ableton Live.
+* Device: Korg nanoKONTROL Studio (`korg-nanokontrol-studio-v*.tsi` file)
+* In-Port: nanoKONTROL Studio
+* Out-Port: nanoKONTROL Studio
+* Device Target: Focus
+
+Live config:
+
+* Control Surface: ClyphX Pro
+* Input: nanoKONTROL Studio
+  * Track: On
+  * Sync: On (TODO: is this necessary?)
+  * Remote: On
+* Output: nanoKONTROL Studio
+  * Track: On
+  * Sync: Off
+  * Remote: On
+
+Controller config:
+
+* Editor: KORG KONTROL Editor
+* Set: `traktor-template-nk.nktrl_st_data`
+* Data: `traktor-template-nk.nktrl_st_data`
 
 #### nanoKEY Studio
 
-Mapped via the Traktor TSI Korg nanoKEY Studio v1
+Traktor config:
 
-#### ClyphX Pro (Optional)
+* Device: Korg nanoKEY Studio (`korg-nanokey-studio-v*.tsi` file)
+* In-Port: nanoKEY Studio
+* Out-Port: nanoKEY Studio
+* Device Target: Focus
 
-ClyphX Pro could optionally be used to trigger MIDI control value changes in Traktor, e.g.
+Live config:
 
-`[Move control to left then center] MIDI CC 1 50 0 ; WAITS 4B ; MIDI CC 1 50 64 ;`
+* Control Surface: ClyphX Pro XTA
+* Input: nanoKEY Studio
+  * Track: On
+  * Sync: Off
+  * Remote: On
+* Output: nanoKEY Studio
+  * Track: On
+  * Sync: Off
+  * Remote: On
 
-1. Move control Ch 01. CC 50 to value 0 (full left)
-2. Wait 4 bars
-3. Move control Ch 01. CC 50 to value 64 (half way)
+Controller config:
 
-Ch 01. CC 50 could then be mapped to a Gain control, Crossfader etc in Traktor.
+* Editor: KORG KONTROL Editor
+* Set: `traktor-template-nk.nanokey_st_set`
+* Data: `traktor-template-nk.nanokey_st_data`
 
-Setup in Traktor:
+#### ClyphX Pro (programmatic MIDI messages)
 
-1. Use my Traktor-ClyphX.tsi
-2. In-Port: Traktor Virtual Input
-3. Out-Port: None
-4. Map controller input to Traktor element in this TSI
+ClyphX Pro is used to send messages to Traktor in action lists.
 
-Setup in Ableton Live:
+For example, the following action programmatically sends:
 
-1. Control Surface > ClyphX Pro - Set Output to: Traktor Virtual Input
-2. Output: ClyphX_Pro Output: Track: On, Remote: On
+* a value of `127`
+* to MIDI control change `46`
+* on channel `16`
+* via Live's Control Surface `ClyphX Pro XTB` (`MIDI` `B`) port
+* which outputs MIDI messages to `Traktor Virtual Input`
+* which sends the message to Traktor
+
+`MIDIB CC 16 46 127`
+
+This example allows controller-based track selection to be decoupled from Traktor deck selection when necessary.
+
+Traktor setup:
+
+* Device: `Traktor-ClyphX-Pro-v*1-0.tsi`
+* In-Port: Traktor Virtual Input
+* Out-Port: None
+* Device Target: Focus
+
+Manually map MIDI channel and CC in this template.
+
+Live setup:
+
+* Control Surface: ClyphX Pro XTB
+* Input: None
+* Output: Traktor Virtual Input
+  * Track: Off
+  * Sync: Off
+  * Remote: Off
+
+Controller config:
+
+* N/A
 
 ---
 

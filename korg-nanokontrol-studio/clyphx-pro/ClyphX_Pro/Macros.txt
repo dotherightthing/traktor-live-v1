@@ -170,6 +170,7 @@ $LOOP_NUDGE_RIGHT$ =
 $LOOP_RECORD$ =
  MSG "Recording new clip";
  user_clip select_traktor_deck;
+ 5-8/ARM OFF;
  SEL/ARM ON;
  SEL/SEL EMPTY;
  SRECFIX 4;

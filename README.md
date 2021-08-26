@@ -106,8 +106,6 @@ If the expected output pairs aren’t visible, restart Traktor.
 6. Output Preview: not connected
 7. Output FX Return: not connected
 
-Note: “Headphones Mix” should also be set to 0 / off, otherwise there will be phasing in the master output and more noticeably in samples recorded in Live, due to Traktor’s output being routed back into the Deck D input.
-
 #### Input Routing
 
 If the expected input pairs aren’t visible, restart Traktor.

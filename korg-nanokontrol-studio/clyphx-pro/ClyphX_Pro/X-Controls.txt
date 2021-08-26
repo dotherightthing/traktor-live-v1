@@ -81,47 +81,22 @@
 # when the command below is commented out, the LED feedback works, but the record action does not
 # see https://forum.nativekontrol.com/thread/4416/button-binding-control-trigger-action
 # MIDIB Channel 16 sends to the XTB output (Traktor Virtual Input)
-X_CLIP_REC = CC, 1, 81, 0, 127,
- MSG "Recording new clip";
- user_clip select_traktor_deck_a_during_recording MIDIB CC 16 46 127;
- user_clip select_traktor_deck_b_during_recording MIDIB CC 16 49 127;
- 4-8/ARM OFF;
- SEL/ARM ON;
- SEL/SEL EMPTY;
- SRECFIX 4;
- WAITS 5B;
- SEL/ARM OFF;
- user_clip select_traktor_deck_d_after_recording MIDIB CC 16 50 127;
- MSG "Recorded new clip"
+LOOP_REC = CC, 1, 81, 0, 127, $LOOP_RECORD$
 
 # LED feedback is handled by user_actions/SelectedTrackLedStates.py
-CLIP_LOOP = CC, 1, 55, 0, 127,
- user_clip action_if_live_onpress SEL/CLIP LOOP :
- user_clip action_if_live_onrelease NONE
+LOOP = CC, 1, 55, 0, 127, $LOOP$
 
-CLIP_LOOP_SIZE_LEFT = CC, 1, 56, 0, 127,
- SEL/CLIP LOOP *.5;
- MSG "Halved loop size"
+LOOP_SIZE_LEFT = CC, 1, 56, 0, 127, $LOOP_HALVE$
 
-CLIP_LOOP_SIZE_RIGHT = CC, 1, 57, 0, 127,
- SEL/CLIP LOOP *2;
- MSG "Doubled loop size"
+LOOP_SIZE_RIGHT = CC, 1, 57, 0, 127, $LOOP_DOUBLE$
 
-CLIP_MOVE_LEFT = CC, 1, 58, 0, 127,
- SEL/CLIP START <1B;
- MSG "Moved clip start back 1 bar"
+LOOP_MOVE_LEFT = CC, 1, 58, 0, 127, $LOOP_LEFT$
 
-CLIP_MOVE_RIGHT = CC, 1, 59, 0, 127,
- SEL/CLIP START >1B;
- MSG "Moved clip start forward 1 bar"
+LOOP_MOVE_RIGHT = CC, 1, 59, 0, 127, $LOOP_RIGHT$
 
-CLIP_NUDGE_LEFT = CC, 1, 60, 0, 127,
- SEL/JUMP <;
- MSG "Jumped clip back"
+LOOP_NUDGE_LEFT = CC, 1, 60, 0, 127, $LOOP_NUDGE_LEFT$
 
-CLIP_NUDGE_RIGHT = CC, 1, 61, 0, 127,
- SEL/JUMP >;
- MSG "Jumped clip forward"
+LOOP_NUDGE_RIGHT = CC, 1, 61, 0, 127, $LOOP_NUDGE_RIGHT$
 
 # Track FX selection
 

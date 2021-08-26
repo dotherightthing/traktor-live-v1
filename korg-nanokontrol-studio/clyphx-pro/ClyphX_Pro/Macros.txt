@@ -51,7 +51,7 @@
 
 # Traktor TSI v3.0 - KORG nanoKONTROL - Macros
 
-$TRACK_1_SELECTED_LEDS$ =
+$TRACK_1_LEDS$ =
  MIDI %MIDI_CC_SELECT_1% 127;
  MIDI %MIDI_CC_SELECT_2% 127;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -59,9 +59,10 @@ $TRACK_1_SELECTED_LEDS$ =
  MIDI %MIDI_CC_SELECT_5% 0;
  MIDI %MIDI_CC_SELECT_6% 0;
  MIDI %MIDI_CC_SELECT_7% 0;
- MIDI %MIDI_CC_SELECT_8% 0
+ MIDI %MIDI_CC_SELECT_8% 0;
+ user_clip loop_led
 
-$TRACK_2_SELECTED_LEDS$ =
+$TRACK_2_LEDS$ =
  MIDI %MIDI_CC_SELECT_1% 127;
  MIDI %MIDI_CC_SELECT_2% 127;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -69,9 +70,10 @@ $TRACK_2_SELECTED_LEDS$ =
  MIDI %MIDI_CC_SELECT_5% 0;
  MIDI %MIDI_CC_SELECT_6% 0;
  MIDI %MIDI_CC_SELECT_7% 0;
- MIDI %MIDI_CC_SELECT_8% 0
+ MIDI %MIDI_CC_SELECT_8% 0;
+ user_clip loop_led
 
-$TRACK_3_SELECTED_LEDS$ =
+$TRACK_3_LEDS$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 127;
@@ -79,9 +81,10 @@ $TRACK_3_SELECTED_LEDS$ =
  MIDI %MIDI_CC_SELECT_5% 0;
  MIDI %MIDI_CC_SELECT_6% 0;
  MIDI %MIDI_CC_SELECT_7% 0;
- MIDI %MIDI_CC_SELECT_8% 0
+ MIDI %MIDI_CC_SELECT_8% 0;
+ user_clip loop_led
 
-$TRACK_4_SELECTED_LEDS$ =
+$TRACK_4_LEDS$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 127;
@@ -89,9 +92,10 @@ $TRACK_4_SELECTED_LEDS$ =
  MIDI %MIDI_CC_SELECT_5% 0;
  MIDI %MIDI_CC_SELECT_6% 0;
  MIDI %MIDI_CC_SELECT_7% 0;
- MIDI %MIDI_CC_SELECT_8% 0
+ MIDI %MIDI_CC_SELECT_8% 0;
+ user_clip loop_led
 
-$TRACK_5_SELECTED_LEDS$ =
+$TRACK_5_LEDS$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -100,9 +104,10 @@ $TRACK_5_SELECTED_LEDS$ =
  MIDI %MIDI_CC_SELECT_6% 0;
  MIDI %MIDI_CC_SELECT_7% 0;
  MIDI %MIDI_CC_SELECT_8% 0;
- user_clip deck_leds
+ user_clip deck_leds;
+ user_clip loop_led
 
-$TRACK_6_SELECTED_LEDS$ =
+$TRACK_6_LEDS$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -111,9 +116,10 @@ $TRACK_6_SELECTED_LEDS$ =
  MIDI %MIDI_CC_SELECT_6% 127;
  MIDI %MIDI_CC_SELECT_7% 0;
  MIDI %MIDI_CC_SELECT_8% 0;
- user_clip deck_leds
+ user_clip deck_leds;
+ user_clip loop_led
 
-$TRACK_7_SELECTED_LEDS$ =
+$TRACK_7_LEDS$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -122,9 +128,10 @@ $TRACK_7_SELECTED_LEDS$ =
  MIDI %MIDI_CC_SELECT_6% 0;
  MIDI %MIDI_CC_SELECT_7% 127;
  MIDI %MIDI_CC_SELECT_8% 0;
- user_clip deck_leds
+ user_clip deck_leds;
+ user_clip loop_led
 
-$TRACK_8_SELECTED_LEDS$ =
+$TRACK_8_LEDS$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -133,4 +140,46 @@ $TRACK_8_SELECTED_LEDS$ =
  MIDI %MIDI_CC_SELECT_6% 0;
  MIDI %MIDI_CC_SELECT_7% 0;
  MIDI %MIDI_CC_SELECT_8% 127;
- user_clip deck_leds
+ user_clip deck_leds;
+ user_clip loop_led
+
+$LOOP$ =
+ user_clip action_if_live_onpress SEL/CLIP LOOP :
+ user_clip action_if_live_onrelease NONE
+
+$LOOP_DOUBLE$ =
+ SEL/CLIP LOOP *2;
+ MSG "Doubled loop size"
+
+$LOOP_HALVE$ =
+ SEL/CLIP LOOP *.5;
+ MSG "Halved loop size"
+
+$LOOP_LEFT$ =
+ SEL/CLIP START <1B;
+ MSG "Moved clip start back 1 bar"
+
+$LOOP_NUDGE_LEFT$ =
+ SEL/JUMP <;
+ MSG "Jumped clip back"
+
+$LOOP_NUDGE_RIGHT$ =
+ SEL/JUMP >;
+ MSG "Jumped clip forward"
+
+$LOOP_RECORD$ =
+ MSG "Recording new clip";
+ user_clip select_traktor_deck_a_during_recording MIDIB %MIDI_CC_TRAKTOR_DECK_A% 127;
+ user_clip select_traktor_deck_b_during_recording MIDIB %MIDI_CC_TRAKTOR_DECK_B% 127;
+ 4-8/ARM OFF;
+ SEL/ARM ON;
+ SEL/SEL EMPTY;
+ SRECFIX 4;
+ WAITS 5B;
+ SEL/ARM OFF;
+ user_clip select_traktor_deck_d_after_recording MIDIB CC 16 50 127;
+ MSG "Recorded new clip"
+
+$LOOP_RIGHT$ =
+ SEL/CLIP START >1B;
+ MSG "Moved clip start forward 1 bar"

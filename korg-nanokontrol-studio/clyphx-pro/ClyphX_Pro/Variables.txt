@@ -54,6 +54,8 @@
 # These are automatically exposed to user_actions
 # These can also be updated by user_actions, see https://forum.nativekontrol.com/post/27823/thread
 
+%MIDI_CC_LOOP% = CC 1 55
+
 %MIDI_CC_SELECT_1% = CC 1 46
 %MIDI_CC_SELECT_2% = CC 1 47
 %MIDI_CC_SELECT_3% = CC 1 48
@@ -62,3 +64,6 @@
 %MIDI_CC_SELECT_6% = CC 1 51
 %MIDI_CC_SELECT_7% = CC 1 52
 %MIDI_CC_SELECT_8% = CC 1 53
+
+%MIDI_CC_TRAKTOR_DECK_A% = CC 16 46
+%MIDI_CC_TRAKTOR_DECK_B% = CC 16 49

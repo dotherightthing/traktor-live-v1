@@ -73,18 +73,20 @@ class SelectedTrackLedStates(UserActionsBase):
         self.add_clip_action('action_if_live_onpress', self.action_if_live_onpress)
         self.add_clip_action('action_if_live_onrelease', self.action_if_live_onrelease)
 
+        # called by G-Controls.txt
+        self.add_clip_action('deck_leds', self.deck_leds)
+
         # called by action_if_live_onrelease
         self.add_clip_action('update_loop_led_clip', self.update_loop_led)
 
         # called by on_selected_track_changed()
         self.add_track_action('update_loop_led', self.update_loop_led)
-        self.add_clip_action('update_track_led', self.update_track_led)
 
 
     def on_selected_track_changed(self):
         empty_dict = {}
         self.update_loop_led(empty_dict, 'MIDI CC 1 55')
-        self.update_track_led()
+        # self.deck_leds()
 
     def action_if_live_onpress(self, action_def, args):
         # the current Live set object
@@ -146,75 +148,25 @@ class SelectedTrackLedStates(UserActionsBase):
         # self.canonical_parent.log_message('update_loop_led: ' + action_list)
         self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
 
-    def update_track_led(self):
+    # this can't just use macros as the LOM needs to be queried
+    def deck_leds(self, action_def, args):
         # the current Live set object
         # see also https://docs.cycling74.com/max8/vignettes/live_object_model
         live_set = self.song()
 
         song_view = live_set.view
         selected_track = song_view.selected_track
-        selected_track_name = selected_track.name
-        action_list = 'WAIT 5; '
+        action_list = ''
 
-        # tracks 1-4 are Traktor
-        # tracks 5-8 are Live
-        if (selected_track_name == '1'):
-            action_list += 'MIDI CC 1 46 127; '
-            action_list += 'MIDI CC 1 49 0; '
-            action_list += 'MIDI CC 1 50 0; '
-            action_list += 'MIDI CC 1 51 0; '
-            action_list += 'MIDI CC 1 52 0; '
-            action_list += 'MIDI CC 1 53 0; '
-        elif (selected_track_name == '1FX'):
+        self.canonical_parent.log_message('deck_leds')
+        self.canonical_parent.log_message(selected_track.input_routing_type.display_name)
+
+        if (selected_track.input_routing_type.display_name == '1FX'):
             action_list += 'MIDI CC 1 46 127; '
             action_list += 'MIDI CC 1 47 127; '
-            action_list += 'MIDI CC 1 48 0; '
-            action_list += 'MIDI CC 1 49 0; '
-            action_list += 'MIDI CC 1 50 0; '
-            action_list += 'MIDI CC 1 51 0; '
-            action_list += 'MIDI CC 1 52 0; '
-            action_list += 'MIDI CC 1 53 0; '
-        elif (selected_track_name == '4'):
-            action_list += 'MIDI CC 1 46 0; '
-            action_list += 'MIDI CC 1 47 0; '
+        elif (selected_track.input_routing_type.display_name == '4FX'):
             action_list += 'MIDI CC 1 48 127; '
             action_list += 'MIDI CC 1 49 127; '
-            action_list += 'MIDI CC 1 50 0; '
-            action_list += 'MIDI CC 1 51 0; '
-            action_list += 'MIDI CC 1 52 0; '
-            action_list += 'MIDI CC 1 53 0; '
-        else:
-            if (selected_track.input_routing_type.display_name == '1FX'):
-                action_list += 'MIDI CC 1 46 127; '
-                action_list += 'MIDI CC 1 47 127; '
-                action_list += 'MIDI CC 1 48 0; '
-                action_list += 'MIDI CC 1 49 0; '
-            elif (selected_track.input_routing_type.display_name == '4FX'):
-                action_list += 'MIDI CC 1 46 0; '
-                action_list += 'MIDI CC 1 47 0; '
-                action_list += 'MIDI CC 1 48 127; '
-                action_list += 'MIDI CC 1 49 127; '
-
-            if (selected_track_name == '5'):
-                action_list += 'MIDI CC 1 50 127; '
-                action_list += 'MIDI CC 1 51 0; '
-                action_list += 'MIDI CC 1 52 0; '
-                action_list += 'MIDI CC 1 53 0; '
-            elif (selected_track_name == '6'):
-                action_list += 'MIDI CC 1 50 0; '
-                action_list += 'MIDI CC 1 51 127; '
-                action_list += 'MIDI CC 1 52 0; '
-                action_list += 'MIDI CC 1 53 0; '
-            elif (selected_track_name == '7'):
-                action_list += 'MIDI CC 1 50 0; '
-                action_list += 'MIDI CC 1 51 0; '
-                action_list += 'MIDI CC 1 52 127; '
-                action_list += 'MIDI CC 1 53 0; '
-            elif (selected_track_name == '8'):
-                action_list += 'MIDI CC 1 50 0; '
-                action_list += 'MIDI CC 1 51 0; '
-                action_list += 'MIDI CC 1 52 0; '
-                action_list += 'MIDI CC 1 53 127; '
 
         self.canonical_parent.log_message(action_list)
         self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

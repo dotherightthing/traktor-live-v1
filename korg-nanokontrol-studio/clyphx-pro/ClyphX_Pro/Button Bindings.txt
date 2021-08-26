@@ -153,7 +153,6 @@ VERSION = v1.0.5
 
 # Traktor TSI v3.0 - KORG nanoKONTROL - Button bindings
 # CC numbers reference those assigned in the KORG KONTROL Editor
-# See also X-Controls.txt which sets up buttons which don't require LED feedback.
 # Note: MSG actions are not supported/output
 
 
@@ -202,22 +201,3 @@ TRACK_7_EQTHREE_LO = CC, 1, 44, 127, 0, 7/DEV("Traktor-EQ+Utility".1) "GainLo"
 TRACK_8_EQTHREE_HI = CC, 1, 28, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainHi"
 TRACK_8_EQTHREE_MD = CC, 1, 37, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainMid"
 TRACK_8_EQTHREE_LO = CC, 1, 45, 127, 0, 8/DEV("Traktor-EQ+Utility".1) "GainLo"
-
-# Track selection
-# Additional select actions and LED feedback are handled by user_actions/SelectedTrackLedStates.py
-
-# 1. visually select the track and its accompanying FX track by illuminating their Select buttons
-# 2. programmatically select a track in Live to set the target for the loop controls
-# 3. programmatically select a deck in Traktor to set the target for the loop controls and keyboard pitching
-#    (via the same CC being mapped to the deck in Traktor)
-
-
-
-# 4. programmatically select a deck in Traktor to set the target for keyboard pitching when a Live track is selected and recording
-# The same buttons are mapped in Traktor on channel 16:
-# CC, 16, 46 is mapped to Deck A select
-# CC, 16, 49 is mapped to Deck B select
-# CC, 16, 50 is mapped to Deck D select
-# These MIDI CCs are triggered via a user_action which is called by X_CLIP_REC in X-Controls, when recording starts and stops.
-# This ensures that melodic deck control is possible during sampling into Live
-# TODO full control may require duplicating the modifier system from the nanoKONTROL TSI to the Programmatic TSI (#17)

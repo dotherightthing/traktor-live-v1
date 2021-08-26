@@ -1,0 +1,68 @@
+#********************************** [SETTINGS NOTES] **********************************
+
+# Please DO NOT change any of the spacing in this file.
+
+# Please DO NOT change the name of this file or its file extension.  When done making
+# your changes to the settings below, just save the file.
+
+# After saving this file, you will need to load a new Live Set/reload the
+# current Live Set for your changes to take effect.
+
+
+
+# --------------------------------------------------------------------------------------
+
+[MACROS]
+
+# Below, you can specify a list of Macros to use in Action Lists.
+
+# The entry format is $MACRO_NAME$ = ACTION(s)
+
+# --------------------------------------------------------------------------------------
+# | ENTRY      |  DESCRIPTION
+# --------------------------------------------------------------------------------------
+# | MACRO_NAME |  A unique one-word name for the Macro enclosed in dollar signs.
+# --------------------------------------------------------------------------------------
+# | ACTION(s)  |  The Action(s) to assign to the Macro.  You can also assign Macros to
+# |            |  other Macros.
+# --------------------------------------------------------------------------------------
+
+# See the Macros section of the manual for more info on Macros.
+
+# --------------------------------------------------------------------------------------
+
+# Below is an example list that has been commented out (the # at the beginning of
+# a line makes the line a comment). Your list should be formatted in the same way
+# except without the # at the beginning of each line.
+
+# Single line Macro:
+# $EX_MACRO_1$ = METRO
+
+# Multi line Macro type 1 (note that each additional line needs to be indented by 1 space):
+# $EX_MACRO_2$ = ARM;
+#  SOLO;
+
+# Multi line Macro type 2 (note that each additional line needs to be indented by 1 space):
+# $EX_MACRO_3$ =
+#  ARM;
+#  SOLO;
+
+# --------------------------------------------------------------------------------------
+
+# Traktor TSI v3.0 - KORG nanoKONTROL - Macros
+
+$TRACK_1_SELECTED_LEDS$ = MIDI %CC_SELECT_1% 127; MIDI %CC_SELECT_2% 127; MIDI %CC_SELECT_3% 0; MIDI %CC_SELECT_4% 0; MIDI %CC_SELECT_5% 0; MIDI %CC_SELECT_6% 0; MIDI %CC_SELECT_7% 0; MIDI %CC_SELECT_8% 0
+
+$TRACK_2_SELECTED_LEDS$ = MIDI %CC_SELECT_1% 127; MIDI %CC_SELECT_2% 127; MIDI %CC_SELECT_3% 0; MIDI %CC_SELECT_4% 0; MIDI %CC_SELECT_5% 0; MIDI %CC_SELECT_6% 0; MIDI %CC_SELECT_7% 0; MIDI %CC_SELECT_8% 0
+
+$TRACK_3_SELECTED_LEDS$ = MIDI %CC_SELECT_1% 0; MIDI %CC_SELECT_2% 0; MIDI %CC_SELECT_3% 127; MIDI %CC_SELECT_4% 127; MIDI %CC_SELECT_5% 0; MIDI %CC_SELECT_6% 0; MIDI %CC_SELECT_7% 0; MIDI %CC_SELECT_8% 0
+
+$TRACK_4_SELECTED_LEDS$ = MIDI %CC_SELECT_1% 0; MIDI %CC_SELECT_2% 0; MIDI %CC_SELECT_3% 127; MIDI %CC_SELECT_4% 127; MIDI %CC_SELECT_5% 0; MIDI %CC_SELECT_6% 0; MIDI %CC_SELECT_7% 0; MIDI %CC_SELECT_8% 0
+
+$TRACK_5_SELECTED_LEDS$ = MIDI %CC_SELECT_1% 0; MIDI %CC_SELECT_2% 0; MIDI %CC_SELECT_3% 0; MIDI %CC_SELECT_4% 0; MIDI %CC_SELECT_5% 127; MIDI %CC_SELECT_6% 0; MIDI %CC_SELECT_7% 0; MIDI %CC_SELECT_8% 0; user_clip deck_leds MIDI %CC_SELECT_1% 127
+
+$TRACK_6_SELECTED_LEDS$ = MIDI %CC_SELECT_1% 0; MIDI %CC_SELECT_2% 0; MIDI %CC_SELECT_3% 0; MIDI %CC_SELECT_4% 0; MIDI %CC_SELECT_5% 0; MIDI %CC_SELECT_6% 127; MIDI %CC_SELECT_7% 0; MIDI %CC_SELECT_8% 0; user_clip deck_leds MIDI %CC_SELECT_1% 127
+
+$TRACK_7_SELECTED_LEDS$ = MIDI %CC_SELECT_1% 0; MIDI %CC_SELECT_2% 0; MIDI %CC_SELECT_3% 0; MIDI %CC_SELECT_4% 0; MIDI %CC_SELECT_5% 0; MIDI %CC_SELECT_6% 0; MIDI %CC_SELECT_7% 127; MIDI %CC_SELECT_8% 0; user_clip deck_leds MIDI %CC_SELECT_1% 127
+
+$TRACK_8_SELECTED_LEDS$ = MIDI %CC_SELECT_1% 0; MIDI %CC_SELECT_2% 0; MIDI %CC_SELECT_3% 0; MIDI %CC_SELECT_4% 0; MIDI %CC_SELECT_5% 0; MIDI %CC_SELECT_6% 0; MIDI %CC_SELECT_7% 0; MIDI %CC_SELECT_8% 127; user_clip deck_leds MIDI %CC_SELECT_1% 127

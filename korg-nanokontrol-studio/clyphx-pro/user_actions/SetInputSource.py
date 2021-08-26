@@ -50,16 +50,11 @@ class SetInputSource(UserActionsBase):
         selected_track_name = selected_track.name
         action_list = ''
 
-        if (selected_track_name == '1') or (selected_track_name == '1FX') or (selected_track_name == '4') or (selected_track_name == '4FX'):
+        if (selected_track_name == '1') or (selected_track_name == '4'):
             for track_index in [5, 6, 7, 8]:
-                if (selected_track_name == '1') or (selected_track_name == '1FX'):
-                    input_track_name = '1FX'
-                elif (selected_track_name == '4') or (selected_track_name == '4FX'):
-                    input_track_name = '4FX'
-
                 # FX are on their own audio channel to allow them to be recorded with the channel audio
                 # for xfader cut FX trails
-                action_list += str(track_index) + '/IN "' + input_track_name + '"; '
+                action_list += str(track_index) + '/IN "' + selected_track_name + 'FX"; '
 
             # self.canonical_parent.log_message(action_list)
             self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

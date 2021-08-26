@@ -156,25 +156,6 @@ VERSION = v1.0.5
 # Note: MSG actions are not supported/output
 
 
-# Track clip playback
-
-CLIP_PLAY = CC, 1, 80, 0, 127, SEL/PLAY
-
-
-# Track clip record
-
-# 'SRECFIX 4' is in X-Controls.txt
-# when the command below is commented out, the record action works, but the LED feedback does not
-# see https://forum.nativekontrol.com/thread/4416/button-binding-control-trigger-action
-#
-CLIP_REC = CC, 1, 81, 0, 127, SEL/ARM
-
-
-# Track clip stop
-
-CLIP_STOP = CC, 1, 63, 0, 0, SEL/STOP
-
-
 # Track device 1: EQ Three
 # LEDs work best with Button Behaviour = Momentary
 

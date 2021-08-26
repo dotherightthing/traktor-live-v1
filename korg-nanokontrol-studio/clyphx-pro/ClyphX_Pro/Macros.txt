@@ -144,8 +144,8 @@ $LEDS_8$ =
  user_clip loop_led
 
 $LOOP$ =
- user_clip action_if_live_onpress SEL/CLIP LOOP :
- user_clip action_if_live_onrelease NONE
+ SEL/CLIP LOOP :
+ NONE
 
 $LOOP_DOUBLE$ =
  SEL/CLIP LOOP *2;
@@ -167,21 +167,33 @@ $LOOP_NUDGE_RIGHT$ =
  SEL/JUMP >;
  MSG "Jumped clip forward"
 
+$LOOP_PLAY$ = SEL/PLAY
+
+# Note: if this doesn't work, press the SYNC button on the controller
 $LOOP_RECORD$ =
+ WAIT 5;
  MSG "Recording new clip";
  user_clip select_traktor_deck;
- 5-8/ARM OFF;
+ ALL/ARM OFF;
  SEL/ARM ON;
+ MIDI %MIDI_CC_PLAY% 0;
+ MIDI %MIDI_CC_REC% 127;
  SEL/SEL EMPTY;
  SRECFIX 4;
  WAITS 5B;
  SEL/ARM OFF;
+ MIDI %MIDI_CC_REC% 0;
+ MIDI %MIDI_CC_PLAY% 127;
+ user_clip loop_led;
  user_clip deselect_traktor_deck;
  MSG "Recorded new clip"
 
 $LOOP_RIGHT$ =
  SEL/CLIP START >1B;
  MSG "Moved clip start forward 1 bar"
+
+$LOOP_STOP$ = SEL/STOP
+
 $INPUT_DECK_A$ =
  5/IN "1FX";
  6/IN "1FX";

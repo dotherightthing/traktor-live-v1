@@ -86,6 +86,10 @@ LOOP_REC = CC, 1, 81, 0, 127, $LOOP_RECORD$
 # LED feedback is handled by user_actions/SelectedTrackLedStates.py
 LOOP = CC, 1, 55, 0, 127, $LOOP$
 
+LOOP_PLAY = CC, 1, 80, 0, 127, $LOOP_PLAY$
+
+LOOP_STOP = CC, 1, 63, 0, 0, $LOOP_STOP$
+
 LOOP_SIZE_LEFT = CC, 1, 56, 0, 127, $LOOP_HALVE$
 
 LOOP_SIZE_RIGHT = CC, 1, 57, 0, 127, $LOOP_DOUBLE$

@@ -35,41 +35,28 @@ class SelectTraktorDeck(UserActionsBase):
     # Your class must implement this method.
     def create_actions(self):
         # called by X-Controls.txt
-        self.add_clip_action('select_traktor_deck_a_during_recording', self.select_traktor_deck_a_during_recording)
-        self.add_clip_action('select_traktor_deck_b_during_recording', self.select_traktor_deck_b_during_recording)
-        self.add_clip_action('select_traktor_deck_d_after_recording', self.select_traktor_deck_d_after_recording)
+        self.add_clip_action('select_traktor_deck', self.select_traktor_deck)
+        self.add_clip_action('deselect_traktor_deck', self.deselect_traktor_deck)
 
     # select sampler source track during recording
-    def select_traktor_deck_a_during_recording(self, action_def, args):
+    def select_traktor_deck(self, action_def, args):
         # the current Live set object
         # see also https://docs.cycling74.com/max8/vignettes/live_object_model
         live_set = self.song()
         song_view = live_set.view
         selected_track = song_view.selected_track
         input_name = selected_track.input_routing_type.display_name
-        action_list = args
+        action_list = ''
 
         if input_name == '1FX':
-            self.canonical_parent.log_message(action_list)
-            self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
+            action_list += 'MIDIB %MIDI_CC_TRAKTOR_DECK_A% 127'
+        elif input_name == '4FX':
+            action_list += 'MIDIB %MIDI_CC_TRAKTOR_DECK_B% 127'
 
-    # select sampler source track during recording
-    def select_traktor_deck_b_during_recording(self, action_def, args):
-        # the current Live set object
-        # see also https://docs.cycling74.com/max8/vignettes/live_object_model
-        live_set = self.song()
-        song_view = live_set.view
-        selected_track = song_view.selected_track
-        input_name = selected_track.input_routing_type.display_name
-        action_list = args
-
-        if input_name == '4FX':
-            self.canonical_parent.log_message(action_list)
-            self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
+        self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
 
     # select dummy track after recording
-    def select_traktor_deck_d_after_recording(self, action_def, args):
-        action_list = args
+    def deselect_traktor_deck(self, action_def, args):
+        action_list = 'MIDIB %MIDI_CC_TRAKTOR_DECK_D% 127'
 
-        self.canonical_parent.log_message(action_list)
         self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

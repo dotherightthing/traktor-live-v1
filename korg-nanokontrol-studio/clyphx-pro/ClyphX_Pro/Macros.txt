@@ -169,15 +169,13 @@ $LOOP_NUDGE_RIGHT$ =
 
 $LOOP_RECORD$ =
  MSG "Recording new clip";
- user_clip select_traktor_deck_a_during_recording MIDIB %MIDI_CC_TRAKTOR_DECK_A% 127;
- user_clip select_traktor_deck_b_during_recording MIDIB %MIDI_CC_TRAKTOR_DECK_B% 127;
- 4-8/ARM OFF;
+ user_clip select_traktor_deck;
  SEL/ARM ON;
  SEL/SEL EMPTY;
  SRECFIX 4;
  WAITS 5B;
  SEL/ARM OFF;
- user_clip select_traktor_deck_d_after_recording MIDIB CC 16 50 127;
+ user_clip deselect_traktor_deck;
  MSG "Recorded new clip"
 
 $LOOP_RIGHT$ =

@@ -54,6 +54,9 @@
 # These are automatically exposed to user_actions
 # These can also be updated by user_actions, see https://forum.nativekontrol.com/post/27823/thread
 
+# MIDI controls
+# See also G-Controls (which doesn't support variables)
+
 %MIDI_CC_LOOP% = CC 1 55
 
 %MIDI_CC_SELECT_1% = CC 1 46

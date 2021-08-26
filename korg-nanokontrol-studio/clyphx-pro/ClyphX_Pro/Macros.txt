@@ -51,7 +51,7 @@
 
 # Traktor TSI v3.0 - KORG nanoKONTROL - Macros
 
-$TRACK_1_LEDS$ =
+$LEDS_1$ =
  MIDI %MIDI_CC_SELECT_1% 127;
  MIDI %MIDI_CC_SELECT_2% 127;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -62,7 +62,7 @@ $TRACK_1_LEDS$ =
  MIDI %MIDI_CC_SELECT_8% 0;
  user_clip loop_led
 
-$TRACK_2_LEDS$ =
+$LEDS_2$ =
  MIDI %MIDI_CC_SELECT_1% 127;
  MIDI %MIDI_CC_SELECT_2% 127;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -73,7 +73,7 @@ $TRACK_2_LEDS$ =
  MIDI %MIDI_CC_SELECT_8% 0;
  user_clip loop_led
 
-$TRACK_3_LEDS$ =
+$LEDS_3$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 127;
@@ -84,7 +84,7 @@ $TRACK_3_LEDS$ =
  MIDI %MIDI_CC_SELECT_8% 0;
  user_clip loop_led
 
-$TRACK_4_LEDS$ =
+$LEDS_4$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 127;
@@ -95,7 +95,7 @@ $TRACK_4_LEDS$ =
  MIDI %MIDI_CC_SELECT_8% 0;
  user_clip loop_led
 
-$TRACK_5_LEDS$ =
+$LEDS_5$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -107,7 +107,7 @@ $TRACK_5_LEDS$ =
  user_clip deck_leds;
  user_clip loop_led
 
-$TRACK_6_LEDS$ =
+$LEDS_6$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -119,7 +119,7 @@ $TRACK_6_LEDS$ =
  user_clip deck_leds;
  user_clip loop_led
 
-$TRACK_7_LEDS$ =
+$LEDS_7$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 0;
@@ -131,7 +131,7 @@ $TRACK_7_LEDS$ =
  user_clip deck_leds;
  user_clip loop_led
 
-$TRACK_8_LEDS$ =
+$LEDS_8$ =
  MIDI %MIDI_CC_SELECT_1% 0;
  MIDI %MIDI_CC_SELECT_2% 0;
  MIDI %MIDI_CC_SELECT_3% 0;

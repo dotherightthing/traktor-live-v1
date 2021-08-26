@@ -110,7 +110,7 @@ VERSION = v1.0.0
 
 # Traktor TSI v3.0 - KORG nanoKONTROL - G-Controls
 # CC numbers reference those assigned in the KORG KONTROL Editor
-# Note: Multiple line formatting breaks the action lists below
+# Note: Multiple line formatting not supported below
 
 # Track selection
 # Additional select actions and LED feedback are handled by user_actions/SelectedTrackLedStates.py

@@ -54,11 +54,11 @@
 # These are automatically exposed to user_actions
 # These can also be updated by user_actions, see https://forum.nativekontrol.com/post/27823/thread
 
-%CC_SELECT_1% = CC 1 46
-%CC_SELECT_2% = CC 1 47
-%CC_SELECT_3% = CC 1 48
-%CC_SELECT_4% = CC 1 49
-%CC_SELECT_5% = CC 1 50
-%CC_SELECT_6% = CC 1 51
-%CC_SELECT_7% = CC 1 52
-%CC_SELECT_8% = CC 1 53
+%MIDI_CC_SELECT_1% = CC 1 46
+%MIDI_CC_SELECT_2% = CC 1 47
+%MIDI_CC_SELECT_3% = CC 1 48
+%MIDI_CC_SELECT_4% = CC 1 49
+%MIDI_CC_SELECT_5% = CC 1 50
+%MIDI_CC_SELECT_6% = CC 1 51
+%MIDI_CC_SELECT_7% = CC 1 52
+%MIDI_CC_SELECT_8% = CC 1 53

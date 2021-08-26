@@ -86,7 +86,6 @@ class SelectedTrackLedStates(UserActionsBase):
     def on_selected_track_changed(self):
         empty_dict = {}
         self.update_loop_led(empty_dict, 'MIDI CC 1 55')
-        # self.deck_leds()
 
     def action_if_live_onpress(self, action_def, args):
         # the current Live set object
@@ -148,7 +147,6 @@ class SelectedTrackLedStates(UserActionsBase):
         # self.canonical_parent.log_message('update_loop_led: ' + action_list)
         self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
 
-    # this can't just use macros as the LOM needs to be queried
     def deck_leds(self, action_def, args):
         # the current Live set object
         # see also https://docs.cycling74.com/max8/vignettes/live_object_model
@@ -158,15 +156,13 @@ class SelectedTrackLedStates(UserActionsBase):
         selected_track = song_view.selected_track
         action_list = ''
 
-        self.canonical_parent.log_message('deck_leds')
-        self.canonical_parent.log_message(selected_track.input_routing_type.display_name)
-
+        # TODO: is it possible to use a variable + a conditional instead?
         if (selected_track.input_routing_type.display_name == '1FX'):
-            action_list += 'MIDI CC 1 46 127; '
-            action_list += 'MIDI CC 1 47 127; '
+            action_list += 'MIDI %MIDI_CC_SELECT_1% 127;'
+            action_list += 'MIDI %MIDI_CC_SELECT_2% 127'
         elif (selected_track.input_routing_type.display_name == '4FX'):
-            action_list += 'MIDI CC 1 48 127; '
-            action_list += 'MIDI CC 1 49 127; '
+            action_list += 'MIDI %MIDI_CC_SELECT_3% 127;'
+            action_list += 'MIDI %MIDI_CC_SELECT_4% 127'
 
-        self.canonical_parent.log_message(action_list)
+        # self.canonical_parent.log_message(action_list)
         self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

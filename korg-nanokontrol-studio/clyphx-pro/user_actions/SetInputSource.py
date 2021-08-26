@@ -63,23 +63,3 @@ class SetInputSource(UserActionsBase):
 
             # self.canonical_parent.log_message(action_list)
             self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
-        elif (selected_track.input_routing_type.display_name == '1FX'):
-            # + highlight the source track
-            action_list += 'WAIT 2; '
-            action_list += 'MIDI CC 1 46 127; '
-            action_list += 'MIDI CC 1 47 127; '
-            action_list += 'MIDI CC 1 48 0; '
-            action_list += 'MIDI CC 1 49 0'
-
-            # self.canonical_parent.log_message(action_list)
-            self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
-        elif (selected_track.input_routing_type.display_name == '4FX'):
-            # + highlight the source track
-            action_list += 'WAIT 2; '
-            action_list += 'MIDI CC 1 46 0; '
-            action_list += 'MIDI CC 1 47 0; '
-            action_list += 'MIDI CC 1 48 127; '
-            action_list += 'MIDI CC 1 49 127'
-
-            # self.canonical_parent.log_message(action_list)
-            self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)

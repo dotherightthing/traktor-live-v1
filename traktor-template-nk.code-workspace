@@ -12,7 +12,7 @@
 	],
 	"settings": {
 		"files.associations": {
-			"*.txt": "shellscript"
+			"*.txt": "powershell"
 		},
 		"editor.wordWrap": "on"
 	}

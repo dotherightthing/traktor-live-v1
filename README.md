@@ -4,7 +4,7 @@
 
 Traktor template for KORG nanoKONTROL + nanoKEY Studio.
 
-Includes Live starter file with Traktor mixer and 5 channel Live sampler.
+Includes Live starter file with Traktor mixer and 4 channel Live sampler.
 
 This is a private project, documented here for my own benefit and shared in case any part proves useful.
 
@@ -331,7 +331,7 @@ Controller config:
 
 ### ableton-live
 
-Starter file with Traktor mixer and 5 channel Live sampler.
+Starter file with Traktor mixer and 4 channel Live sampler.
 
 ### clyphx-pro
 

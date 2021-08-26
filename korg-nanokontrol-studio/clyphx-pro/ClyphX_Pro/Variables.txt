@@ -57,6 +57,14 @@
 # MIDI controls
 # See also G-Controls (which doesn't support variables)
 
+%MIDI_CC_FX_1_1% = CC 1 22
+%MIDI_CC_FX_1_2% = CC 1 30
+%MIDI_CC_FX_1_3% = CC 1 39
+
+%MIDI_CC_FX_4_1% = CC 1 23
+%MIDI_CC_FX_4_2% = CC 1 31
+%MIDI_CC_FX_4_3% = CC 1 40
+
 %MIDI_CC_LOOP% = CC 1 55
 
 %MIDI_CC_PLAY% = CC 1 80

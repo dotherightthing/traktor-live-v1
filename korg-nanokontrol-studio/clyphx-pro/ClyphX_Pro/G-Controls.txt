@@ -112,6 +112,26 @@ VERSION = v1.0.0
 # CC numbers reference those assigned in the KORG KONTROL Editor
 # Note: Multiple line formatting and Variables not supported below
 
+# Track FX selection
+
+TRACK_1_FX_1 = CC, 1, 22, 0, 127, FALSE
+TRACK_1_FX_1 RELEASED = WAIT 1; $FX_1_1$
+
+TRACK_1_FX_2 = CC, 1, 30, 0, 127, FALSE
+TRACK_1_FX_2 RELEASED = WAIT 1; $FX_1_2$
+
+TRACK_1_FX_3 = CC, 1, 39, 0, 127, FALSE
+TRACK_1_FX_3 RELEASED = WAIT 1; $FX_1_3$
+
+TRACK_4_FX_1 = CC, 1, 23, 0, 127, FALSE
+TRACK_4_FX_1 RELEASED = WAIT 1; $FX_4_1$
+
+TRACK_4_FX_2 = CC, 1, 31, 0, 127, FALSE
+TRACK_4_FX_2 RELEASED = WAIT 1; $FX_4_2$
+
+TRACK_4_FX_3 = CC, 1, 40, 0, 127, FALSE
+TRACK_4_FX_3 RELEASED = WAIT 1; $FX_4_3$
+
 # Track selection
 # Additional select actions and LED feedback are handled by user_actions/SelectedTrackLedStates.py
 

@@ -337,11 +337,23 @@ Starter file with Traktor mixer and 5 channel Live sampler.
 
 Configuration files for Isotonik Studios / Stray's ClyphX Pro, which map MIDI controls to Live's interface and provide LED feedback.
 
+The following files are [symlinked](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) to the replacement files in this repository:
+
 * `/Users/Dan/NativeKONTROL/ClyphX_Pro/Button Bindings.txt`
 * `/Users/Dan/NativeKONTROL/ClyphX_Pro/Encoder Bindings.txt`
+* `/Users/Dan/NativeKONTROL/ClyphX_Pro/G-Controls.txt`
+* `/Users/Dan/NativeKONTROL/ClyphX_Pro/Macros.txt`
+* `/Users/Dan/NativeKONTROL/ClyphX_Pro/Preferences.txt`
+* `/Users/Dan/NativeKONTROL/ClyphX_Pro/Variables.txt`
 * `/Users/Dan/NativeKONTROL/ClyphX_Pro/X-Controls.txt`
+* `/Users/Dan/NativeKONTROL/ClyphX_Pro/XTA/Button Bindings.txt`
+* `/Users/Dan/NativeKONTROL/ClyphX_Pro/XTA/Encoder Bindings.txt`
+* `/Users/Dan/NativeKONTROL/ClyphX_Pro/XTA/X-Controls.txt`
+
+The following files need to be manually updated:
+
 * `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py`
-* `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SetInputSource.py`
+* `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktorDeck.py`
 
 ### korg-kontrol-editor
 

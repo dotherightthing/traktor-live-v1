@@ -240,8 +240,9 @@ $LEDS_8$ =
  user_clip loop_led
 
 $LOOP$ =
- SEL/CLIP LOOP :
- NONE
+ SEL/CLIP LOOP;
+ WAIT 5;
+ user_clip loop_led
 
 $LOOP_DOUBLE$ =
  SEL/CLIP LOOP *2;

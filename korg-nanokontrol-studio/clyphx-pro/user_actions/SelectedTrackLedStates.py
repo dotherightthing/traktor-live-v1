@@ -65,41 +65,15 @@ from ClyphX_Pro.clyphx_pro.UserActionsBase import UserActionsBase
 class SelectedTrackLedStates(UserActionsBase):
     # Your class must implement this method.
     def create_actions(self):
-        # called by X-Controls.txt
-        self.add_clip_action('action_if_live_onpress', self.action_if_live_onpress)
-        self.add_clip_action('action_if_live_onrelease', self.action_if_live_onrelease)
-
         # called by G-Controls.txt
         self.add_clip_action('deck_leds', self.deck_leds)
 
-        # called by action_if_live_onrelease
-        self.add_clip_action('loop_led_clip', self.loop_led)
-
-        # called by on_selected_track_changed()
-        self.add_track_action('loop_led', self.loop_led)
-
+        # called by Macros.txt
+        self.add_clip_action('loop_led', self.loop_led)
 
     # def on_selected_track_changed(self):
     #     empty_dict = {}
     #     self.my_action(empty_dict, 'my_str')
-
-    def action_if_live_onpress(self, action_def, args):
-        # the current Live set object
-        # see also https://docs.cycling74.com/max8/vignettes/live_object_model
-        live_set = self.song()
-        song_view = live_set.view
-        selected_track = song_view.selected_track
-        selected_track_name = selected_track.name
-        action_list = args
-
-        # tracks 1-4 are Traktor
-        # tracks 5-8 are Live
-        if (selected_track_name != '1') and (selected_track_name != '4'):
-            self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
-
-    def action_if_live_onrelease(self, action_def, args):
-        action_list = 'wait 1 ; user_clip loop_led_clip MIDI %MIDI_CC_LOOP%'
-        self.canonical_parent.clyphx_pro_component.trigger_action_list(action_list)
 
     # when a track is selected
     # highlight the loop ('set') button LED

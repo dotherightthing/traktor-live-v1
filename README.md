@@ -189,6 +189,8 @@ This controls MIDI sync, allowing Live's clock to sync to Traktor's clock.
   * Remote: Off
 * Output: None
 
+Takeover Mode: Value Scaling
+
 Note: `MIDI Clock Sync Delay` was initially set using Traktor's internal mixer, with *Cue out* used to sync Traktor and Live's metronomes. Live now functions as the external mixer and syncing does not appear to be an issue anymore.
 
 #### UI (top left)

@@ -16,20 +16,14 @@ PresetSwitchIgnore=0
 Active=1
 Comments=
 Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 var="ga" Type="SetVar"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
-Name=CC 1 46-49 = Focus Traktor
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 var="ga" Type="SetVar"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Name=Track SELECTs = Focus Traktor/Live
 Name0=Focus Traktor
+Name1=Focus Live
 Options0=Actv01Stop00OutO01StMa00000002if(ga<46)noexecuteif(ga>49)noexecute
+Options1=Actv01Stop00OutO01StMa00000002if(ga<50)noexecuteif(ga>53)noexecute
 Outgoing0=AcApA000BTraktor.app
-PresetSwitchIgnore=0
-
-[Preset.2]
-Active=1
-Comments=
-Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 var="ga" Type="SetVar"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
-Name=CC 1 50-53 = Focus Live
-Name0=Focus Traktor
-Options0=Actv01Stop00OutO01StMa00000002if(ga<50)noexecuteif(ga>53)noexecute
-Outgoing0=AcApA001CAbleton Live 10 Standard.app
+Outgoing1=AcApA001CAbleton Live 10 Standard.app
 PresetSwitchIgnore=0
 
 [Project]
@@ -40,6 +34,6 @@ Version=2
 
 [Signatures]
 SigName-1=[Midi Translator Pro Internal]
-Signature-1=lgMsr6+W+H6EBtsixl0BQS/pqGttAgxwlvqbC9mwnO/yQUX1v+0gELjKvxYmjDR/U/qyByAGbzKhp7Da83GIwdLDqyDlqPjPRRtAtQ3j6Rxjk+V817Jc0XhqGdStvlvGJPLNWL6L9ZNDhExjnQJ11O0IcVWH5TV2UBZWTB7ppBY=
+Signature-1=tdm4LR+QQZKON2GAu9Othm2oJXg+DzyG3zdqjP8s5My9zZbF0e5ro+pd3U5qRj0XiUR/9lzd9oyCg61yW9Fg4pPpxcGMvS1NtGUDvm5MMKqVlip0du20gWG+37BpHkC7LNnv2F2emp2880Df81c833InPKNJpPQ1Lza2NbGzwMc=
 SignedBy-1=Dan Smith
 

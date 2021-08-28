@@ -10,20 +10,17 @@ Incoming: On timer "init"
 Outgoing: (none)
 
 _____________________________________________________________
-[x] Preset 1: CC 1 46-49 = Focus Traktor
+[x] Preset 1: Track SELECTs = Focus Traktor/Live
 
 [x] Translator 1.0: Focus Traktor
-Incoming: Control Change on ch. 1 with CC#:46 (0x2E) set 'ga' to CC# with any value
+Incoming: Control Change on ch. 1 with any CC# set 'ga' to CC# with any value
 Rules:
   if ga<46 then exit rules, skip Outgoing Action
   if ga>49 then exit rules, skip Outgoing Action
 Outgoing: Activating app: "Traktor.app"
 
-_____________________________________________________________
-[x] Preset 2: CC 1 50-53 = Focus Live
-
-[x] Translator 2.0: Focus Traktor
-Incoming: Control Change on ch. 1 with CC#:46 (0x2E) and any value
+[x] Translator 1.1: Focus Live
+Incoming: Control Change on ch. 1 with any CC# set 'ga' to CC# with any value
 Rules:
   if ga<50 then exit rules, skip Outgoing Action
   if ga>53 then exit rules, skip Outgoing Action

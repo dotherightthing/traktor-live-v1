@@ -4,4 +4,6 @@ ableton-live/traktor-live Project/Ableton Project Info/Project8_1.cfg
 ableton-live/traktor-live Project/Icon?
 ableton-live/traktor-live Project/Backup
 ableton-live/traktor-live Project/Samples
+ableton-live/traktor-live Project/*.als
+!ableton-live/traktor-live Project/traktor-live.als
 !*.code-workspace

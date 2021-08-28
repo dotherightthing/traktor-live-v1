@@ -327,6 +327,17 @@ Controller config:
 
 * N/A
 
+#### Bome MIDI Translator Pro
+
+Open Bome MTP so it is running in the background.
+
+Bome MPT will process MIDI messages before they reach Traktor or Live.
+
+Bome functions:
+
+1. Track 1-4 SELECT: Focus Traktor
+2. Track 5-8 SELECT: Focus Live
+
 ---
 
 ## Files

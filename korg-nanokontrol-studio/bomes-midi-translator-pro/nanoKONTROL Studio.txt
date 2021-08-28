@@ -1,0 +1,31 @@
+Project: nanoKONTROL Studio
+ Comments: Dan Smith / Panoramica
+ Project MIDI IN ports:   nanoKONTROL Studio CTRL
+ Project MIDI OUT ports:  nanoKONTROL Studio CTRL
+_____________________________________________________________
+[ ] Preset 0: init
+
+[ ] Translator 0.0: Init Global Vars
+Incoming: On timer "init"
+Outgoing: (none)
+
+_____________________________________________________________
+[x] Preset 1: CC 1 46-49 = Focus Traktor
+
+[x] Translator 1.0: Focus Traktor
+Incoming: Control Change on ch. 1 with CC#:46 (0x2E) set 'ga' to CC# with any value
+Rules:
+  if ga<46 then exit rules, skip Outgoing Action
+  if ga>49 then exit rules, skip Outgoing Action
+Outgoing: Activating app: "Traktor.app"
+
+_____________________________________________________________
+[x] Preset 2: CC 1 50-53 = Focus Live
+
+[x] Translator 2.0: Focus Traktor
+Incoming: Control Change on ch. 1 with CC#:46 (0x2E) and any value
+Rules:
+  if ga<50 then exit rules, skip Outgoing Action
+  if ga>53 then exit rules, skip Outgoing Action
+Outgoing: Activating app: "Ableton Live 10 Standard.app"
+

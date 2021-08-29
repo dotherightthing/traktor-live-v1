@@ -1,0 +1,29 @@
+{
+  "name": "traktor-template-nk",
+  "version": "2.3.0",
+  "description": "Traktor template for KORG nanoKONTROL + nanoKEY Studio.",
+  "main": "README.md",
+  "scripts": {
+    "start": "./start.sh >/dev/null",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotherightthing/traktor-template-nk.git"
+  },
+  "keywords": [
+    "midi-controller",
+    "djing"
+  ],
+  "person": {
+    "name": "Dan Smith",
+    "email": "dev@dotherightthing.co.nz",
+    "url": "http://dotherightthing.co.nz"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dotherightthing/traktor-template-nk/issues"
+  },
+  "homepage": "https://github.com/dotherightthing/traktor-template-nk#readme",
+  "private": true
+}

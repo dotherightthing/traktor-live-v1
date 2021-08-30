@@ -1,0 +1,71 @@
+Project: nanoKONTROL Studio
+ Comments: Dan Smith / Panoramica
+ Project MIDI IN ports:   nanoKONTROL Studio CTRL
+ Project MIDI OUT ports:  Bome MIDI Translator 1 Virtual Out
+_____________________________________________________________
+[ ] Preset 0: init
+
+[ ] Translator 0.0: Init Global Vars
+Incoming: On timer "init"
+Outgoing: (none)
+
+_____________________________________________________________
+[x] Preset 1: Track SELECTs = Focus Traktor/Live
+
+[x] Translator 1.0: Focus Traktor
+Incoming: Control Change on ch. 1 with any CC# set 'ga' to CC# with any value
+Rules:
+  if ga<46 then exit rules, skip Outgoing Action
+  if ga>49 then exit rules, skip Outgoing Action
+Outgoing: Activating app: "Traktor.app"
+
+[x] Translator 1.1: Focus Live
+Incoming: Control Change on ch. 1 with any CC# set 'ga' to CC# with any value
+Rules:
+  if ga<50 then exit rules, skip Outgoing Action
+  if ga>53 then exit rules, skip Outgoing Action
+Outgoing: Activating app: "Ableton Live 10 Standard.app"
+
+_____________________________________________________________
+[x] Preset 2: Track GAIN = XFADE A OFF B
+
+[x] Translator 2.0: Split CC 1 N into CC 1/2/3 N
+Options: swallow
+Incoming: Control Change on ch. 1 with any CC# set 'qq' to CC# with any value and 'oo' to value
+Rules:
+  // Start
+  //
+  // The 8 track encoders are CC 1 13->20
+  //
+  if qq<13 then exit rules, skip Outgoing Action
+  if qq<=20 then Goto "FilterValue"
+  if qq>20 then exit rules, skip Outgoing Action
+  //
+  // Split the CC range of 0-127 into three distinct 'states'
+  //
+  Label "FilterValue"
+  if oo<=42 then Goto "Left"
+  if oo<=84 then Goto "Center"
+  if oo<=127 then Goto "Right"
+  //
+  // Left sends the incoming CC out on channel 2
+  //
+  Label "Left"
+  pp=1
+  exit rules, execute Outgoing Action
+  //
+  // Center sends the incoming CC out on channel 3
+  //
+  Label "Center"
+  pp=2
+  exit rules, execute Outgoing Action
+  //
+  // Right sends the incoming CC out on channel 4
+  //
+  Label "Right"
+  pp=3
+  exit rules, execute Outgoing Action
+  //
+  // End
+Outgoing: Control Change on ch.'pp' with CC#:qq and value:127 (0x7F)
+

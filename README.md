@@ -329,11 +329,20 @@ Controller config:
 
 #### Bome MIDI Translator Pro
 
-Open Bome MTP so it is running in the background.
+Bome MIDI Translator Pro is used to filter MIDI messages from controllers before they reach Live.
 
-Bome MPT will process MIDI messages before they reach Traktor or Live.
+Note: Bome needs to be running in the background.
 
-Bome functions:
+Live setup:
+
+* Control Surface: ClyphX Pro XTC
+* Input: Bome MIDI Translator 1
+  * Track: Off
+  * Sync: Off
+  * Remote: Off
+* Output: None
+
+Additional Bome functions:
 
 1. Track 1-4 SELECT: Focus Traktor
 2. Track 5-8 SELECT: Focus Live

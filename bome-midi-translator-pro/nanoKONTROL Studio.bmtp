@@ -1,0 +1,49 @@
+; ------- Bome MIDI Translator: signed project file
+; ------- You can modify this file as you like, but that will invalidate the
+; ------- signature so that it cannot be opened in the BomeBox or MT Player anymore.
+;
+[Preset.0]
+Active=0
+Comments=
+Incoming0=Tim0TimT0004init
+Name=init
+Name0=Init Global Vars
+Options0=Actv00Stop00OutO00
+Outgoing0=None
+PresetSwitchIgnore=0
+
+[Preset.1]
+Active=1
+Comments=
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 var="ga" Type="SetVar"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 var="ga" Type="SetVar"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Name=Track SELECTs = Focus Traktor/Live
+Name0=Focus Traktor
+Name1=Focus Live
+Options0=Actv01Stop00OutO01StMa00000002if(ga<46)noexecuteif(ga>49)noexecute
+Options1=Actv01Stop00OutO01StMa00000002if(ga<50)noexecuteif(ga>53)noexecute
+Outgoing0=AcApA000BTraktor.app
+Outgoing1=AcApA001CAbleton Live 10 Standard.app
+PresetSwitchIgnore=0
+
+[Preset.2]
+Active=1
+Comments=
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 var="qq" Type="SetVar"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Name=Track GAIN = XFADE A OFF B
+Name0=Split CC 1 N into CC 1/2/3 N
+Options0=Actv01Stop00OutO00StMa00000022label000E__cmt>// Startlabel0008__cmt>//label002D__cmt>// The 8 track encoders are CC 1 13->20label0008__cmt>//if(qq<13)noexecuteif(qq<=20)goto000BFilterValueif(qq>20)noexecutelabel0008__cmt>//label0041__cmt>// Split the CC range of 0-127 into three distinct 'states'label0008__cmt>//label000BFilterValueif(oo<=42)goto0004Leftif(oo<=84)goto0006Centerif(oo<=127)goto0005Rightlabel0008__cmt>//label0034__cmt>// Left sends the incoming CC out on channel 2label0008__cmt>//label0004Leftpp=1executelabel0008__cmt>//label0036__cmt>// Center sends the incoming CC out on channel 3label0008__cmt>//label0006Centerpp=2executelabel0008__cmt>//label0035__cmt>// Right sends the incoming CC out on channel 4label0008__cmt>//label0005Rightpp=3executelabel0008__cmt>//label000C__cmt>// End
+Outgoing0=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange"><Channel var="pp"/><Value1 var="qq"/><Value2 num="0x7F"/></Simple></Outgoing>
+PresetSwitchIgnore=0
+
+[Project]
+Comments=Dan Smith / Panoramica
+DefaultInPorts=MIDA00010017nanoKONTROL Studio CTRL
+DefaultOutPorts=MIDA00010022Bome MIDI Translator 1 Virtual Out
+Version=2
+
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=aC8frHIgxwB5E6UUrrCOzNFVxFQapDvqR60jDSt7ayTSdTz6+BxxTeYfk4zFaRjZka0HWpv7MA3Tx0ZsOJ1+tRo4p5rTCMA3hFFkx0fxop4jq2n9z/wKTruVPyuDTA0GWZ0kPPNZTUgto/hVCIslCDQb+H9gG79ZdHXLowLq+qo=
+SignedBy-1=Dan Smith
+

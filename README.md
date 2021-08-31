@@ -132,7 +132,7 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
 ##### UI (top left)
 
-1. Click Ext so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - if you have BetterTouchTool installed this will happen automatically
+1. Click `Ext` so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - if you have BetterTouchTool installed this will happen automatically
 2. Global launch quantisation: None (punching in exactly when you want seems most reliable)
 
 ---

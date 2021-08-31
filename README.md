@@ -163,7 +163,7 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
     * Source: `clyphx-pro/ClyphX_Pro/Variables.txt`
     * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt`
 
-##### Ableton Live setup
+##### Ableton Live MIDI setup
 
 <img src="ableton-live/screenshots/midi.png" alt="Screenshot of Ableton Live's MIDI configuration" width="500">
 
@@ -253,7 +253,7 @@ The following files cannot be symlinked and need to be manually copied over the 
   * Sync: Off
   * Remote: On
 
-##### Controller config
+##### Controller configuration
 
 Configuration files for the control surface editor.
 
@@ -295,7 +295,7 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
   * Sync: Off
   * Remote: On
 
-##### Controller config
+##### Controller configuration
 
 Configuration files for the control surface editor.
 

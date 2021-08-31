@@ -1,6 +1,6 @@
-# NK Traktor Pro Ableton Live
+# NK Traktor Live
 
-[![GitHub release](https://img.shields.io/github/v/tag/dotherightthing/traktor-template-nk)](https://github.com/dotherightthing/traktor-template-nk/releases) [![GitHub issues](https://img.shields.io/github/issues/dotherightthing/traktor-template-nk.svg)](https://github.com/dotherightthing/traktor-template-nk/issues)
+[![GitHub release](https://img.shields.io/github/v/tag/dotherightthing/nk-traktor-live)](https://github.com/dotherightthing/nk-traktor-live/releases) [![GitHub issues](https://img.shields.io/github/issues/dotherightthing/nk-traktor-live.svg)](https://github.com/dotherightthing/nk-traktor-live/issues)
 
 Traktor Pro mix template for the KORG nanoKEY/nanoKONTROL Studio MIDI controllers.
 
@@ -121,8 +121,8 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 <img src="ableton-live/screenshots/output-config.png" alt="Screenshot of Ableton Live's Output Config window" width="500">
 
 1. Driver Type: CoreAudio
-2. Audio Input Device: NK Traktor Pro Ableton Live (6 In, 6 Out)
-3. Audio Output Device: NK Traktor Pro Ableton Live (6 In, 6 Out)
+2. Audio Input Device: NK Traktor Live (6 In, 6 Out)
+3. Audio Output Device: NK Traktor Live (6 In, 6 Out)
 4. Channel Configuration
    1. Input Config:
       * 3/4: "Traktor Pro Deck A"
@@ -246,10 +246,10 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 The following files cannot be symlinked and need to be manually copied over the top:
 
 1. `SelectedTrackLedStates.py`
-    * Source: `traktor-template-nk/clyphx-pro/user_actions/SelectedTrackLedStates.py`
+    * Source: `nk-traktor-live/clyphx-pro/user_actions/SelectedTrackLedStates.py`
     * Target: `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py`
 1. `SelectTraktor ProDeck.py`
-    * Source: `traktor-template-nk/clyphx-pro/user_actions/SelectTraktor ProDeck.py`
+    * Source: `nk-traktor-live/clyphx-pro/user_actions/SelectTraktor ProDeck.py`
     * Target: `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktor ProDeck.py`
 
 ##### Ableton Live MIDI setup
@@ -271,8 +271,8 @@ Configuration files for the control surface editor.
 Double-click to open the set files, then select Communication > Write Scene Data.
 
 * Editor: KORG KONTROL Editor
-* Set: `korg-kontrol-editor/traktor-template-nk.nktrl_st_data`
-* Data: `korg-kontrol-editor/traktor-template-nk.nktrl_st_data`
+* Set: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
+* Data: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
 
 ##### Visual mapping
 
@@ -313,8 +313,8 @@ Configuration files for the control surface editor.
 Double-click to open the set files, then select Communication > Write Scene Data.
 
 * Editor: KORG KONTROL Editor
-* Set: `korg-kontrol-editor/traktor-template-nk.nanokey_st_set`
-* Data: `korg-kontrol-editor/traktor-template-nk.nanokey_st_data`
+* Set: `korg-kontrol-editor/nk-traktor-live.nanokey_st_set`
+* Data: `korg-kontrol-editor/nk-traktor-live.nanokey_st_data`
 
 ##### Visual mapping
 

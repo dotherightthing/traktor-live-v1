@@ -1,5 +1,5 @@
 {
-  "name": "traktor-template-nk",
+  "name": "nk-traktor-live",
   "version": "2.3.0",
   "description": "Traktor template for KORG nanoKONTROL + nanoKEY Studio.",
   "main": "README.md",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dotherightthing/traktor-template-nk.git"
+    "url": "git+https://github.com/dotherightthing/nk-traktor-live.git"
   },
   "keywords": [
     "midi-controller",
@@ -21,8 +21,8 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dotherightthing/traktor-template-nk/issues"
+    "url": "https://github.com/dotherightthing/nk-traktor-live/issues"
   },
-  "homepage": "https://github.com/dotherightthing/traktor-template-nk#readme",
+  "homepage": "https://github.com/dotherightthing/nk-traktor-live#readme",
   "private": true
 }

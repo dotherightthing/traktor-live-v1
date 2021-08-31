@@ -1,7 +1,7 @@
 {
   "BTTPresetCreatorNotes" : "",
   "BTTPresetInfoURL" : "",
-  "BTTPresetName" : "traktor-template-nk",
+  "BTTPresetName" : "nk-traktor-live",
   "BTTPresetColor" : "0.000000, 220.000002, 0.000000, 255.000000",
   "BTTGeneralSettings" : {
     "BTTPathSampleSize" : 100,
@@ -44,7 +44,7 @@
     "BTTTpFourFingerSwipeSensitivity" : 0.40000000000000002,
     "BSTMoveTreshold" : 2,
     "BTTHideFomControlStripWhenOpen" : false,
-    "BTTNumberOfStarts" : 3001,
+    "BTTNumberOfStarts" : 3002,
     "BTTForceNormalClickPressure3F" : 150,
     "showSiriRemoteTab" : true,
     "SIRIScrollSpeed" : 1,
@@ -147,7 +147,7 @@
     "showOtherTriggersTab" : true,
     "BSTSnapAreaDefaultPictoDistanceFromLeft" : 0.10000000149011612
   },
-  "BTTPresetUUID" : "6B34E9F6-5488-4642-A29E-CD558029DDE2",
+  "BTTPresetUUID" : "E5BA83F4-11B7-4A0D-B54A-44DFB3C9948F",
   "BTTPresetContent" : [
     {
       "BTTAppBundleIdentifier" : "BT.G",

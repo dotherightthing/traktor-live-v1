@@ -135,17 +135,6 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 1. Click Ext so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - if you have BetterTouchTool installed this will happen automatically
 2. Global launch quantisation: None (punching in exactly when you want seems most reliable)
 
-#### Record from Traktor Pro to Ableton Live
-
-ClyphX Pro is used to reduce the number of button presses required to produce usable loops.
-
-Current workflow:
-
-1. Press `Select` on Channel `1` or `4` (this sets the recording source to Traktor Pro's Deck `A` or `B`)
-2. Press `Select` on Channel `5`, `6`, `7`, `8` (this sets the target Ableton Live channel for sampling)
-3. Press the `Record` button to start recording immediately
-4. 4 bars of audio will be recorded
-
 ---
 
 ### 5. Controller Mapping
@@ -381,7 +370,16 @@ Alternatively BTT can be configured to launch actions from MIDI messages.
 
 #### FAQs
 
-1. Why can't I hear recording clips in Ableton Live? - Press the sync button to sync playback with Traktor Pro.
+##### How do I use the sampler?
+
+1. Press `Select` on Channel `1` or `4` (this sets the recording source to Traktor Pro's Deck `A` or `B`)
+2. Press `Select` on Channel `5`, `6`, `7`, `8` (this sets the target Ableton Live channel for sampling)
+3. Press the `Record` button to start recording immediately
+4. 4 bars of audio will be recorded
+
+##### Why can't I hear recording clips in Ableton Live?
+
+Press the sync button to sync playback with Traktor Pro.
 
 #### References
 

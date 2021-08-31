@@ -14,6 +14,18 @@
 		"files.associations": {
 			"*.txt": "powershell"
 		},
-		"editor.wordWrap": "on"
+		"editor.wordWrap": "on",
+		"markdownlint.config": {
+			"MD013": false,
+			"no-inline-html": {
+				"allowed_elements": [
+					"img"
+				]
+			},
+			"MD024": false,
+			"no-duplicate-heading": {
+				"siblings_only": true
+			}
+		}
 	}
 }

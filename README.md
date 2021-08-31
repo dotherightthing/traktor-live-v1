@@ -1,28 +1,28 @@
-# traktor-template-nk
+# NK Traktor Pro Ableton Live
 
 [![GitHub release](https://img.shields.io/github/v/tag/dotherightthing/traktor-template-nk)](https://github.com/dotherightthing/traktor-template-nk/releases) [![GitHub issues](https://img.shields.io/github/issues/dotherightthing/traktor-template-nk.svg)](https://github.com/dotherightthing/traktor-template-nk/issues)
 
-Traktor template for KORG nanoKONTROL + nanoKEY Studio.
+Traktor Pro mix template for the KORG nanoKEY/nanoKONTROL Studio MIDI controllers.
 
-Includes Live starter file with Traktor mixer and 4 channel Live sampler.
+Includes Ableton Live starter file with mixer and 4 channel sampler.
 
-This is a private project, documented here for my own benefit and shared in case any part proves useful.
+I've documented this for my own benefit, but please help yourself to any part you find useful.
 
 ---
 
 ## Purpose
 
-The purpose of this setup is to replace Traktor’s Loop Recorder and Remix Decks with Ableton Live.
+The purpose of this setup is to replace Traktor Pro’s Remix Decks and Loop Recorder with Ableton Live.
 
-### Replace Traktor’s Remix Decks
+### Replace Traktor Pro’s Remix Decks
 
-Traktor’s Remix Decks mostly work fine when resampling directly from a deck.
+Traktor Pro’s Remix Decks mostly work fine when resampling directly from a deck.
 
 However when keylock pitching is used, the recorded pitch often does not match the source deck.
 
-### Replace Traktor’s Loop Recorder
+### Replace Traktor Pro’s Loop Recorder
 
-To capture global FX like reverb and gating, Traktor’s Loop Recorder must be used.
+To capture global FX like reverb and gating, Traktor Pro’s Loop Recorder must be used.
 
 The Loop Recorder is problematic because it records loops slightly too long. Samples glitch on repeat and drift out of time with the source material.
 
@@ -39,203 +39,110 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
     * [Native Instruments Traktor Pro 3](https://www.native-instruments.com/en/products/traktor/dj-software/traktor-pro-3/) (v3.4.2)
 4. **[Mixer and Sampler](#4-mixer-and-sampler):**
     * [Ableton Live](https://www.ableton.com/en/live/) (v10) + ClyphX Pro (v1.2.0)
+    * [A1TriggerGate](https://a1audio.alexhilton.net/a1triggergate) (v1.4)
 5. **[Controller Mapping](#5-controller-mapping):**
     * [KORG nanoKONTROL Studio](https://www.korg.com/us/products/computergear/nanokontrol_studio/) (v1.05)
     * [KORG nanoKEY Studio](https://www.korg.com/us/products/computergear/nanokey_studio/) (v1.08)
     * [KORG KONTROL Editor](https://www.korg.com/us/support/download/software/1/133/1355/)
-    * [Native Instruments Traktor Controller Manager](https://support.native-instruments.com/hc/en-us/articles/209590569-How-to-Use-the-Controller-Manager-in-TRAKTOR) (part of Traktor Pro 3)
+    * [Native Instruments Traktor Pro Controller Manager](https://support.native-instruments.com/hc/en-us/articles/209590569-How-to-Use-the-Controller-Manager-in-TRAKTOR) (part of Traktor Pro 3)
     * [Isotonik Studios ClyphX Pro](https://isotonikstudios.com/product/clyphx-pro/) (v1.2.0) (running in Ableton Live 10)
     * [Bome Midi Translator Pro](https://www.bome.com/products/miditranslator) (v1.9.0)
 6. **[Mix Recorder](#6-mix-recorder):**
     * [Rogue Amoeba Audio Hijack](https://rogueamoeba.com/audiohijack/) (v3)
-7. **[Launch script](#7-launch-script):**
+7. **[Launch Script](#7-launch-script):**
     * [BetterTouchTool](https://folivora.ai/) (v3.570)
-8. **[Configuration Files](#8-configuration-files)**
-9. **[FAQs](#9-faqs)**
+8. **[Further Reading](#8-further-reading)**
+
+---
 
 ### 1. Physical Sound Card
 
-This setup is for the internal sound card on my Macbook Pro. I also own a Native Instruments Z1 which contains its own sound card, providing a separate stereo pair for monitoring.
+#### MacBook Pro
+
+This setup is for the internal sound card on my Macbook Pro.
+
+As my Native Instruments Z1 is in storage, the output goes directly to headphones and there is no separate output for cueing.
+
+---
 
 ### 2. Virtual Sound Card
 
-Loopback allows additional stereo pairs to be added to an existing sound card. These pairs can then be used for internal routing via input and output settings in Traktor and Live.
+#### Loopback
+
+Loopback allows additional stereo pairs to be added to an existing sound card. These pairs can then be used for internal routing via input and output settings in Traktor Pro and Ableton Live.
 
 Some web tutorials use Jack Audio instead. I prefer Loopback’s routing UI.
 
-![Screenshot of Loopback configuration](/loopback/loopback-config.png)
+##### Project file
 
-#### Devices
+1. Make sure Loopback is installed but not running
+2. Finder > Go > Go to Folder > `~/Library/Application Support/Loopback/`
+3. Replace `~/Library/Application Support/Loopback/Devices.plist` with the project file `loopback/Devices.plist`
+4. Launch Loopback to load the device
 
-1. Click *+ New Virtual Device*
-2. Click the pencil icon next to the title
-3. Rename to *Loopback - Mac SC + Traktor + Live*
-
-#### Sources
-
-1. Click *+*
-2. Select *Pass-Thru*
-3. By default this has 2 channels: (1+2 / L+R). To add additional channels, use *Output Channels*.
-
-#### Output Channels
-
-In order to be able to choose which Traktor deck to sample from, both decks must be routed to an external mixer.
-
-This effectively means that Live becomes both the mixer (at least for deck volume control) and the sampler. This also means that recording mixes has to be done in Live, which is preferable anyway as retains the multitrack separation.
-
-1. The Pass-Thru source adds 2 channels by default (1+2 / L+R)
-2. Click `+` 2 times
-3. 2 stereo channels are added (3+4, 5+6)
-
-These channels will be used as follows:
-
-1. 1+2: Live Out (to soundcard out)
-2. 3+4: Traktor Deck A Out (to Live In)
-3. 5+6: Traktor Deck B Out (to Live In)
-
-#### Monitors
-
-1. External Headphones, sourced from Output Channels 1+1
+In order to be able to choose which Traktor Pro deck to sample from, both decks are routed to Ableton Live.
 
 ---
 
 ### 3. DJ Application and MIDI Clock
 
-#### Audio Setup
+#### Traktor Pro
 
-1. Audio Device: Loopback - Mac SC + Traktor + Live
-2. Sample Rate: 44100 Hz
-3. Buffer Size: 128
+Various `.tsi` templates map the control surfaces and supporting software to Traktor Pro's interface / API.
 
-#### Output Routing
+##### Project file
 
-If the expected output pairs aren’t visible, restart Traktor.
+1. Preferences > Import > `traktor-pro/nk-traktor-live.tsi`
 
-1. Mixing Mode: External
-2. Output Deck A: 3+4 from Loopback - Mac SC + Traktor + Live
-3. Output Deck B: 5+6 from Loopback - Mac SC + Traktor + Live
-4. Output Deck C: not connected
-5. Output Deck D: not connected
-6. Output Preview: not connected
-7. Output FX Return: not connected
+##### Top of mixer section
 
-#### Input Routing
-
-If the expected input pairs aren’t visible, restart Traktor.
-
-1. Input Deck A: not connected
-2. Input Deck B: not connected
-3. Input Deck C: not connected
-4. Input Deck D: not connected
-5. Input FX Send (Ext): not connected
-
-#### External Sync
-
-1. External Clock Source: EXT
-2. MIDI Clock Settings: Enable MIDI Clock
-
-#### Loading
-
-1. Resetting Controls: uncheck both as one or other can disrupt Sync slave (TODO add reference)
-
-#### Decks Layout
-
-Deck Flavour: 2 Decks
-
-1. A: Track Deck / Advanced
-2. B: Track Deck / Advanced
-
-#### Global Section (top of UI)
-
-1. Offset: 0 Ms
-2. Sync icon: On
-3. Sync: push at first beat of bar to align Live’s 1.1.1 with Traktor’s beat grid (creates gap in audio)
-4. Snap: On
-5. Quant: On
-
-#### Controller Manager
-
-From tutorial: [How to Sync Ableton Live and Traktor - The Right Way | DJ Endo](https://www.youtube.com/watch?v=4xzldehIsCE)
-
-##### Device Setup
-
-1. Add: Generic MIDI
-2. Edit Comment: CLOCK
-3. Out-Port: Traktor Virtual Output
-
-Then review other devices and make sure none are using an Out-Port of Traktor Virtual Output, or All.
-
-#### Active Deck (to sample from)
-
-* Press MASTER so that the Master Clock Tempo in the Global Section matches the active deck’s BPM. This is what Live will sync to.
-* Push Sync in Global Section to set the start of the bar.
-* Select Sync on the other deck only, to ensure that new material matches the BPM.
+* Offset: `0 Ms`
 
 ---
 
 ### 4. Mixer and Sampler
 
-#### Audio
+#### Ableton Live
 
-##### Audio Device
+##### Project file
+
+1. `ableton-live/traktor-live Project/traktor-live.als`
+
+Contains a 4 channel mixer and a 4 channel sampler.
+
+Automatically loaded by BetterTouchTool, otherwise double-click to load.
+
+##### Audio
+
+<img src="ableton-live/screenshots/audio-device.png" alt="Screenshot of Ableton Live's Audio Device window" width="500">
+
+<img src="ableton-live/screenshots/input-config.png" alt="Screenshot of Ableton Live's Input Config window" width="500">
+
+<img src="ableton-live/screenshots/output-config.png" alt="Screenshot of Ableton Live's Output Config window" width="500">
 
 1. Driver Type: CoreAudio
-2. Audio Input Device: Loopback - Mac SC + Traktor + Live (6 In, 6 Out)
-3. Audio Output Device: Loopback - Mac SC + Traktor + Live (6 In, 6 Out)
+2. Audio Input Device: NK Traktor Pro Ableton Live (6 In, 6 Out)
+3. Audio Output Device: NK Traktor Pro Ableton Live (6 In, 6 Out)
 4. Channel Configuration
    1. Input Config:
-      * 3/4: "Traktor Deck A"
-      * 5/6: "Traktor Deck B"
+      * 3/4: "Traktor Pro Deck A"
+      * 5/6: "Traktor Pro Deck B"
    2. Output Config:
-      * 1/2: "Live Out"
+      * 1/2: "Ableton Live Out"
 
-#### Link / MIDI
+##### UI (top left)
 
-##### MIDI
+1. Click Ext so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - if you have BetterTouchTool installed this will happen automatically
+2. Global launch quantisation: None (punching in exactly when you want seems most reliable)
 
-This controls MIDI sync, allowing Live's clock to sync to Traktor's clock.
-
-* Control Surface: None
-* Input: Traktor Virtual Output
-  * Track: Off
-  * Sync: On
-  * Remote: Off
-* Output: None
-
-Takeover Mode: Value Scaling
-
-Note: `MIDI Clock Sync Delay` was initially set using Traktor's internal mixer, with *Cue out* used to sync Traktor and Live's metronomes. Live now functions as the external mixer and syncing does not appear to be an issue anymore.
-
-#### UI (top left)
-
-##### Ext
-
-1. Click Ext so that it lights up - Live will now follow the Sync source (Traktor Virtual Output) - if you have BetterTouchTool installed this will happen automatically
-2. Global launch quantisation: None (Punching in exactly when you want seems most reliable)
-
-#### Tracks
-
-![Screenshot of Loopback configuration](/ableton-live/live-config.png)
-
-##### Table
-
-| Channel      | 1                           | 1FX      | 4FX      | 4                           | 5      | 6      | 7      | 8      | Master       |
-|--------------|-----------------------------|----------|----------|-----------------------------|--------|--------|--------|--------|--------------|
-| Audio From   | Ext. In: 3/4 Traktor Deck A | No Input | No Input | Ext. In: 5/6 Traktor Deck B | 1 FX   | 1 FX   | 1 FX   | 1 FX   | -            |
-| Monitor      | In                          | In       | In       | In                          | Off    | Off    | Off    | Off    | -            |
-| Audio To     | 1FX                         | Master   | Master   | 4FX                         | Master | Master | Master | Master | 1/2 Live Out |
-| XFade assign | A                           | -        | -        | B                           | -      | -      | -      | -      | -            |
-
-#### Record from Traktor to Live
+#### Record from Traktor Pro to Ableton Live
 
 ClyphX Pro is used to reduce the number of button presses required to produce usable loops.
 
-I was initially inspired by this tutorial: [Live Looping Setup - Hands Free! Ableton and ClyphX-Pro](https://www.youtube.com/watch?v=Yn_ExkefmCQ)
-
 Current workflow:
 
-1. Press `Select` on Channel `1` or `4` (this sets the recording source to Traktor's Deck `A` or `B`)
-2. Press `Select` on Channel `5`, `6`, `7`, `8` (this sets the target Live channel for sampling)
+1. Press `Select` on Channel `1` or `4` (this sets the recording source to Traktor Pro's Deck `A` or `B`)
+2. Press `Select` on Channel `5`, `6`, `7`, `8` (this sets the target Ableton Live channel for sampling)
 3. Press the `Record` button to start recording immediately
 4. 4 bars of audio will be recorded
 
@@ -245,90 +152,151 @@ Current workflow:
 
 #### ClyphX Pro
 
-ClyphX Pro is sometimes used to send messages to Traktor in action lists.
+The default ClyphX Pro 'controller' is primarily used to sync MIDI clock between Traktor Pro and Ableton Live.
 
-This allows controller-based track selection to be decoupled from Traktor deck selection when necessary.
+Additionally, ClyphX Pro is sometimes used to send scripted MIDI messages to Traktor Pro. When this is done, channel `16` is used to make it clear that Traktor Pro is being targetted.
 
-When this is done, channel `16` is used to make it clear that Traktor is being targetted.
+Note: `MIDI Clock Sync Delay` was initially set using Traktor Pro's internal mixer, with *Cue out* used to sync Traktor Pro and Ableton Live's metronomes. Ableton Live now functions as the external mixer and syncing does not appear to be an issue anymore.
 
-Traktor setup:
+##### ClyphX Pro configuration files
 
-* Device: `Traktor-ClyphX-Pro-v*1-0.tsi`
-* In-Port: Traktor Virtual Input
-* Out-Port: None
-* Device Target: Focus
+Configuration files for Stray's ClyphX Pro, which map MIDI controls to Ableton Live's interface and provide LED feedback.
 
-Manually map MIDI channel and CC in this template.
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
-Live setup:
+1. `Macros.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Macros.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt`
+2. `Preferences.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Preferences.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Preferences.txt`
+3. `Variables.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Variables.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt`
 
-* Control Surface: ClyphX Pro
-* Input: Traktor Virtual Output (this is for clock sync with Traktor, see 3. DJ Application and MIDI Clock)
-* Output: Traktor Virtual Input
+##### Ableton Live setup
 
-Controller config:
+<img src="ableton-live/screenshots/midi.png" alt="Screenshot of Ableton Live's MIDI configuration" width="500">
 
-* N/A
-
-#### Bome MIDI Translator Pro (XTA)
-
-Bome MIDI Translator Pro is used to filter MIDI messages from controllers before they reach Live.
-
-Note: Bome needs to be running in the background.
-
-Live setup:
-
-* Control Surface: ClyphX Pro XTA
-* Input: Bome MIDI Translator 1
+* Control Surface: `ClyphX Pro`
+* Input: `Traktor Pro Virtual Output`
+  * Track: Off
+  * Sync: On
+  * Remote: Off
+* Output: `Traktor Pro Virtual Input`
   * Track: Off
   * Sync: Off
   * Remote: Off
-* Output: None
+* Takeover Mode: Value Scaling
 
-Additional Bome functions:
+#### Bome MIDI Translator Pro (ClyphX Pro XTA)
 
-1. Track 1-4 SELECT: Focus Traktor
-2. Track 5-8 SELECT: Focus Live
+Bome MIDI Translator Pro is used to filter the MIDI messages sent by controllers, before they reach Ableton Live.
 
-#### KORG nanoKONTROL Studio (XTB)
+1. Channels 1-8: Split encoder value range across 3 channels
+2. Channels 1-4 `SELECT`: Focus Traktor Pro
+3. Channels 5-8 `SELECT`: Focus Ableton Live
 
-Traktor config:
+##### Project file
 
-* Device: Korg nanoKONTROL Studio (`korg-nanokontrol-studio-v*.tsi` file)
-* In-Port: nanoKONTROL Studio
-* Out-Port: nanoKONTROL Studio
-* Device Target: Focus
+1. `bome-midi-translator-pro/nanoKONTROL Studio.bmtp.`
 
-Live config:
+Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
-* Control Surface: ClyphX Pro XTB
-* Input: nanoKONTROL Studio
+##### ClyphX Pro configuration files
+
+Configuration files for Stray's ClyphX Pro, which map MIDI controls to Ableton Live's interface and provides LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
+
+1. `X-Controls.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/XTC/X-Controls.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTC/X-Controls.txt`
+
+##### Ableton Live MIDI setup
+
+* Control Surface: `ClyphX Pro XTA`
+* Input: `Bome MIDI Translator 1`
+  * Track: Off
+  * Sync: Off
+  * Remote: Off
+* Output: `None`
+
+#### KORG nanoKONTROL Studio (ClyphX Pro XTB)
+
+##### ClyphX Pro configuration files
+
+Configuration files for Stray's ClyphX Pro, which map MIDI controls to Ableton Live's interface and provides LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
+
+1. `Button Bindings.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/XTD/Button Bindings.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTD/Button Bindings.txt`
+2. `Encoder Bindings.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/XTD/Encoder Bindings.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTD/Encoder Bindings.txt`
+3. `G-Controls.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/XTD/G-Controls.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTD/G-Controls.txt`
+4. `X-Controls.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/XTD/X-Controls.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTD/X-Controls.txt`
+
+The following files cannot be symlinked and need to be manually copied over the top:
+
+1. `SelectedTrackLedStates.py`
+    * Source: `traktor-template-nk/clyphx-pro/user_actions/SelectedTrackLedStates.py`
+    * Target: `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py`
+1. `SelectTraktor ProDeck.py`
+    * Source: `traktor-template-nk/clyphx-pro/user_actions/SelectTraktor ProDeck.py`
+    * Target: `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktor ProDeck.py`
+
+##### Ableton Live MIDI setup
+
+* Control Surface: `ClyphX Pro XTB`
+* Input: `nanoKONTROL Studio`
   * Track: On
-  * Sync: On (TODO: is this necessary?)
+  * Sync: Off
   * Remote: On
-* Output: nanoKONTROL Studio
+* Output: `nanoKONTROL Studio`
   * Track: On
   * Sync: Off
   * Remote: On
 
-Controller config:
+##### Controller config
+
+Configuration files for the control surface editor.
+
+Double-click to open the set files, then select Communication > Write Scene Data.
 
 * Editor: KORG KONTROL Editor
-* Set: `traktor-template-nk.nktrl_st_data`
-* Data: `traktor-template-nk.nktrl_st_data`
+* Set: `korg-kontrol-editor/traktor-template-nk.nktrl_st_data`
+* Data: `korg-kontrol-editor/traktor-template-nk.nktrl_st_data`
 
-#### KORG nanoKEY Studio (XTC)
+##### Visual mapping
 
-Traktor config:
+SVG designs which can be printed and cut to create custom overlays for the hardware.
 
-* Device: Korg nanoKEY Studio (`korg-nanokey-studio-v*.tsi` file)
-* In-Port: nanoKEY Studio
-* Out-Port: nanoKEY Studio
-* Device Target: Focus
+These are based on the PDF manuals available from Korg: `nanoKONTROL_Studio_OM_E1.pdf`
 
-Live config:
+* `svg-overlays/...`
 
-* Control Surface: ClyphX Pro XTC
+#### KORG nanoKEY Studio (ClyphX Pro XTC)
+
+##### ClyphX Pro configuration files
+
+Configuration files for Stray's ClyphX Pro, which map MIDI controls to Ableton Live's interface and provides LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
+
+1. `Encoder Bindings.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/XTA/Encoder Bindings.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTA/Encoder Bindings.txt`
+
+##### Ableton Live config
+
+* Control Surface: `ClyphX Pro XTC`
 * Input: nanoKEY Studio
   * Track: On
   * Sync: Off
@@ -338,17 +306,31 @@ Live config:
   * Sync: Off
   * Remote: On
 
-Controller config:
+##### Controller config
+
+Configuration files for the control surface editor.
+
+Double-click to open the set files, then select Communication > Write Scene Data.
 
 * Editor: KORG KONTROL Editor
-* Set: `traktor-template-nk.nanokey_st_set`
-* Data: `traktor-template-nk.nanokey_st_data`
+* Set: `korg-kontrol-editor/traktor-template-nk.nanokey_st_set`
+* Data: `korg-kontrol-editor/traktor-template-nk.nanokey_st_data`
 
---
+##### Visual mapping
+
+SVG designs which can be printed and cut to create custom overlays for the hardware.
+
+These are based on the PDF manuals available from Korg: `nanoKEY_studio_OM_E1b.pdf`
+
+* `svg-overlays/...`
+
+---
 
 ### 6. Mix Recorder
 
-While Ableton Live can be used to record the evolving mix and any automation, the playback head jumps to the beginning of the arrangement timeline when Traktor is requested to send a Master Clock Sync message to Live.
+#### Audio Hijack
+
+While Ableton Live can be used to record the evolving mix and any automation, the playback head jumps to the beginning of the arrangement timeline when Traktor Pro is requested to send a Master Clock Sync message to Ableton Live.
 
 This runs the risk of overwriting existing audio later in the mix.
 
@@ -363,98 +345,46 @@ Audio Hijack offers two alternatives to this:
 
 In addition Audio Hijack makes it clear *when* it is recording, by optionally displaying level meters in the [macOS menu bar](https://support.apple.com/en-nz/guide/mac-help/mchlp1446/10.15/mac/10.15).
 
+##### Project file
+
+* `audio-hijack/...`
+
+Automatically loaded by BetterTouchTool, otherwise double-click to load.
+
 ---
 
 ### 7. Launch Script
 
-BetterTouchTool (BTT) is a macOS app originally designed for customising the [Mac Touch Bar](https://support.apple.com/en-gb/guide/mac-help/mchlbfd5b039/10.15/mac/10.15) which appears on some Mac laptops.
+#### BetterTouchTool (BTT)
 
-Alternatively BTT can be configured to launch actions from MIDI messages.
+BetterTouchTool (BTT) is a macOS app originally designed for customising the [Mac Touch Bar](https://support.apple.com/en-gb/guide/mac-help/mchlbfd5b039/10.15/mac/10.15) which appears on some Mac laptops.
 
 BTT also provides controls over application launching and manipulation.
 
 BTT solves various usability problems, such as:
 
 * remembering to launch the different apps used in this template
-* putting Live into External Sync mode
+* putting Ableton Live into External Sync mode
 * starting the mix recorder
 
----
+##### Project file
 
-### 8. Configuration Files
+* `better-touch-tool/...`
 
-#### ableton-live
+Double-click this file to add the `Trakor NK` launch button to your Touch Bar.
 
-Starter file with mixer and 4 channel sampler.
-
-Automatically loaded by BetterTouchTool, otherwise double-click to load.
-
-#### audio-hijack
-
-Export of the configured session.
-
-Automatically loaded by BetterTouchTool, otherwise double-click to load.
-
-#### better-touch-tool
-
-Export of the configured preset. Double-click this file to add the `Trakor NK` launch button to your Touch Bar.
-
-#### bome-midi-translator-pro
-
-Export of the configured project.
-
-Automatically loaded by BetterTouchTool, otherwise double-click to load.
-
-#### clyphx-pro
-
-Configuration files for Isotonik Studio's / Stray's ClyphX Pro, which map MIDI controls to Live's interface and provides LED feedback.
-
-[Symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the following files to their replacements in this repository:
-
-| Replaced by a symlink                                        | Symlink target in traktor-template-nk          |
-|--------------------------------------------------------------|------------------------------------------------|
-| /Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt               | clyphx-pro/ClyphX_Pro/Macros.txt               |
-| /Users/You/NativeKONTROL/ClyphX_Pro/Preferences.txt          | clyphx-pro/ClyphX_Pro/Preferences.txt          |
-| /Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt            | clyphx-pro/ClyphX_Pro/Variables.txt            |
-| /Users/You/NativeKONTROL/ClyphX_Pro/XTA/Encoder Bindings.txt | clyphx-pro/ClyphX_Pro/XTA/Encoder Bindings.txt |
-| /Users/You/NativeKONTROL/ClyphX_Pro/XTC/X-Controls.txt       | clyphx-pro/ClyphX_Pro/XTC/X-Controls.txt       |
-| /Users/You/NativeKONTROL/ClyphX_Pro/XTD/Button Bindings.txt  | clyphx-pro/ClyphX_Pro/XTD/Button Bindings.txt  |
-| /Users/You/NativeKONTROL/ClyphX_Pro/XTD/Encoder Bindings.txt | clyphx-pro/ClyphX_Pro/XTD/Encoder Bindings.txt |
-| /Users/You/NativeKONTROL/ClyphX_Pro/XTD/G-Controls.txt       | clyphx-pro/ClyphX_Pro/XTD/G-Controls.txt       |
-| /Users/You/NativeKONTROL/ClyphX_Pro/XTD/X-Controls.txt       | clyphx-pro/ClyphX_Pro/XTD/X-Controls.txt       |
-
-The following files need to be manually updated:
-
-| Copy from                                                              | Copy to                                                                                                                                            |
-|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| traktor-template-nk/clyphx-pro/user_actions/SelectedTrackLedStates.py | /Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py |
-| traktor-template-nk/clyphx-pro/user_actions/SelectTraktorDeck.py      | /Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktorDeck.py      |
-
-#### korg-kontrol-editor
-
-Configuration files for the control surface editor.
-
-Double-click to open the set files. Then choose Communication > Write Scene Data.
-
-#### loopback
-
-Screenshot of the 6-channel configuration. Loopback does not have an export feature.
-
-#### svg-overlays
-
-SVG designs which can be printed and cut to create custom overlays for the hardware.
-
-These are based on the PDF manuals available from Korg:
-
-* nanoKEY_studio_OM_E1b.pdf
-* nanoKONTROL_Studio_OM_E1.pdf
-
-#### traktor-template
-
-`.tsi` templates which map the control surfaces to Traktor's interface / API.
+Alternatively BTT can be configured to launch actions from MIDI messages.
 
 ---
 
-### 9. FAQs
+### 8. Further Reading
 
-1. Why can't I hear recording clips in Live? - Press the sync button to sync playback with Traktor.
+#### FAQs
+
+1. Why can't I hear recording clips in Ableton Live? - Press the sync button to sync playback with Traktor Pro.
+
+#### References
+
+1. [How to Sync Ableton Live and Traktor Pro - The Right Way | DJ Endo](https://www.youtube.com/watch?v=4xzldehIsCE)
+2. [Ableton Live Looping Setup - Hands Free! Ableton and ClyphX-Pro](https://www.youtube.com/watch?v=Yn_ExkefmCQ)
+3. etc..

@@ -125,10 +125,10 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 3. Audio Output Device: NK Traktor Live (6 In, 6 Out)
 4. Channel Configuration
    1. Input Config:
-      * 3/4: "Traktor Pro Deck A"
-      * 5/6: "Traktor Pro Deck B"
+      * 3/4: `Traktor Pro Deck A`
+      * 5/6: `Traktor Pro Deck B`
    2. Output Config:
-      * 1/2: "Ableton Live Out"
+      * 1/2: `Live Out`
 
 ##### UI (top left)
 

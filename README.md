@@ -360,9 +360,9 @@ Additional Bome functions:
 
 ### 6. Mix Recorder
 
-While Ableton Live can be used record the evolving mix and any automation, the playback head jumps to 1.1.1 when Traktor is requested to send a Master Clock Sync message to Live.
+While Ableton Live can be used to record the evolving mix and any automation, the playback head jumps to the beginning of the arrangement timeline when Traktor is requested to send a Master Clock Sync message to Live.
 
-This runs the risk of overwriting earlier recording later in the mix.
+This runs the risk of overwriting existing audio later in the mix.
 
 One solution is to use an external recording app, however free macOS apps provide limited control over what can be recorded.
 
@@ -373,7 +373,7 @@ Audio Hijack offers two alternatives to this:
 1. record directly from an application (e.g. Ableton Live)
 2. record from specific virtual output channels (e.g. channels 1+2 of a Loopback device)
 
-In addition Audio Hijack makes it clear when it is recording, by optionally displaying level meters in the [macOS menu bar](https://support.apple.com/en-nz/guide/mac-help/mchlp1446/10.15/mac/10.15).
+In addition Audio Hijack makes it clear *when* it is recording, by optionally displaying level meters in the [macOS menu bar](https://support.apple.com/en-nz/guide/mac-help/mchlp1446/10.15/mac/10.15).
 
 ---
 
@@ -440,7 +440,7 @@ The following files need to be manually updated:
 | traktor-template-nk/korg-nanokontrol-studio/clyphx-pro/user_actions/SelectedTrackLedStates.py | /Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py |
 | traktor-template-nk/korg-nanokontrol-studio/clyphx-pro/user_actions/SelectTraktorDeck.py      | /Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktorDeck.py      |
 
-#### korg-kontrol-editor (sub folders))
+#### korg-kontrol-editor (sub folders)
 
 Configuration files for the control surface editor.
 

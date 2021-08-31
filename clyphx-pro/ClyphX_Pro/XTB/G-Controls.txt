@@ -108,7 +108,7 @@ VERSION = v1.0.0
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v3.0 - KORG nanoKONTROL - G-Controls
+# Traktor TSI v3.0 - XTB (KORG nanoKONTROL Studio) - G-Controls
 # CC numbers reference those assigned in the KORG KONTROL Editor
 # Note: Multiple line formatting and Variables not supported below
 

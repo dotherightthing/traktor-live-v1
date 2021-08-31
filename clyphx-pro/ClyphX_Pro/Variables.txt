@@ -50,9 +50,16 @@
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v3.0 - KORG nanoKONTROL - Variables
+# Traktor TSI v3.0 - Shared Variables
 # These are automatically exposed to user_actions
 # These can also be updated by user_actions, see https://forum.nativekontrol.com/post/27823/thread
+
+# Controller XT Scripts
+
+%MIDI_TRAKTOR% = 'MIDI'
+%MIDI_BOME% = 'MIDIA'
+%MIDI_NANOKONTROL% = 'MIDIB'
+%MIDI_NANOKEY% = 'MIDIC'
 
 # MIDI controls
 # See also G-Controls (which doesn't support variables)

@@ -151,7 +151,7 @@ VERSION = v1.0.5
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v3.0 - KORG nanoKONTROL - Button bindings
+# Traktor TSI v3.0 - XTB (KORG nanoKONTROL Studio) - Button bindings
 # CC numbers reference those assigned in the KORG KONTROL Editor
 # Note: MSG actions are not supported/output
 

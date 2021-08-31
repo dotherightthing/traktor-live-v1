@@ -243,7 +243,54 @@ Current workflow:
 
 ### 5. Controller Mapping
 
-#### KORG nanoKONTROL Studio
+#### ClyphX Pro
+
+ClyphX Pro is sometimes used to send messages to Traktor in action lists.
+
+This allows controller-based track selection to be decoupled from Traktor deck selection when necessary.
+
+When this is done, channel `16` is used to make it clear that Traktor is being targetted.
+
+Traktor setup:
+
+* Device: `Traktor-ClyphX-Pro-v*1-0.tsi`
+* In-Port: Traktor Virtual Input
+* Out-Port: None
+* Device Target: Focus
+
+Manually map MIDI channel and CC in this template.
+
+Live setup:
+
+* Control Surface: ClyphX Pro
+* Input: Traktor Virtual Output (this is for clock sync with Traktor, see 3. DJ Application and MIDI Clock)
+* Output: Traktor Virtual Input
+
+Controller config:
+
+* N/A
+
+#### Bome MIDI Translator Pro (XTA)
+
+Bome MIDI Translator Pro is used to filter MIDI messages from controllers before they reach Live.
+
+Note: Bome needs to be running in the background.
+
+Live setup:
+
+* Control Surface: ClyphX Pro XTA
+* Input: Bome MIDI Translator 1
+  * Track: Off
+  * Sync: Off
+  * Remote: Off
+* Output: None
+
+Additional Bome functions:
+
+1. Track 1-4 SELECT: Focus Traktor
+2. Track 5-8 SELECT: Focus Live
+
+#### KORG nanoKONTROL Studio (XTB)
 
 Traktor config:
 
@@ -254,7 +301,7 @@ Traktor config:
 
 Live config:
 
-* Control Surface: ClyphX Pro
+* Control Surface: ClyphX Pro XTB
 * Input: nanoKONTROL Studio
   * Track: On
   * Sync: On (TODO: is this necessary?)
@@ -270,7 +317,7 @@ Controller config:
 * Set: `traktor-template-nk.nktrl_st_data`
 * Data: `traktor-template-nk.nktrl_st_data`
 
-#### KORG nanoKEY Studio
+#### KORG nanoKEY Studio (XTC)
 
 Traktor config:
 
@@ -281,7 +328,7 @@ Traktor config:
 
 Live config:
 
-* Control Surface: ClyphX Pro XTA
+* Control Surface: ClyphX Pro XTC
 * Input: nanoKEY Studio
   * Track: On
   * Sync: Off
@@ -296,65 +343,6 @@ Controller config:
 * Editor: KORG KONTROL Editor
 * Set: `traktor-template-nk.nanokey_st_set`
 * Data: `traktor-template-nk.nanokey_st_data`
-
-#### ClyphX Pro
-
-ClyphX Pro is used to send messages to Traktor in action lists.
-
-For example, the following action programmatically sends:
-
-* a value of `127`
-* to MIDI control change `46`
-* on channel `16`
-* via Live's Control Surface `ClyphX Pro XTB` (`MIDI` `B`) port
-* which outputs MIDI messages to `Traktor Virtual Input`
-* which sends the message to Traktor
-
-`MIDIB CC 16 46 127`
-
-This example allows controller-based track selection to be decoupled from Traktor deck selection when necessary.
-
-Traktor setup:
-
-* Device: `Traktor-ClyphX-Pro-v*1-0.tsi`
-* In-Port: Traktor Virtual Input
-* Out-Port: None
-* Device Target: Focus
-
-Manually map MIDI channel and CC in this template.
-
-Live setup:
-
-* Control Surface: ClyphX Pro XTB
-* Input: None
-* Output: Traktor Virtual Input
-  * Track: Off
-  * Sync: Off
-  * Remote: Off
-
-Controller config:
-
-* N/A
-
-#### Bome MIDI Translator Pro
-
-Bome MIDI Translator Pro is used to filter MIDI messages from controllers before they reach Live.
-
-Note: Bome needs to be running in the background.
-
-Live setup:
-
-* Control Surface: ClyphX Pro XTC
-* Input: Bome MIDI Translator 1
-  * Track: Off
-  * Sync: Off
-  * Remote: Off
-* Output: None
-
-Additional Bome functions:
-
-1. Track 1-4 SELECT: Focus Traktor
-2. Track 5-8 SELECT: Focus Live
 
 --
 
@@ -380,6 +368,8 @@ In addition Audio Hijack makes it clear *when* it is recording, by optionally di
 ### 7. Launch Script
 
 BetterTouchTool (BTT) is a macOS app originally designed for customising the [Mac Touch Bar](https://support.apple.com/en-gb/guide/mac-help/mchlbfd5b039/10.15/mac/10.15) which appears on some Mac laptops.
+
+Alternatively BTT can be configured to launch actions from MIDI messages.
 
 BTT also provides controls over application launching and manipulation.
 
@@ -415,44 +405,42 @@ Export of the configured project.
 
 Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
-#### clyphx-pro (root folder and sub folders)
+#### clyphx-pro
 
 Configuration files for Isotonik Studio's / Stray's ClyphX Pro, which map MIDI controls to Live's interface and provides LED feedback.
 
 [Symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the following files to their replacements in this repository:
 
-| Replaced by a symlink                                          | Symlink target                                                                       |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| /Users/You/NativeKONTROL/ClyphX_Pro/Button Bindings.txt      | traktor-template-nk/korg-nanokontrol-studio/clyphx-pro/ClyphX_Pro/Button Bindings.txt  |
-| /Users/You/NativeKONTROL/ClyphX_Pro/Encoder Bindings.txt     | traktor-template-nk/korg-nanokontrol-studio/clyphx-pro/ClyphX_Pro/Encoder Bindings.txt |
-| /Users/You/NativeKONTROL/ClyphX_Pro/G-Controls.txt           | traktor-template-nk/korg-nanokontrol-studio/clyphx-pro/ClyphX_Pro/G Controls.txt       |
-| /Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt               | traktor-template-nk/clyphx-pro/ClyphX_Pro/Macros.txt                                   |
-| /Users/You/NativeKONTROL/ClyphX_Pro/Preferences.txt          | traktor-template-nk/clyphx-pro/ClyphX_Pro/Preferences.txt                              |
-| /Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt            | traktor-template-nk/clyphx-pro/ClyphX_Pro/Variables.txt                                |
-| /Users/You/NativeKONTROL/ClyphX_Pro/X-Controls.txt           | traktor-template-nk/korg-nanokontrol-studio/clyphx-pro/ClyphX_Pro/X Controls.txt       |
-| /Users/You/NativeKONTROL/ClyphX_Pro/XTA/Encoder Bindings.txt | traktor-template-nk/korg-nanokey-studio/clyphx-pro/ClyphX_Pro/XTA/Encoder Bindings.txt |
-| /Users/You/NativeKONTROL/ClyphX_Pro/XTC/X-Controls.txt       | traktor-template-nk/bome-midi-translator-pro/clyphx-pro/ClyphX_Pro/XTC/X-Controls.txt  |
+| Replaced by a symlink                                        | Symlink target in traktor-template-nk          |
+|--------------------------------------------------------------|------------------------------------------------|
+| /Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt               | clyphx-pro/ClyphX_Pro/Macros.txt               |
+| /Users/You/NativeKONTROL/ClyphX_Pro/Preferences.txt          | clyphx-pro/ClyphX_Pro/Preferences.txt          |
+| /Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt            | clyphx-pro/ClyphX_Pro/Variables.txt            |
+| /Users/You/NativeKONTROL/ClyphX_Pro/XTA/Encoder Bindings.txt | clyphx-pro/ClyphX_Pro/XTA/Encoder Bindings.txt |
+| /Users/You/NativeKONTROL/ClyphX_Pro/XTC/X-Controls.txt       | clyphx-pro/ClyphX_Pro/XTC/X-Controls.txt       |
+| /Users/You/NativeKONTROL/ClyphX_Pro/XTD/Button Bindings.txt  | clyphx-pro/ClyphX_Pro/XTD/Button Bindings.txt  |
+| /Users/You/NativeKONTROL/ClyphX_Pro/XTD/Encoder Bindings.txt | clyphx-pro/ClyphX_Pro/XTD/Encoder Bindings.txt |
+| /Users/You/NativeKONTROL/ClyphX_Pro/XTD/G-Controls.txt       | clyphx-pro/ClyphX_Pro/XTD/G-Controls.txt       |
+| /Users/You/NativeKONTROL/ClyphX_Pro/XTD/X-Controls.txt       | clyphx-pro/ClyphX_Pro/XTD/X-Controls.txt       |
 
 The following files need to be manually updated:
 
-| Copy from                                                                                     | Copy to                                                                                                                                            |
+| Copy from                                                              | Copy to                                                                                                                                            |
 |-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| traktor-template-nk/korg-nanokontrol-studio/clyphx-pro/user_actions/SelectedTrackLedStates.py | /Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py |
-| traktor-template-nk/korg-nanokontrol-studio/clyphx-pro/user_actions/SelectTraktorDeck.py      | /Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktorDeck.py      |
+| traktor-template-nk/clyphx-pro/user_actions/SelectedTrackLedStates.py | /Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py |
+| traktor-template-nk/clyphx-pro/user_actions/SelectTraktorDeck.py      | /Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktorDeck.py      |
 
-#### korg-kontrol-editor (sub folders)
+#### korg-kontrol-editor
 
 Configuration files for the control surface editor.
 
-Double-click to open the set files.
-
-Then choose Communication > Write Scene Data.
+Double-click to open the set files. Then choose Communication > Write Scene Data.
 
 #### loopback
 
 Screenshot of the 6-channel configuration. Loopback does not have an export feature.
 
-#### svg-overlays (sub folders)
+#### svg-overlays
 
 SVG designs which can be printed and cut to create custom overlays for the hardware.
 
@@ -461,7 +449,7 @@ These are based on the PDF manuals available from Korg:
 * nanoKEY_studio_OM_E1b.pdf
 * nanoKONTROL_Studio_OM_E1.pdf
 
-#### traktor-template (sub folders)
+#### traktor-template
 
 `.tsi` templates which map the control surfaces to Traktor's interface / API.
 

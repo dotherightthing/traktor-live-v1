@@ -44,7 +44,7 @@
     "BTTTpFourFingerSwipeSensitivity" : 0.40000000000000002,
     "BSTMoveTreshold" : 2,
     "BTTHideFomControlStripWhenOpen" : false,
-    "BTTNumberOfStarts" : 3000,
+    "BTTNumberOfStarts" : 3001,
     "BTTForceNormalClickPressure3F" : 150,
     "showSiriRemoteTab" : true,
     "SIRIScrollSpeed" : 1,
@@ -147,7 +147,7 @@
     "showOtherTriggersTab" : true,
     "BSTSnapAreaDefaultPictoDistanceFromLeft" : 0.10000000149011612
   },
-  "BTTPresetUUID" : "D001368C-AE7C-49DD-85B9-13C6B32E7A6E",
+  "BTTPresetUUID" : "6B34E9F6-5488-4642-A29E-CD558029DDE2",
   "BTTPresetContent" : [
     {
       "BTTAppBundleIdentifier" : "BT.G",

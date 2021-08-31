@@ -146,7 +146,7 @@ VERSION = v1.0.5
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v3.0 - KORG nanoKEY - Encoder bindings
+# Traktor TSI v3.0 - XTC (KORG nanoKEY Studio) - Encoder bindings
 # CC numbers reference those assigned in the KORG KONTROL Editor
 
 

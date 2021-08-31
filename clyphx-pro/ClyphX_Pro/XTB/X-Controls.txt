@@ -73,7 +73,7 @@
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v3.0 - KORG nanoKONTROL - X-Controls
+# Traktor TSI v3.0 - XTB (KORG nanoKONTROL Studio) - X-Controls
 # An X-Control is a control on a MIDI controller.
 # CC numbers reference those assigned in the KORG KONTROL Editor
 

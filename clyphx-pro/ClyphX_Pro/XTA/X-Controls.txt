@@ -73,7 +73,7 @@
 
 # --------------------------------------------------------------------------------------
 
-# Traktor TSI v3.0 - Bome MIDI Translator Pro - X-Controls
+# Traktor TSI v3.0 - XTA (Bome MIDI Translator Pro) - X-Controls
 
 # Track crossfade assign - channel GAIN encoder
 # Bome MIDI Translator Pro splits input from KORG nanoKONTROL channel GAIN encoder over 3 channels:

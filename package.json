@@ -1,7 +1,7 @@
 {
   "name": "nk-traktor-live",
   "version": "2.3.0",
-  "description": "Traktor template for KORG nanoKONTROL + nanoKEY Studio.",
+  "description": "Traktor Pro mix template for the KORG nanoKEY/nanoKONTROL Studio MIDI controllers.",
   "main": "README.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -4,7 +4,6 @@
   "description": "Traktor template for KORG nanoKONTROL + nanoKEY Studio.",
   "main": "README.md",
   "scripts": {
-    "start": "./start.sh >/dev/null",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

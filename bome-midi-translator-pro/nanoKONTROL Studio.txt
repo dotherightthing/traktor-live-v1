@@ -3,23 +3,16 @@ Project: nanoKONTROL Studio
  Project MIDI IN ports:   nanoKONTROL Studio CTRL
  Project MIDI OUT ports:  Bome MIDI Translator 1 Virtual Out
 _____________________________________________________________
-[ ] Preset 0: init
+[x] Preset 0: Track SELECTs = Focus Traktor/Live
 
-[ ] Translator 0.0: Init Global Vars
-Incoming: On timer "init"
-Outgoing: (none)
-
-_____________________________________________________________
-[x] Preset 1: Track SELECTs = Focus Traktor/Live
-
-[x] Translator 1.0: Focus Traktor
+[x] Translator 0.0: Focus Traktor
 Incoming: Control Change on ch. 1 with any CC# set 'ga' to CC# with any value
 Rules:
   if ga<46 then exit rules, skip Outgoing Action
   if ga>49 then exit rules, skip Outgoing Action
 Outgoing: Activating app: "Traktor.app"
 
-[x] Translator 1.1: Focus Live
+[x] Translator 0.1: Focus Live
 Incoming: Control Change on ch. 1 with any CC# set 'ga' to CC# with any value
 Rules:
   if ga<50 then exit rules, skip Outgoing Action
@@ -27,9 +20,9 @@ Rules:
 Outgoing: Activating app: "Ableton Live 10 Standard.app"
 
 _____________________________________________________________
-[x] Preset 2: Track GAIN = XFADE A OFF B
+[x] Preset 1: Track GAIN = XFADE A OFF B
 
-[x] Translator 2.0: Split CC 1 N into CC 1/2/3 N
+[x] Translator 1.0: Split CC 1 N into CC 1/2/3 N
 Options: swallow
 Incoming: Control Change on ch. 1 with any CC# set 'qq' to CC# with any value and 'oo' to value
 Rules:

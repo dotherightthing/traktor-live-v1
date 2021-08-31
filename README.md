@@ -120,15 +120,15 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
 <img src="ableton-live/screenshots/output-config.png" alt="Screenshot of Ableton Live's Output Config window" width="500">
 
-1. Driver Type: CoreAudio
-2. Audio Input Device: NK Traktor Live (6 In, 6 Out)
-3. Audio Output Device: NK Traktor Live (6 In, 6 Out)
+1. Driver Type: `CoreAudio`
+2. Audio Input Device: `NK Traktor Live (6 In, 6 Out)`
+3. Audio Output Device: `NK Traktor Live (6 In, 6 Out)`
 4. Channel Configuration
    1. Input Config:
-      * 3/4: `Traktor Pro Deck A`
-      * 5/6: `Traktor Pro Deck B`
+      * `3/4: Traktor Pro Deck A`
+      * `5/6: Traktor Pro Deck B`
    2. Output Config:
-      * 1/2: `Live Out`
+      * `1/2: Live Out`
 
 ##### UI (top left)
 
@@ -169,13 +169,13 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 
 * Control Surface: `ClyphX Pro`
 * Input: `Traktor Pro Virtual Output`
-  * Track: Off
-  * Sync: On
-  * Remote: Off
+  * Track: `Off`
+  * Sync: `On`
+  * Remote: `Off`
 * Output: `Traktor Pro Virtual Input`
-  * Track: Off
-  * Sync: Off
-  * Remote: Off
+  * Track: `Off`
+  * Sync: `Off`
+  * Remote: `Off`
 * Takeover Mode: Value Scaling
 
 #### Bome MIDI Translator Pro (ClyphX Pro XTA)
@@ -206,9 +206,9 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 
 * Control Surface: `ClyphX Pro XTA`
 * Input: `Bome MIDI Translator 1`
-  * Track: Off
-  * Sync: Off
-  * Remote: Off
+  * Track: `Off`
+  * Sync: `Off`
+  * Remote: `Off`
 * Output: `None`
 
 #### KORG nanoKONTROL Studio (ClyphX Pro XTB)
@@ -245,13 +245,13 @@ The following files cannot be symlinked and need to be manually copied over the 
 
 * Control Surface: `ClyphX Pro XTB`
 * Input: `nanoKONTROL Studio`
-  * Track: On
-  * Sync: Off
-  * Remote: On
+  * Track: `On`
+  * Sync: `Off`
+  * Remote: `On`
 * Output: `nanoKONTROL Studio`
-  * Track: On
-  * Sync: Off
-  * Remote: On
+  * Track: `On`
+  * Sync: `Off`
+  * Remote: `On`
 
 ##### Controller configuration
 
@@ -286,14 +286,14 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 ##### Ableton Live config
 
 * Control Surface: `ClyphX Pro XTC`
-* Input: nanoKEY Studio
-  * Track: On
-  * Sync: Off
-  * Remote: On
-* Output: nanoKEY Studio
-  * Track: On
-  * Sync: Off
-  * Remote: On
+* Input: `nanoKEY Studio`
+  * Track: `On`
+  * Sync: `Off`
+  * Remote: `On`
+* Output: `nanoKEY Studio`
+  * Track: `On`
+  * Sync: `Off`
+  * Remote: `On`
 
 ##### Controller configuration
 

@@ -45,8 +45,8 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
     * [KORG KONTROL Editor](#korg-kontrol-editor)
     * [KORG nanoKEY Studio](#korg-nanokey-studio)
     * [KORG nanoKONTROL Studio](#korg-nanokontrol-studio)
-    * [Native Instruments Traktor Pro Controller Manager](#native-instruments-traktor-pro-controller-manager)
     * [nativeKONTROL ClyphX Pro](#nativekontrol-clyphx-pro)
+    * [Native Instruments Traktor Pro Controller Manager](#native-instruments-traktor-pro-controller-manager)
 6. **[Mix Recorder](#6-mix-recorder):**
     * [Rogue Amoeba Audio Hijack](#rogue-amoeba-audio-hijack)
 7. **[Launch Script](#7-launch-script):**

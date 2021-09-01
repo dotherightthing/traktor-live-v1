@@ -185,6 +185,8 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 * ClyphX Pro
   * Product: <https://isotonikstudios.com/product/clyphx-pro/>
   * Version: 1.2.0
+* ClyphX Pro Ableton Live Hotfix:
+  Product: <https://forum.nativekontrol.com/post/21021>
 * ClyphX Pro Bindings
   * Product: <https://isotonikstudios.com/product/clyphx-pro-bindings/>
 * ClyphX Pro G-Controls

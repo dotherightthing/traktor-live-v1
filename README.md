@@ -281,7 +281,7 @@ Double-click to open the set files, then select Communication > Write Scene Data
 
 SVG designs which can be printed and cut to create custom overlays for the hardware.
 
-These are based on the PDF manuals available from Korg: `nanoKEY_studio_OM_E1b.pdf`
+Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/551/2967/>
 
 * `svg-overlays/nanokey-inkscape.svg`
 
@@ -346,7 +346,7 @@ Double-click to open the set files, then select Communication > Write Scene Data
 
 SVG designs which can be printed and cut to create custom overlays for the hardware.
 
-These are based on the PDF manuals available from Korg: `nanoKONTROL_Studio_OM_E1.pdf`
+Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/552/2911/>
 
 * `svg-overlays/nanokontrol-inkscape.svg`
 

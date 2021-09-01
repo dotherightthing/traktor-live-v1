@@ -410,13 +410,13 @@ After locating and downloading the owner manuals, I optimised the vector graphic
     3. Transform > Scale
     4. Set width and height to the dimensions in the owner manual
     5. Scale proportionally
-3. Outline the control areas
+3. Outline the cphysical controls
     1. View > Display mode > Outline
     2. Double-click parts to edit them directly
     3. Use `+`/`-` to zoom in/out
-    4. Use `delete` to delete
-    5. Click near letters, click inside shapes
-    6. Edit nodes to ensure that rounded corners use unbroken paths
+    4. Click near letters, click inside shapes
+    5. Use `delete` to delete lines that won't be cut
+    6. Use node editing tools to ensure that cut paths are unbroken
 4. Edit objects
     1. Object > Objects...
     2. Maximise the panel (close other panels)

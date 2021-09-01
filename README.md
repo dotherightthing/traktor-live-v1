@@ -251,8 +251,8 @@ Control surface editor.
 
 ##### KORG KONTROL Editor configuration files
 
-* Set: `korg-kontrol-editor/nk-traktor-live.nanokey_st_set`
-* Data: `korg-kontrol-editor/nk-traktor-live.nanokey_st_data`
+1. Set: `korg-kontrol-editor/nk-traktor-live.nanokey_st_set`
+2. Data: `korg-kontrol-editor/nk-traktor-live.nanokey_st_data`
 
 Double-click to open the set files, then select Communication > Write Scene Data.
 
@@ -295,8 +295,8 @@ Based on the PDF manual available from Korg: <https://www.korg.com/us/support/do
 
 ##### KORG KONTROL Editor configuration files
 
-* Set: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
-* Data: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
+1. Set: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
+2. Data: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
 
 Double-click to open the set files, then select Communication > Write Scene Data.
 
@@ -340,7 +340,7 @@ Based on the PDF manual available from Korg: <https://www.korg.com/us/support/do
 
 #### Native Instruments Traktor Pro Controller Manager
 
-* Part of Traktor Pro 3: <https://support.native-instruments.com/hc/en-us/articles/209590569-How-to-Use-the-Controller-Manager-in-TRAKTOR>
+Part of Traktor Pro 3: <https://support.native-instruments.com/hc/en-us/articles/209590569-How-to-Use-the-Controller-Manager-in-TRAKTOR>
 
 Various `.tsi` templates map the control surfaces and supporting software to Traktor Pro's interface / API.
 
@@ -378,7 +378,7 @@ In addition Audio Hijack makes it clear *when* it is recording, by optionally di
 
 ##### Project file
 
-* `audio-hijack/nk-traktor-live.ahsession`
+1. `audio-hijack/nk-traktor-live.ahsession`
 
 Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
@@ -403,7 +403,7 @@ BTT solves various usability problems, such as:
 
 ##### Project file
 
-* `better-touch-tool/nk-traktor-live.bttpreset`
+1. `better-touch-tool/nk-traktor-live.bttpreset`
 
 Double-click this file to add the `NK Trakor Live` launch button to your Touch Bar.
 

@@ -394,7 +394,7 @@ Inkscape is a cross-platform vector editor.
 
 ##### Process to create the bundled SVG
 
-After locating and downloading the owner manuals, I optimise the vector graphics to create reliable cut files:
+After locating and downloading the owner manuals, I optimised the vector graphics to create reliable cut files:
 
 1. File > Import
     1. Select page

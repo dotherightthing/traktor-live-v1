@@ -506,7 +506,7 @@ BTT solves various usability problems, such as:
 
 1. `better-touch-tool/nk-traktor-live.bttpreset`
 
-Double-click this file to add the `NK Trakor Live` launch button to your Touch Bar.
+Double-click this file to add the `NK Traktor Live` launch button to your Touch Bar.
 
 Alternatively BTT can be configured to launch actions from MIDI messages.
 

@@ -42,7 +42,7 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
     * [Plugins](#plugins)
 5. **[Controller Mapping](#5-controller-mapping):**
     * [Bome Midi Translator Pro](#bome-midi-translator-pro)
-    * [nativeKONTROL ClyphX Pro](#isotonik-studios-clyphx-pro)
+    * [nativeKONTROL ClyphX Pro](#nativekontrol-clyphx-pro)
     * [KORG KONTROL Editor](#korg-kontrol-editor)
     * [KORG nanoKEY Studio](#korg-nanokey-studio)
     * [KORG nanoKONTROL Studio](#korg-nanokontrol-studio)

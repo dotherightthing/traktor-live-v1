@@ -171,7 +171,7 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
 ##### ClyphX Pro configuration files
 
-Configuration files for Stray's ClyphX Pro, which map MIDI controls to Ableton Live's interface and provides LED feedback.
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
 
 I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
@@ -203,7 +203,7 @@ Note: `MIDI Clock Sync Delay` was initially set using Traktor Pro's internal mix
 
 ##### ClyphX Pro configuration files
 
-Configuration files for Stray's ClyphX Pro, which map MIDI controls to Ableton Live's interface and provide LED feedback.
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
 
 I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
@@ -247,7 +247,7 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 
 ##### ClyphX Pro configuration files
 
-Configuration files for Stray's ClyphX Pro, which map MIDI controls to Ableton Live's interface and provides LED feedback.
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
 
 I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
@@ -294,7 +294,7 @@ These are based on the PDF manuals available from Korg: `nanoKEY_studio_OM_E1b.p
 
 ##### ClyphX Pro configuration files
 
-Configuration files for Stray's ClyphX Pro, which map MIDI controls to Ableton Live's interface and provides LED feedback.
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
 
 I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 

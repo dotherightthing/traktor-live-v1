@@ -180,57 +180,6 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 
 ---
 
-#### nativeKONTROL ClyphX Pro
-
-* ClyphX Pro
-  * Product: <https://isotonikstudios.com/product/clyphx-pro/>
-  * Version: 1.2.0
-* ClyphX Pro Ableton Live Hotfix:
-  * Product: <https://forum.nativekontrol.com/post/21021>
-* ClyphX Pro Bindings
-  * Product: <https://isotonikstudios.com/product/clyphx-pro-bindings/>
-* ClyphX Pro G-Controls
-  * Product: <https://forum.nativekontrol.com/thread/3906/beta-controls-accessory-clyphx-pro>
-
-The default ClyphX Pro 'controller' is primarily used to sync MIDI clock between Traktor Pro and Ableton Live.
-
-Additionally, ClyphX Pro is sometimes used to send scripted MIDI messages to Traktor Pro. When this is done, channel `16` is used to make it clear that Traktor Pro is being targetted.
-
-Note: `MIDI Clock Sync Delay` was initially set using Traktor Pro's internal mixer, with *Cue out* used to sync Traktor Pro and Ableton Live's metronomes. Ableton Live now functions as the external mixer and syncing does not appear to be an issue anymore.
-
-##### Ableton Live MIDI setup
-
-<img src="ableton-live/screenshots/midi.png" alt="Screenshot of Ableton Live's MIDI configuration" width="500">
-
-* Control Surface: `ClyphX Pro`
-* Input: `Traktor Pro Virtual Output`
-  * Track: `Off`
-  * Sync: `On`
-  * Remote: `Off`
-* Output: `Traktor Pro Virtual Input`
-  * Track: `Off`
-  * Sync: `Off`
-  * Remote: `Off`
-* Takeover Mode: Value Scaling
-
-##### nativeKONTROL ClyphX Pro configuration files
-
-1. `Macros.txt`
-    * Source: `clyphx-pro/ClyphX_Pro/Macros.txt`
-    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt`
-2. `Preferences.txt`
-    * Source: `clyphx-pro/ClyphX_Pro/Preferences.txt`
-    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Preferences.txt`
-3. `Variables.txt`
-    * Source: `clyphx-pro/ClyphX_Pro/Variables.txt`
-    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt`
-
-These map MIDI controls to Ableton Live's interface and provide LED feedback.
-
-I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
-
----
-
 #### KORG KONTROL Editor
 
 * Product: <https://www.korg.com/us/support/download/software/1/133/1355/>
@@ -342,6 +291,57 @@ The following files cannot be symlinked and need to be manually copied over:
 SVG file which can be printed and cut to create custom overlays for the hardware.
 
 Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/552/2911/>
+
+---
+
+#### nativeKONTROL ClyphX Pro
+
+* ClyphX Pro
+  * Product: <https://isotonikstudios.com/product/clyphx-pro/>
+  * Version: 1.2.0
+* ClyphX Pro Ableton Live Hotfix:
+  * Product: <https://forum.nativekontrol.com/post/21021>
+* ClyphX Pro Bindings
+  * Product: <https://isotonikstudios.com/product/clyphx-pro-bindings/>
+* ClyphX Pro G-Controls
+  * Product: <https://forum.nativekontrol.com/thread/3906/beta-controls-accessory-clyphx-pro>
+
+The default ClyphX Pro 'controller' is primarily used to sync MIDI clock between Traktor Pro and Ableton Live.
+
+Additionally, ClyphX Pro is sometimes used to send scripted MIDI messages to Traktor Pro. When this is done, channel `16` is used to make it clear that Traktor Pro is being targetted.
+
+Note: `MIDI Clock Sync Delay` was initially set using Traktor Pro's internal mixer, with *Cue out* used to sync Traktor Pro and Ableton Live's metronomes. Ableton Live now functions as the external mixer and syncing does not appear to be an issue anymore.
+
+##### Ableton Live MIDI setup
+
+<img src="ableton-live/screenshots/midi.png" alt="Screenshot of Ableton Live's MIDI configuration" width="500">
+
+* Control Surface: `ClyphX Pro`
+* Input: `Traktor Pro Virtual Output`
+  * Track: `Off`
+  * Sync: `On`
+  * Remote: `Off`
+* Output: `Traktor Pro Virtual Input`
+  * Track: `Off`
+  * Sync: `Off`
+  * Remote: `Off`
+* Takeover Mode: Value Scaling
+
+##### nativeKONTROL ClyphX Pro configuration files
+
+1. `Macros.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Macros.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt`
+2. `Preferences.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Preferences.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Preferences.txt`
+3. `Variables.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Variables.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt`
+
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
 ---
 

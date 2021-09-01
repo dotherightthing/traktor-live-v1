@@ -24,7 +24,7 @@ However when keylock pitching is used, the recorded pitch often does not match t
 
 To capture global FX like reverb and gating, Traktor Pro’s Loop Recorder must be used.
 
-The Loop Recorder is problematic because it records loops slightly too long. Samples glitch on repeat and drift out of time with the source material.
+The Loop Recorder is problematic because it records loops slightly too long. Samples glitch on repeat and drift out of sync with the source material.
 
 ---
 

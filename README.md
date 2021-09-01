@@ -47,11 +47,14 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
     * [KORG nanoKONTROL Studio](#korg-nanokontrol-studio)
     * [nativeKONTROL ClyphX Pro](#nativekontrol-clyphx-pro)
     * [Native Instruments Traktor Pro Controller Manager](#native-instruments-traktor-pro-controller-manager)
-6. **[Mix Recorder](#6-mix-recorder):**
+6. **[Controller Overlay](#6-controller-overlay)**
+    * [Inkscape](#inkscape)
+    * [Cricut](#cricut)
+7. **[Mix Recorder](#7-mix-recorder):**
     * [Rogue Amoeba Audio Hijack](#rogue-amoeba-audio-hijack)
-7. **[Launch Script](#7-launch-script):**
+8. **[Launch Script](#8-launch-script):**
     * [BetterTouchTool](#bettertouchtool)
-8. **[Further Reading](#8-further-reading)**
+9. **[Further Reading](#9-further-reading)**
 
 ---
 
@@ -222,14 +225,6 @@ These map MIDI controls to Ableton Live's interface and provide LED feedback.
 
 I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
-##### Printed overlay
-
-1. `svg-overlays/nanokey-inkscape.svg`
-
-SVG file which can be printed and cut to create custom overlays for the hardware.
-
-Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/551/2967/>
-
 ---
 
 #### KORG nanoKONTROL Studio
@@ -283,14 +278,6 @@ The following files cannot be symlinked and need to be manually copied over:
 1. `SelectTraktor ProDeck.py`
     * Source: `nk-traktor-live/clyphx-pro/user_actions/SelectTraktor ProDeck.py`
     * Target: `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktor ProDeck.py`
-
-##### Printed overlay
-
-1. `svg-overlays/nanokontrol-inkscape.svg`
-
-SVG file which can be printed and cut to create custom overlays for the hardware.
-
-Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/552/2911/>
 
 ---
 
@@ -361,7 +348,111 @@ Various `.tsi` templates map the control surfaces and supporting software to Tra
 
 ---
 
-### 6. Mix Recorder
+### 6. Controller Overlay
+
+The worst part about customising cheap generic MIDI controllers is remembering what everything does.
+
+This situation can easily be resolved with sticky labels, but these become incorrect if you switch to different software.
+
+Another option is to use a dynamic interface on e.g. an iPad. But while this liberates you from the laptop screen, it leaves you staring at the iPad's screen instead - you don't want that finger to inadvertedly slide off the control in the middle of a mix!
+
+So I created physical overlays for my physical controllers. These can be switched out quickly. They look nice and they are great for protoyping and memory retention.
+
+Note: You can also buy physical overlays online, *if* they make them for your controller and *if* you are ok with the carbon footprint of getting small packages sent from the other side of the world (I live in New Zealand).
+
+The process to generate an overlay is as follows:
+
+1. Extract SVG files from owner manuals.
+2. Identify the 'pen' versus 'cut' lines.
+3. Precision draw/cut the file using a cutting machine.
+4. Peel the cut card off the cutting mat and the cut sections will separate.
+5. Handwrite text labels describing what each control does.
+6. Remove any blocking controls (e.g. fader handles) from the controller.
+7. Slide the overlay over the top of the controller.
+8. I also cut a plastic sheet to protect the cut card(s) below.
+9. Reattach any blocking controls onto the controller.
+
+My cutting machine does have a pen attachment, but I use this sparingly as 'pen' lines for text labels add complexity to the file and dramatically increase wait times.
+
+When I have nailed down the functionality, I'll do a 'print and cut' - printing the labels and patterns at a print shop, then cutting the holes for the controls.
+
+#### Inkscape
+
+* Product: <https://inkscape.org/>
+* Version: 1.0.2
+
+Inkscape is a cross-platform vector editor.
+
+##### Project files
+
+1. KORG nanoKEY Studio
+    * Owner manual: <https://www.korg.com/us/support/download/manual/0/551/2967/>
+    * SVG: `svg-overlays/nanokey-inkscape.svg`
+2. KORG nanoKONTROL Studio
+    * Owner manual: <https://www.korg.com/us/support/download/manual/0/552/2911/>
+    * SVG: `svg-overlays/nanokontrol-inkscape.svg`
+
+##### Process to create the bundled SVG
+
+After locating and downloading the owner manuals, I optimise the vector graphics to create reliable cut files:
+
+1. File > Import
+    1. Select page
+    2. Internal import
+    3. Uncheck 'replace fonts & embed images'
+    4. Precision: 2.0 (default)
+2. Fix dimensions
+    1. Select objects on page
+    2. `COMMAND + G` to group
+    3. Transform > Scale
+    4. Set width and height to the dimensions in the owner manual
+    5. Scale proportionally
+3. Outline the control areas
+    1. View > Display mode > Outline
+    2. Double-click parts to edit them directly
+    3. Use `+`/`-` to zoom in/out
+    4. Use `delete` to delete
+    5. Click near letters, click inside shapes
+    6. Edit nodes to ensure that rounded corners use unbroken paths
+4. Edit objects
+    1. Object > Objects...
+    2. Maximise the panel (close other panels)
+    3. Click 3D rectangle layer icon to select that object
+    4. Select all g... objects and ungroup them
+    5. Delete all g... layers (empty groups)
+    6. Optimise one of each individual control (e.g. channel strip)
+    7. Group each individual control
+    8. Use guides to position copies of these in their original positions
+5. Export SVG
+
+#### Cricut
+
+* Cricut Maker
+  * Product: <https://cricut.com/en_us/machines/cricut-maker-machines/cricut-maker.html>
+  * Version: 2017
+* Cricut Design Space
+  * Product: <https://design.cricut.com/>
+  * Version: 6.12.227
+
+The Cricut Maker is a consumer level cutting machine.
+
+Cricut Design Space is the companion software for the Cricut range .
+
+##### Cricut process
+
+1. Launch Cricut Design Space
+2. Import bundled SVG
+3. Mark each object as 'pen' (draw) or 'cut' (cut)
+4. Select top level group > Attach (to print the layout as you intended)
+5. Select top level group > Set dimensions to matcn Inkscape file
+6. Wait a long time for the project to load
+7. Load the mat and cardboard into the machine
+8. Draw the 'pen' lines
+9. Cut the 'cut' lines
+
+---
+
+### 7. Mix Recorder
 
 #### Rogue Amoeba Audio Hijack
 
@@ -391,7 +482,7 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
 ---
 
-### 7. Launch Script
+### 8. Launch Script
 
 #### BetterTouchTool
 
@@ -418,7 +509,7 @@ Alternatively BTT can be configured to launch actions from MIDI messages.
 
 ---
 
-### 8. Further Reading
+### 9. Further Reading
 
 #### FAQs
 

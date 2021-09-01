@@ -269,7 +269,7 @@ SVG designs which can be printed and cut to create custom overlays for the hardw
 
 These are based on the PDF manuals available from Korg: `nanoKONTROL_Studio_OM_E1.pdf`
 
-* `svg-overlays/...`
+* `svg-overlays/nanokontrol-inkscape.svg`
 
 #### KORG nanoKEY Studio (ClyphX Pro XTC)
 
@@ -311,7 +311,7 @@ SVG designs which can be printed and cut to create custom overlays for the hardw
 
 These are based on the PDF manuals available from Korg: `nanoKEY_studio_OM_E1b.pdf`
 
-* `svg-overlays/...`
+* `svg-overlays/nanokey-inkscape.svg`
 
 ---
 
@@ -336,7 +336,7 @@ In addition Audio Hijack makes it clear *when* it is recording, by optionally di
 
 ##### Project file
 
-* `audio-hijack/...`
+* `audio-hijack/nk-traktor-live.ahsession`
 
 Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
@@ -358,7 +358,7 @@ BTT solves various usability problems, such as:
 
 ##### Project file
 
-* `better-touch-tool/...`
+* `better-touch-tool/nk-traktor-live.bttpreset`
 
 Double-click this file to add the `NK Trakor Live` launch button to your Touch Bar.
 

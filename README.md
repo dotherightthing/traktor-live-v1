@@ -360,7 +360,7 @@ BTT solves various usability problems, such as:
 
 * `better-touch-tool/...`
 
-Double-click this file to add the `Trakor NK` launch button to your Touch Bar.
+Double-click this file to add the `NK Trakor Live` launch button to your Touch Bar.
 
 Alternatively BTT can be configured to launch actions from MIDI messages.
 

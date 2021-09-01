@@ -38,14 +38,14 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
 3. **[DJ Application and MIDI Clock](#3-dj-application-and-midi-clock):**
     * [Native Instruments Traktor Pro 3](https://www.native-instruments.com/en/products/traktor/dj-software/traktor-pro-3/) (v3.4.2)
 4. **[Mixer and Sampler](#4-mixer-and-sampler):**
-    * [Ableton Live](https://www.ableton.com/en/live/) (v10) + ClyphX Pro (v1.2.0)
+    * [Ableton Live](https://www.ableton.com/en/live/) (v10)
     * [A1TriggerGate](https://a1audio.alexhilton.net/a1triggergate) (v1.4)
 5. **[Controller Mapping](#5-controller-mapping):**
     * [KORG nanoKONTROL Studio](https://www.korg.com/us/products/computergear/nanokontrol_studio/) (v1.05)
     * [KORG nanoKEY Studio](https://www.korg.com/us/products/computergear/nanokey_studio/) (v1.08)
     * [KORG KONTROL Editor](https://www.korg.com/us/support/download/software/1/133/1355/)
     * [Native Instruments Traktor Pro Controller Manager](https://support.native-instruments.com/hc/en-us/articles/209590569-How-to-Use-the-Controller-Manager-in-TRAKTOR) (part of Traktor Pro 3)
-    * [Isotonik Studios ClyphX Pro](https://isotonikstudios.com/product/clyphx-pro/) (v1.2.0) (running in Ableton Live 10)
+    * [Isotonik Studios ClyphX Pro](https://isotonikstudios.com/product/clyphx-pro/) (v1.2.0)
     * [Bome Midi Translator Pro](https://www.bome.com/products/miditranslator) (v1.9.0)
 6. **[Mix Recorder](#6-mix-recorder):**
     * [Rogue Amoeba Audio Hijack](https://rogueamoeba.com/audiohijack/) (v3)

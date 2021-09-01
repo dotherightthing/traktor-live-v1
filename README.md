@@ -350,7 +350,7 @@ Various `.tsi` templates map the control surfaces and supporting software to Tra
 
 ### 6. Controller Overlay
 
-The worst part about customising cheap generic MIDI controllers is remembering what everything does.
+The worst part about customising generic MIDI controllers is remembering what everything does.
 
 This situation can easily be resolved with sticky labels, but these become incorrect if you switch to different software.
 

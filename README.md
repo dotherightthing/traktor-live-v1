@@ -436,7 +436,7 @@ After locating and downloading the owner manuals, I optimised the vector graphic
 
 The Cricut Maker is a consumer level cutting machine.
 
-Cricut Design Space is the companion software for the Cricut range .
+Cricut Design Space is the companion software for the Cricut range.
 
 ##### Cricut process
 

@@ -360,19 +360,22 @@ So I created physical overlays for my physical controllers. These can be switche
 
 Note: You can also buy physical overlays online, *if* they make them for your controller and *if* you are ok with the carbon footprint of getting small packages sent from the other side of the world (I live in New Zealand).
 
+#### Process overview
+
 The process to generate an overlay is as follows:
 
-1. Extract SVG files from owner manuals.
-2. Identify the 'pen' versus 'cut' lines.
-3. Precision draw/cut the file using a cutting machine.
-4. Peel the cut card off the cutting mat and the cut sections will separate.
-5. Handwrite text labels describing what each control does.
-6. Remove any blocking controls (e.g. fader handles) from the controller.
-7. Slide the overlay over the top of the controller.
-8. I also cut a plastic sheet to protect the cut card(s) below.
-9. Reattach any blocking controls onto the controller.
+1. Extract SVG files from owner manuals (bundled Inkscape SVGs)
+2. Load the SVGs into cutting machine software
+3. Identify the 'pen' versus 'cut' lines
+4. Precision draw/cut the file using a cutting machine
+5. Peel the cut card off the cutting mat and the cut sections will separate
+6. Handwrite text labels describing what each control does
+7. Remove any blocking controls (e.g. fader handles) from the controller
+8. Slide the overlay over the top of the controller
+9. I also cut a plastic sheet to protect the cut card(s) below
+10. Reattach any blocking controls onto the controller
 
-My cutting machine does have a pen attachment, but I use this sparingly as 'pen' lines for text labels add complexity to the file and dramatically increase wait times.
+My cutting machine does have a pen attachment, but I use this sparingly as 'pen' lines for text labels add complexity to the file and dramatically increase loading times.
 
 When I have nailed down the functionality, I'll do a 'print and cut' - printing the labels and patterns at a print shop, then cutting the holes for the controls.
 
@@ -438,7 +441,7 @@ The Cricut Maker is a consumer level cutting machine.
 
 Cricut Design Space is the companion software for the Cricut range.
 
-##### Cricut process
+##### Process to cut the SVG
 
 1. Launch Cricut Design Space
 2. Import bundled SVG

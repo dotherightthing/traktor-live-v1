@@ -410,7 +410,7 @@ After locating and downloading the owner manuals, I optimised the vector graphic
     3. Transform > Scale
     4. Set width and height to the dimensions in the owner manual
     5. Scale proportionally
-3. Outline the cphysical controls
+3. Outline the physical controls
     1. View > Display mode > Outline
     2. Double-click parts to edit them directly
     3. Use `+`/`-` to zoom in/out

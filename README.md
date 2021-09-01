@@ -132,7 +132,7 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 ##### UI (top left)
 
 1. Click `Ext` so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - if you have BetterTouchTool installed this will happen automatically
-2. Global launch quantisation: None (punching in exactly when you want seems most reliable)
+2. Global launch quantisation: `None` (punching in exactly when you want seems most reliable)
 
 ##### Plugins
 
@@ -170,13 +170,13 @@ Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
 ##### nativeKONTROL ClyphX Pro configuration files
 
-These map MIDI controls to Ableton Live's interface and provide LED feedback.
-
-I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
-
 1. `X-Controls.txt`
     * Source: `clyphx-pro/ClyphX_Pro/XTA/X-Controls.txt`
     * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTA/X-Controls.txt`
+
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
 ---
 
@@ -208,10 +208,6 @@ Note: `MIDI Clock Sync Delay` was initially set using Traktor Pro's internal mix
 
 ##### nativeKONTROL ClyphX Pro configuration files
 
-These map MIDI controls to Ableton Live's interface and provide LED feedback.
-
-I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
-
 1. `Macros.txt`
     * Source: `clyphx-pro/ClyphX_Pro/Macros.txt`
     * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt`
@@ -221,6 +217,10 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 3. `Variables.txt`
     * Source: `clyphx-pro/ClyphX_Pro/Variables.txt`
     * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt`
+
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
 ---
 
@@ -251,28 +251,28 @@ Control surface editor.
 
 ##### KORG KONTROL Editor configuration files
 
-Double-click to open the set files, then select Communication > Write Scene Data.
-
 * Set: `korg-kontrol-editor/nk-traktor-live.nanokey_st_set`
 * Data: `korg-kontrol-editor/nk-traktor-live.nanokey_st_data`
 
+Double-click to open the set files, then select Communication > Write Scene Data.
+
 ##### nativeKONTROL ClyphX Pro configuration files
-
-These map MIDI controls to Ableton Live's interface and provide LED feedback.
-
-I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
 1. `Encoder Bindings.txt`
     * Source: `clyphx-pro/ClyphX_Pro/XTC/Encoder Bindings.txt`
     * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTC/Encoder Bindings.txt`
 
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
+
 ##### Printed overlay
+
+1. `svg-overlays/nanokey-inkscape.svg`
 
 SVG file which can be printed and cut to create custom overlays for the hardware.
 
 Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/551/2967/>
-
-* `svg-overlays/nanokey-inkscape.svg`
 
 ---
 
@@ -295,16 +295,12 @@ Based on the PDF manual available from Korg: <https://www.korg.com/us/support/do
 
 ##### KORG KONTROL Editor configuration files
 
-Double-click to open the set files, then select Communication > Write Scene Data.
-
 * Set: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
 * Data: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
 
+Double-click to open the set files, then select Communication > Write Scene Data.
+
 ##### nativeKONTROL ClyphX Pro configuration files
-
-These map MIDI controls to Ableton Live's interface and provide LED feedback.
-
-I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
 
 1. `Button Bindings.txt`
     * Source: `clyphx-pro/ClyphX_Pro/XTB/Button Bindings.txt`
@@ -319,7 +315,11 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
     * Source: `clyphx-pro/ClyphX_Pro/XTB/X-Controls.txt`
     * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTB/X-Controls.txt`
 
-The following files cannot be symlinked and need to be manually copied over the top:
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
+
+The following files cannot be symlinked and need to be manually copied over:
 
 1. `SelectedTrackLedStates.py`
     * Source: `nk-traktor-live/clyphx-pro/user_actions/SelectedTrackLedStates.py`
@@ -330,11 +330,11 @@ The following files cannot be symlinked and need to be manually copied over the 
 
 ##### Printed overlay
 
+1. `svg-overlays/nanokontrol-inkscape.svg`
+
 SVG file which can be printed and cut to create custom overlays for the hardware.
 
 Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/552/2911/>
-
-* `svg-overlays/nanokontrol-inkscape.svg`
 
 ---
 

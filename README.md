@@ -182,8 +182,13 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 
 #### nativeKONTROL ClyphX Pro
 
-* Product: <https://isotonikstudios.com/product/clyphx-pro/>
-* Version: 1.2.0
+* ClyphX Pro
+  * Product: <https://isotonikstudios.com/product/clyphx-pro/>
+  * Version: 1.2.0
+* ClyphX Pro Bindings
+  * Product: <https://isotonikstudios.com/product/clyphx-pro-bindings/>
+* ClyphX Pro G-Controls
+  * Product: <https://forum.nativekontrol.com/thread/3906/beta-controls-accessory-clyphx-pro>
 
 The default ClyphX Pro 'controller' is primarily used to sync MIDI clock between Traktor Pro and Ableton Live.
 

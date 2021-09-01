@@ -47,7 +47,7 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
     * [KORG nanoKONTROL Studio](#korg-nanokontrol-studio)
     * [nativeKONTROL ClyphX Pro](#nativekontrol-clyphx-pro)
     * [Native Instruments Traktor Pro Controller Manager](#native-instruments-traktor-pro-controller-manager)
-6. **[Controller Overlay](#6-controller-overlay)**
+6. **[Controller Overlay](#6-controller-overlay):**
     * [Inkscape](#inkscape)
     * [Cricut](#cricut)
 7. **[Mix Recorder](#7-mix-recorder):**

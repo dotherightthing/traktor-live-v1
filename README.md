@@ -42,11 +42,11 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
     * [Plugins](#plugins)
 5. **[Controller Mapping](#5-controller-mapping):**
     * [Bome Midi Translator Pro](#bome-midi-translator-pro)
-    * [nativeKONTROL ClyphX Pro](#nativekontrol-clyphx-pro)
     * [KORG KONTROL Editor](#korg-kontrol-editor)
     * [KORG nanoKEY Studio](#korg-nanokey-studio)
     * [KORG nanoKONTROL Studio](#korg-nanokontrol-studio)
     * [Native Instruments Traktor Pro Controller Manager](#native-instruments-traktor-pro-controller-manager)
+    * [nativeKONTROL ClyphX Pro](#nativekontrol-clyphx-pro)
 6. **[Mix Recorder](#6-mix-recorder):**
     * [Rogue Amoeba Audio Hijack](#rogue-amoeba-audio-hijack)
 7. **[Launch Script](#7-launch-script):**
@@ -93,16 +93,6 @@ In order to be able to choose which Traktor Pro deck to sample from, both decks 
 
 * Product: <https://www.native-instruments.com/en/products/traktor/dj-software/traktor-pro-3/>
 * Version: 3.4.2
-
-Various `.tsi` templates map the control surfaces and supporting software to Traktor Pro's interface / API.
-
-##### Project file
-
-1. Preferences > Import > `traktor-pro/nk-traktor-live.tsi`
-
-##### Top of mixer section
-
-* Offset: `0 Ms`
 
 ---
 
@@ -169,16 +159,6 @@ Bome MIDI Translator Pro is used to filter the MIDI messages sent by controllers
 
 Automatically loaded by BetterTouchTool, otherwise double-click to load.
 
-##### ClyphX Pro configuration files
-
-These map MIDI controls to Ableton Live's interface and provide LED feedback.
-
-I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
-
-1. `X-Controls.txt`
-    * Source: `clyphx-pro/ClyphX_Pro/XTA/X-Controls.txt`
-    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTA/X-Controls.txt`
-
 ##### Ableton Live MIDI setup
 
 * Control Surface: `ClyphX Pro XTA`
@@ -187,6 +167,16 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
   * Sync: `Off`
   * Remote: `Off`
 * Output: `None`
+
+##### nativeKONTROL ClyphX Pro configuration files
+
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
+
+1. `X-Controls.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/XTA/X-Controls.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTA/X-Controls.txt`
 
 ---
 
@@ -200,22 +190,6 @@ The default ClyphX Pro 'controller' is primarily used to sync MIDI clock between
 Additionally, ClyphX Pro is sometimes used to send scripted MIDI messages to Traktor Pro. When this is done, channel `16` is used to make it clear that Traktor Pro is being targetted.
 
 Note: `MIDI Clock Sync Delay` was initially set using Traktor Pro's internal mixer, with *Cue out* used to sync Traktor Pro and Ableton Live's metronomes. Ableton Live now functions as the external mixer and syncing does not appear to be an issue anymore.
-
-##### ClyphX Pro configuration files
-
-These map MIDI controls to Ableton Live's interface and provide LED feedback.
-
-I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
-
-1. `Macros.txt`
-    * Source: `clyphx-pro/ClyphX_Pro/Macros.txt`
-    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt`
-2. `Preferences.txt`
-    * Source: `clyphx-pro/ClyphX_Pro/Preferences.txt`
-    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Preferences.txt`
-3. `Variables.txt`
-    * Source: `clyphx-pro/ClyphX_Pro/Variables.txt`
-    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt`
 
 ##### Ableton Live MIDI setup
 
@@ -232,11 +206,29 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
   * Remote: `Off`
 * Takeover Mode: Value Scaling
 
+##### nativeKONTROL ClyphX Pro configuration files
+
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
+
+1. `Macros.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Macros.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Macros.txt`
+2. `Preferences.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Preferences.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Preferences.txt`
+3. `Variables.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/Variables.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/Variables.txt`
+
 ---
 
 #### KORG KONTROL Editor
 
 * Product: <https://www.korg.com/us/support/download/software/1/133/1355/>
+
+Control surface editor.
 
 ---
 
@@ -245,17 +237,7 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 * Product: <https://www.korg.com/us/products/computergear/nanokey_studio/>
 * Version: 1.08
 
-##### ClyphX Pro configuration files
-
-These map MIDI controls to Ableton Live's interface and provide LED feedback.
-
-I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
-
-1. `Encoder Bindings.txt`
-    * Source: `clyphx-pro/ClyphX_Pro/XTC/Encoder Bindings.txt`
-    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTC/Encoder Bindings.txt`
-
-##### Ableton Live config
+##### Ableton Live MIDI setup
 
 * Control Surface: `ClyphX Pro XTC`
 * Input: `nanoKEY Studio`
@@ -267,19 +249,26 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
   * Sync: `Off`
   * Remote: `On`
 
-##### Controller configuration
-
-Configuration files for the control surface editor.
+##### KORG KONTROL Editor configuration files
 
 Double-click to open the set files, then select Communication > Write Scene Data.
 
-* Editor: KORG KONTROL Editor
 * Set: `korg-kontrol-editor/nk-traktor-live.nanokey_st_set`
 * Data: `korg-kontrol-editor/nk-traktor-live.nanokey_st_data`
 
-##### Visual mapping
+##### nativeKONTROL ClyphX Pro configuration files
 
-SVG designs which can be printed and cut to create custom overlays for the hardware.
+These map MIDI controls to Ableton Live's interface and provide LED feedback.
+
+I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501e9b9) the target files to the source files, but you can simply copy them over the top.
+
+1. `Encoder Bindings.txt`
+    * Source: `clyphx-pro/ClyphX_Pro/XTC/Encoder Bindings.txt`
+    * Target: `/Users/You/NativeKONTROL/ClyphX_Pro/XTC/Encoder Bindings.txt`
+
+##### Printed overlay
+
+SVG file which can be printed and cut to create custom overlays for the hardware.
 
 Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/551/2967/>
 
@@ -292,7 +281,26 @@ Based on the PDF manual available from Korg: <https://www.korg.com/us/support/do
 * Product: <https://www.korg.com/us/products/computergear/nanokontrol_studio/>
 * Version: 1.05
 
-##### ClyphX Pro configuration files
+##### Ableton Live MIDI setup
+
+* Control Surface: `ClyphX Pro XTB`
+* Input: `nanoKONTROL Studio`
+  * Track: `On`
+  * Sync: `Off`
+  * Remote: `On`
+* Output: `nanoKONTROL Studio`
+  * Track: `On`
+  * Sync: `Off`
+  * Remote: `On`
+
+##### KORG KONTROL Editor configuration files
+
+Double-click to open the set files, then select Communication > Write Scene Data.
+
+* Set: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
+* Data: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
+
+##### nativeKONTROL ClyphX Pro configuration files
 
 These map MIDI controls to Ableton Live's interface and provide LED feedback.
 
@@ -320,31 +328,9 @@ The following files cannot be symlinked and need to be manually copied over the 
     * Source: `nk-traktor-live/clyphx-pro/user_actions/SelectTraktor ProDeck.py`
     * Target: `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktor ProDeck.py`
 
-##### Ableton Live MIDI setup
+##### Printed overlay
 
-* Control Surface: `ClyphX Pro XTB`
-* Input: `nanoKONTROL Studio`
-  * Track: `On`
-  * Sync: `Off`
-  * Remote: `On`
-* Output: `nanoKONTROL Studio`
-  * Track: `On`
-  * Sync: `Off`
-  * Remote: `On`
-
-##### Controller configuration
-
-Configuration files for the control surface editor.
-
-Double-click to open the set files, then select Communication > Write Scene Data.
-
-* Editor: KORG KONTROL Editor
-* Set: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
-* Data: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
-
-##### Visual mapping
-
-SVG designs which can be printed and cut to create custom overlays for the hardware.
+SVG file which can be printed and cut to create custom overlays for the hardware.
 
 Based on the PDF manual available from Korg: <https://www.korg.com/us/support/download/manual/0/552/2911/>
 
@@ -355,6 +341,16 @@ Based on the PDF manual available from Korg: <https://www.korg.com/us/support/do
 #### Native Instruments Traktor Pro Controller Manager
 
 * Part of Traktor Pro 3: <https://support.native-instruments.com/hc/en-us/articles/209590569-How-to-Use-the-Controller-Manager-in-TRAKTOR>
+
+Various `.tsi` templates map the control surfaces and supporting software to Traktor Pro's interface / API.
+
+##### Project file
+
+1. Preferences > Import > `traktor-pro/nk-traktor-live.tsi`
+
+##### Miscellaneous settings
+
+* Offset: `0 Ms` (top of mixer section)
 
 ---
 

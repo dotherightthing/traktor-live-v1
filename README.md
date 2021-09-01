@@ -155,7 +155,7 @@ Bome MIDI Translator Pro is used to filter the MIDI messages sent by controllers
 
 ##### Project file
 
-1. `bome-midi-translator-pro/nanoKONTROL Studio.bmtp.`
+1. `bome-midi-translator-pro/nanoKONTROL Studio.bmtp`
 
 Automatically loaded by BetterTouchTool, otherwise double-click to load.
 

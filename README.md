@@ -444,7 +444,7 @@ Cricut Design Space is the companion software for the Cricut range.
 2. Import bundled SVG
 3. Mark each object as 'pen' (draw) or 'cut' (cut)
 4. Select top level group > Attach (to print the layout as you intended)
-5. Select top level group > Set dimensions to matcn Inkscape file
+5. Select top level group > Set dimensions to match Inkscape file
 6. Wait a long time for the project to load
 7. Load the mat and cardboard into the machine
 8. Draw the 'pen' lines

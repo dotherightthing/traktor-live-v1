@@ -53,6 +53,7 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
 7. **[Mix Recorder](#7-mix-recorder):**
     * [Rogue Amoeba Audio Hijack](#rogue-amoeba-audio-hijack)
 8. **[Launch Script](#8-launch-script):**
+    * [Automator](#automator)
     * [BetterTouchTool](#bettertouchtool)
 9. **[Further Reading](#9-further-reading)**
 
@@ -112,7 +113,7 @@ In order to be able to choose which Traktor Pro deck to sample from, both decks 
 
 Contains a 4 channel mixer and a 4 channel sampler.
 
-Automatically loaded by BetterTouchTool, otherwise double-click to load.
+Automatically loaded by the Automator app, otherwise double-click to load.
 
 ##### Audio
 
@@ -160,7 +161,7 @@ Bome MIDI Translator Pro is used to filter the MIDI messages sent by controllers
 
 1. `bome-midi-translator-pro/nanoKONTROL Studio.bmtp`
 
-Automatically loaded by BetterTouchTool, otherwise double-click to load.
+The `.bmtp` file is Automatically loaded by the Automator app, otherwise double-click to load.
 
 ##### Ableton Live MIDI setup
 
@@ -481,34 +482,41 @@ In addition Audio Hijack makes it clear *when* it is recording, by optionally di
 
 1. `audio-hijack/nk-traktor-live.ahsession`
 
-Automatically loaded by BetterTouchTool, otherwise double-click to load.
+Automatically loaded by the Automator app, otherwise double-click to load.
 
 ---
 
 ### 8. Launch Script
 
-#### BetterTouchTool
+#### Automator
 
-* Product: <https://folivora.ai/>
-* Version: 3.570
+* Product: <https://support.apple.com/en-nz/guide/automator/welcome/mac>
+* Version: macOS Catalina
+
+##### Project file
+
+1. `automator/NK_Traktor_Live.app`
+
+Double-click to run.
+
+This is an Automator workflow which:
+
+* launches the different apps used in this template
+* loads configuration files
+* sends key strokes to applications
+* uses BetterTouchTool to work around some limitations
+
+#### BetterTouchTool
 
 BetterTouchTool (BTT) is a macOS app originally designed for customising the [Mac Touch Bar](https://support.apple.com/en-gb/guide/mac-help/mchlbfd5b039/10.15/mac/10.15) which appears on some Mac laptops.
 
-BTT also provides controls over application launching and manipulation.
-
-BTT solves various usability problems, such as:
-
-* remembering to launch the different apps used in this template
-* putting Ableton Live into External Sync mode
-* starting the mix recorder
+BTT is used here to access application menus.
 
 ##### Project file
 
 1. `better-touch-tool/nk-traktor-live.bttpreset`
 
-Double-click this file to add the `NK Traktor Live` launch button to your Touch Bar.
-
-Alternatively BTT can be configured to launch actions from MIDI messages.
+Automatically loaded and triggered by the Automator app.
 
 ---
 

@@ -539,13 +539,14 @@ To add `NK_Traktor_Live.app` to this list:
 To remove NK_Traktor_Live from this list (so that you can add it again):
 
 ```sh
-# Remove 'NK_Traktor_Live.app' from Accessibility Privacy category
+# Remove 'NK_Traktor_Live.app' from the Accessibility Privacy category
+# See: https://apple.stackexchange.com/questions/339363/how-can-i-remove-applications-from-security-privacy#360610
 tccutil reset Accessibility `osascript -e 'id of app "NK_Traktor_Live"'`
 
-# Remove 'NK_Traktor_Live.app' from Automation Privacy category
+# Remove 'NK_Traktor_Live.app' from the Automation Privacy category
 tccutil reset AppleEvents `osascript -e 'id of app "NK_Traktor_Live"'`
 
-# Remove all apps from Automation Privacy category
+# If the above didb;t work, remove all apps from the Automation Privacy category
 tccutil reset AppleEvents
 ```
 

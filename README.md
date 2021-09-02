@@ -54,7 +54,6 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
     * [Rogue Amoeba Audio Hijack](#rogue-amoeba-audio-hijack)
 8. **[Launch Script](#8-launch-script):**
     * [Automator](#automator)
-    * [BetterTouchTool](#bettertouchtool)
 9. **[Further Reading](#9-further-reading)**
 
 ---
@@ -135,7 +134,7 @@ Automatically loaded by the Automator app, otherwise double-click to load.
 
 ##### UI (top left)
 
-1. Click `Ext` so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - if you have BetterTouchTool installed this will happen automatically
+1. Click `Ext` so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - the Automator script does this automatically
 2. Global launch quantisation: `None` (punching in exactly when you want seems most reliable)
 
 ##### Plugins
@@ -504,22 +503,9 @@ Double-click to run.
 
 This is an Automator workflow which:
 
-* launches the different apps used in this template
-* loads configuration files
-* sends key strokes to applications
-* uses BetterTouchTool to work around some limitations
-
-#### BetterTouchTool
-
-BetterTouchTool (BTT) is a macOS app originally designed for customising the [Mac Touch Bar](https://support.apple.com/en-gb/guide/mac-help/mchlbfd5b039/10.15/mac/10.15) which appears on some Mac laptops.
-
-BTT is used here to access application menus.
-
-##### Project file
-
-1. `better-touch-tool/nk-traktor-live.bttpreset`
-
-Automatically loaded and triggered by the Automator app.
+* launches the different applications used in this template
+* loads application configuration files
+* sends key strokes to operate applications
 
 ---
 
@@ -537,6 +523,37 @@ Automatically loaded and triggered by the Automator app.
 ##### Why can't I hear recording clips in Ableton Live?
 
 Press the sync button to sync playback with Traktor Pro.
+
+##### Why does the Automator script say that it's not allowed to send keystrokes?
+
+The Automator script interacts with both macOS and various applications. It needs the following access.
+
+###### Accessibility
+
+The *Accessibility* screen in *System Preferences* allows apps to control your computer.
+
+To add `NK_Traktor_Live.app` to this list:
+
+`System Preferences > Security & Privacy > Privacy > Accessibility > NK_Traktor_Live.app` (add and enable)
+
+To remove NK_Traktor_Live from this list (so that you can add it again):
+
+```sh
+# Remove 'NK_Traktor_Live.app' from Accessibility Privacy category
+tccutil reset Accessibility `osascript -e 'id of app "NK_Traktor_Live"'`
+
+# Remove 'NK_Traktor_Live.app' from Automation Privacy category
+tccutil reset AppleEvents `osascript -e 'id of app "NK_Traktor_Live"'`
+
+# Remove all apps from Automation Privacy category
+tccutil reset AppleEvents
+```
+
+###### System Events
+
+System Events are used to send keystrokes to apps and find out how big to make windows when they are 'maximised'.
+
+When prompted to allow NK_Traktor_Live to access System Events.app, click 'OK'.
 
 #### References
 

@@ -546,7 +546,7 @@ tccutil reset Accessibility `osascript -e 'id of app "NK_Traktor_Live"'`
 # Remove 'NK_Traktor_Live.app' from the Automation Privacy category
 tccutil reset AppleEvents `osascript -e 'id of app "NK_Traktor_Live"'`
 
-# If the above didb;t work, remove all apps from the Automation Privacy category
+# If the above didn't work, remove all apps from the Automation Privacy category
 tccutil reset AppleEvents
 ```
 

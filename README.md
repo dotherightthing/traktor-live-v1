@@ -493,7 +493,7 @@ Automatically loaded by the Automator app, otherwise double-click to load.
 
 #### Automator
 
-* Product: <https://support.apple.com/en-nz/guide/automator/welcome/mac>
+* Product: <https://support.apple.com/guide/automator/welcome/mac>
 * Version: macOS Catalina
 
 ##### Project file

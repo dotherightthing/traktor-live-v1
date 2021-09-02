@@ -157,9 +157,12 @@ Bome MIDI Translator Pro is used to filter the MIDI messages sent by controllers
 2. Channels 1-4 `SELECT`: Focus Traktor Pro
 3. Channels 5-8 `SELECT`: Focus Ableton Live
 
-##### Project file
+##### Project files
 
-1. `bome-midi-translator-pro/nanoKONTROL Studio.bmtp`
+1. MIDI filters:
+    1. `bome-midi-translator-pro/nanoKONTROL Studio.bmtp`
+2. Application settings:
+    1. `bome-midi-translator-pro/settings.bmts`
 
 The `.bmtp` file is Automatically loaded by the Automator app, otherwise double-click to load.
 

@@ -536,11 +536,16 @@ To add `NK_Traktor_Live.app` to this list:
 
 `System Preferences > Security & Privacy > Privacy > Accessibility > NK_Traktor_Live.app` (add and enable)
 
-To remove NK_Traktor_Live from this list (so that you can add it again):
+And (perhaps) add Automator to this list:
+
+`System Preferences > Security & Privacy > Privacy > Accessibility > Automator.app` (add and enable)
+
+To remove these apps from this list (so that you can add them again):
 
 ```sh
 # Remove 'NK_Traktor_Live.app' from the Accessibility Privacy category
 # See: https://apple.stackexchange.com/questions/339363/how-can-i-remove-applications-from-security-privacy#360610
+tccutil reset Accessibility `osascript -e 'id of app "Automator"'`
 tccutil reset Accessibility `osascript -e 'id of app "NK_Traktor_Live"'`
 
 # Remove 'NK_Traktor_Live.app' from the Automation Privacy category

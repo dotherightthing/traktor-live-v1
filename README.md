@@ -53,8 +53,10 @@ The Loop Recorder is problematic because it records loops slightly too long. Sam
 7. **[Mix Recorder](#7-mix-recorder):**
     * [Rogue Amoeba Audio Hijack](#rogue-amoeba-audio-hijack)
 8. **[Launch Script](#8-launch-script):**
-    * [Automator](#automator)
+    * [Apple Script Editor](#applescripteditor)
 9. **[Further Reading](#9-further-reading)**
+    * [FAQs](#faqs)
+    * [References](#references)
 
 ---
 
@@ -112,7 +114,7 @@ In order to be able to choose which Traktor Pro deck to sample from, both decks 
 
 Contains a 4 channel mixer and a 4 channel sampler.
 
-Automatically loaded by the Automator app, otherwise double-click to load.
+Automatically loaded by the AppleScript app, otherwise double-click to load.
 
 ##### Audio
 
@@ -134,7 +136,7 @@ Automatically loaded by the Automator app, otherwise double-click to load.
 
 ##### UI (top left)
 
-1. Click `Ext` so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - the Automator script does this automatically
+1. Click `Ext` so that it lights up - Ableton Live will now follow the Sync source (Traktor Pro Virtual Output) - the AppleScript app does this automatically
 2. Global launch quantisation: `None` (punching in exactly when you want seems most reliable)
 
 ##### Plugins
@@ -163,7 +165,7 @@ Bome MIDI Translator Pro is used to filter the MIDI messages sent by controllers
 2. Application settings:
     1. `bome-midi-translator-pro/settings.bmts`
 
-The `.bmtp` file is Automatically loaded by the Automator app, otherwise double-click to load.
+The `.bmtp` file is Automatically loaded by the AppleScript app, otherwise double-click to load.
 
 ##### Ableton Live MIDI setup
 
@@ -484,28 +486,26 @@ In addition Audio Hijack makes it clear *when* it is recording, by optionally di
 
 1. `audio-hijack/nk-traktor-live.ahsession`
 
-Automatically loaded by the Automator app, otherwise double-click to load.
+Automatically loaded by the AppleScript app, otherwise double-click to load.
 
 ---
 
 ### 8. Launch Script
 
-#### Automator
+#### Apple Script Editor
 
-* Product: <https://support.apple.com/guide/automator/welcome/mac>
+* Product: <https://support.apple.com/guide/script-editor/welcome/mac>
 * Version: macOS Catalina
 
 ##### Project file
 
-1. `automator/NK_Traktor_Live.app`
+1. `applescripts/NK_Traktor_Live.app`
 
-Double-click to run.
+Double-click to run and:
 
-This is an Automator workflow which:
-
-* launches the different applications used in this template
-* loads application configuration files
-* sends key strokes to operate applications
+* launch the applications used in this template
+* load application configuration files
+* send key strokes to trigger application menus
 
 ---
 
@@ -524,42 +524,34 @@ This is an Automator workflow which:
 
 Press the sync button to sync playback with Traktor Pro.
 
-##### Why does the Automator script say that it's not allowed to send keystrokes?
+###### System Events: 'send keystrokes' error message
 
-The Automator script interacts with both macOS and various applications. It needs the following access.
-
-###### Accessibility
-
-The *Accessibility* screen in *System Preferences* allows apps to control your computer.
-
-To add `NK_Traktor_Live.app` to this list:
-
-`System Preferences > Security & Privacy > Privacy > Accessibility > NK_Traktor_Live.app` (add and enable)
-
-And (perhaps) add Automator to this list:
-
-`System Preferences > Security & Privacy > Privacy > Accessibility > Automator.app` (add and enable)
-
-To remove these apps from this list (so that you can add them again):
-
-```sh
-# Remove 'NK_Traktor_Live.app' from the Accessibility Privacy category
-# See: https://apple.stackexchange.com/questions/339363/how-can-i-remove-applications-from-security-privacy#360610
-tccutil reset Accessibility `osascript -e 'id of app "Automator"'`
-tccutil reset Accessibility `osascript -e 'id of app "NK_Traktor_Live"'`
-
-# Remove 'NK_Traktor_Live.app' from the Automation Privacy category
-tccutil reset AppleEvents `osascript -e 'id of app "NK_Traktor_Live"'`
-
-# If the above didn't work, remove all apps from the Automation Privacy category
-tccutil reset AppleEvents
-```
-
-###### System Events
+> System Events got an error: NK_Traktor_Live is not allowed to send keystrokes.
 
 System Events are used to send keystrokes to apps and find out how big to make windows when they are 'maximised'.
 
 When prompted to allow NK_Traktor_Live to access System Events.app, click 'OK'.
+
+###### System Events: 'assistive access' error message
+
+> System Events got an error: NK_Traktor_Live is not allowed assistive access.
+
+The *Accessibility* screen in *System Preferences* allows apps to control your computer.
+
+When prompted to give NK_Traktor_Live assistive access:
+
+`System Preferences > Security & Privacy > Privacy > Accessibility > NK_Traktor_Live.app` (add and enable)
+
+###### System Events: 'send keystrokes' or 'assistive access' error messages
+
+Sometimes System Events error messages will appear regardless of the settings you have agreed to set.
+
+To resolve this:
+
+1. Reset the Accessibility Privacy category: `sudo tccutil reset Accessibility`
+2. Restart the computer
+3. Run the app
+4. When prompted for access, add NK_Traktor_Live.app to the Accessibility Privacy category followin the instructions above.
 
 #### References
 

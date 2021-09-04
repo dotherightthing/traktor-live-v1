@@ -1,124 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>AMApplicationBuild</key>
-	<string>492</string>
-	<key>AMApplicationVersion</key>
-	<string>2.10</string>
-	<key>AMDocumentVersion</key>
-	<string>2</string>
-	<key>actions</key>
-	<array>
-		<dict>
-			<key>action</key>
-			<dict>
-				<key>AMAccepts</key>
-				<dict>
-					<key>Container</key>
-					<string>List</string>
-					<key>Optional</key>
-					<true/>
-					<key>Types</key>
-					<array>
-						<string>com.apple.applescript.object</string>
-					</array>
-				</dict>
-				<key>AMActionVersion</key>
-				<string>1.0.2</string>
-				<key>AMApplication</key>
-				<array>
-					<string>Automator</string>
-				</array>
-				<key>AMParameterProperties</key>
-				<dict>
-					<key>source</key>
-					<dict/>
-				</dict>
-				<key>AMProvides</key>
-				<dict>
-					<key>Container</key>
-					<string>List</string>
-					<key>Types</key>
-					<array>
-						<string>com.apple.applescript.object</string>
-					</array>
-				</dict>
-				<key>ActionBundlePath</key>
-				<string>/System/Library/Automator/Run AppleScript.action</string>
-				<key>ActionName</key>
-				<string>Run AppleScript</string>
-				<key>ActionParameters</key>
-				<dict>
-					<key>source</key>
-					<string>on run {input, parameters}	# nk-traktor-live	# Traktor Pro mix template for the KORG nanoKEY/nanoKONTROL Studio MIDI controllers.	# https://github.com/dotherightthing/nk-traktor-live		set theVersion to "0.1.1"		# flags for testing	set audiohijack to true	set bome to true	set live to true	set loopback to true	set traktor to true		# --------------------------------------------------	# Confirmation dialog	# --------------------------------------------------			# See: https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html	# See: https://applescript.fandom.com/wiki/Display_Dialog	display dialog "Click 'Continue' to configure and run the following applications (if they are installed):1. Rogue Amoeba Loopback2. Bome MIDI Translator Pro3. Native Instruments Traktor Pro4. Ableton Live5. Rogue Amoeba Audio HijackPlease note that the following system access is required:1. System Preferences &gt; Security &amp; Privacy &gt; Privacy &gt; Accessibility &gt; NK_Traktor_Live.app (add and enable)2. System Events.app (click 'OK' when prompted by NK_Traktor_Live for access to this)" with title ("NK Traktor Live (" &amp; theVersion &amp; ")") with icon note buttons {"Don't Continue", "Continue"} default button "Continue" cancel button "Don't Continue"		# --------------------------------------------------	# Folder selection	# --------------------------------------------------			# See: https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/PromptforaFileorFolder.html	set input to choose folder with prompt "Please select the nk-traktor-live folder"		# --------------------------------------------------	# 1. Rogue Amoeba Loopback	# --------------------------------------------------			if loopback then		tell application "Loopback"			activate		end tell	end if		# --------------------------------------------------	# 2. Bome MIDI Translator Pro	# --------------------------------------------------			if bome then		tell application "Finder"			open (POSIX path of input) &amp; "bome-midi-translator-pro/nanoKONTROL Studio.bmtp" as POSIX file		end tell				# wait N seconds		delay 2				# The project has associated documentation in TXT format. Do you want to open it now? =&gt; No (n)		# See: https://dougscripts.com/itunes/itinfo/keycodes.php		tell application "System Events"			tell application "Bome MIDI Translator Pro" to activate						tell application "System Events"				key code 45			end tell		end tell				# wait N seconds		delay 2	end if		# --------------------------------------------------	# 3. Native Instruments Traktor Pro	# --------------------------------------------------			if traktor then		tell application "Finder"			open (POSIX path of input) &amp; "traktor-pro/nk-traktor-live.tsi" as POSIX file		end tell				# wait N seconds		delay 20	end if		# --------------------------------------------------	# 4. Ableton Live	# --------------------------------------------------			if live and traktor then		tell application "Finder"			open (POSIX path of input) &amp; "ableton-live/nk-traktor-live Project/nk-traktor-live.als" as POSIX file		end tell				# wait N seconds		delay 15				tell application "System Events"			tell process "Live"				click menu item "External Sync" of menu "Options" of menu bar 1			end tell		end tell	end if		# --------------------------------------------------	# 5. Rogue Amoeba Audio Hijack	# --------------------------------------------------			if audiohijack then		tell application "Finder"			open (POSIX path of input) &amp; "audio-hijack/nk-traktor-live.ahsession" as POSIX file		end tell				# wait N seconds		delay 4				# Control &gt; Start Session (COMMAND+R)		tell application "System Events"			key code 15 using {command down}		end tell	end if		# --------------------------------------------------	# Maximise windows	# --------------------------------------------------			if live and traktor then		# maximise window		# See: https://stackoverflow.com/questions/1866912/applescript-how-to-get-current-display-resolution		# See: https://daringfireball.net/2006/12/display_size_applescript_the_lazy_way		# See: https://stackoverflow.com/a/20149022		tell application "Finder"			set _b to bounds of window of desktop			set _width to item 3 of _b			set _height to item 4 of _b						tell application "System Events" to tell process "Live"				set position of window 1 to {0, 0}				set size of window 1 to {_width, _height}			end tell						tell application "System Events" to tell process "Traktor"				set position of window 1 to {0, 0}				set size of window 1 to {_width, _height}			end tell		end tell	end if		# --------------------------------------------------	# Confirmation dialog	# --------------------------------------------------			# See: https://developer.apple.com/library/archive/documentation/LanguagesUtilities/Conceptual/MacAutomationScriptingGuide/DisplayDialogsandAlerts.html	# See: https://applescript.fandom.com/wiki/Display_Dialog	display dialog "Script complete.Press SYNC on controller to begin." with title "NK Traktor Live (" &amp; version &amp; ")" with icon note buttons {"Close", "Start mixing"} default button "Start mixing" cancel button "Close"end run</string>
-				</dict>
-				<key>BundleIdentifier</key>
-				<string>com.apple.Automator.RunScript</string>
-				<key>CFBundleVersion</key>
-				<string>1.0.2</string>
-				<key>CanShowSelectedItemsWhenRun</key>
-				<false/>
-				<key>CanShowWhenRun</key>
-				<true/>
-				<key>Category</key>
-				<array>
-					<string>AMCategoryUtilities</string>
-				</array>
-				<key>Class Name</key>
-				<string>RunScriptAction</string>
-				<key>InputUUID</key>
-				<string>7B8D28EC-F7BC-4B45-A2E6-C7359576EE44</string>
-				<key>Keywords</key>
-				<array>
-					<string>Run</string>
-				</array>
-				<key>OutputUUID</key>
-				<string>CF34AA4F-7DA2-4FCB-B5EA-C6FC1FAC0CC9</string>
-				<key>UUID</key>
-				<string>3CBC21BC-6594-4553-85E6-A3A7DDC87DF9</string>
-				<key>UnlocalizedApplications</key>
-				<array>
-					<string>Automator</string>
-				</array>
-				<key>arguments</key>
-				<dict>
-					<key>0</key>
-					<dict>
-						<key>default value</key>
-						<string>on run {input, parameters}
-	
-	(* Your script goes here *)
-	
-	return input
-end run</string>
-						<key>name</key>
-						<string>source</string>
-						<key>required</key>
-						<string>0</string>
-						<key>type</key>
-						<string>0</string>
-						<key>uuid</key>
-						<string>0</string>
-					</dict>
-				</dict>
-				<key>isViewVisible</key>
-				<true/>
-				<key>location</key>
-				<string>633.750000:315.000000</string>
-				<key>nibPath</key>
-				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
-			</dict>
-			<key>isViewVisible</key>
-			<true/>
-		</dict>
-	</array>
-	<key>connectors</key>
-	<dict/>
-	<key>workflowMetaData</key>
-	<dict>
-		<key>workflowTypeIdentifier</key>
-		<string>com.apple.Automator.application</string>
-	</dict>
-</dict>
-</plist>

@@ -551,7 +551,7 @@ To resolve this:
 1. Reset the Accessibility Privacy category: `sudo tccutil reset Accessibility`
 2. Restart the computer
 3. Run the app
-4. When prompted for access, add NK_Traktor_Live.app to the Accessibility Privacy category followin the instructions above.
+4. When prompted for access, add NK_Traktor_Live.app to the Accessibility Privacy category following the instructions above.
 
 #### References
 

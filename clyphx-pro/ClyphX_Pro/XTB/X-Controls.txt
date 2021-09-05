@@ -77,27 +77,31 @@
 # An X-Control is a control on a MIDI controller.
 # CC numbers reference those assigned in the KORG KONTROL Editor
 
+# Rec button
 # 'arm' is also in Button Bindings.txt
 # when the command below is commented out, the LED feedback works, but the record action does not
 # see https://forum.nativekontrol.com/thread/4416/button-binding-control-trigger-action
 # MIDIB Channel 16 sends to the XTB output (Traktor Virtual Input)
 LOOP_REC = CC, 1, 81, 0, 127, $LOOP_RECORD$
 
+# Set button
 # LED feedback is handled by user_actions/SelectedTrackLedStates.py
 LOOP = CC, 1, 55, 0, 127, $LOOP$
 
+# Play button
 LOOP_PLAY = CC, 1, 80, 0, 127, $LOOP_PLAY$
 
+# Stop button
 LOOP_STOP = CC, 1, 63, 0, 0, $LOOP_STOP$
 
+# Left and right arrows on first row of buttons
 LOOP_SIZE_LEFT = CC, 1, 56, 0, 127, $LOOP_HALVE$
-
 LOOP_SIZE_RIGHT = CC, 1, 57, 0, 127, $LOOP_DOUBLE$
 
+# FFWD and RWD arrows on second row of buttons
 LOOP_MOVE_LEFT = CC, 1, 58, 0, 127, $LOOP_LEFT$
-
 LOOP_MOVE_RIGHT = CC, 1, 59, 0, 127, $LOOP_RIGHT$
 
+# Left and right arrows on second row of buttons
 LOOP_NUDGE_LEFT = CC, 1, 60, 0, 127, $LOOP_NUDGE_LEFT$
-
 LOOP_NUDGE_RIGHT = CC, 1, 61, 0, 127, $LOOP_NUDGE_RIGHT$

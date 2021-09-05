@@ -141,29 +141,15 @@ System Preferences > Security & Privacy > Privacy > Accessibility
 
 If " & appFileName & " is missing:
 
-1. Click 'Cancel'
-2. Click the lock to make changes
-3. Click '+'
-4. Browse to nk-traktor-live/applescripts/NK_Traktor_Live.app
-5. Click the lock to prevent further changes
-6. Run the app again
+'Cancel' > Unlock > '+' > 'NK_Traktor_Live.app' > Lock > Re-run app
 
 If " & appFileName & " is present and checked:
 
-1. Click 'Fix'
-2. Click the lock to make changes
-3. Click '+'
-4. Browse to nk-traktor-live/applescripts/NK_Traktor_Live.app
-5. Click the lock to prevent further changes
-6. Run the app again
+'Fix' > Unlock > '+' > 'NK_Traktor_Live.app' > Lock > Re-run app
 
 If " & appFileName & "  is present and unchecked:
 
-1. Click 'Cancel'
-2. Click the lock to make changes
-3. Click the checkbox for " & appFileName & "
-4. Click the lock to prevent further changes
-3. Run the app again
+'Cancel' > Unlock > Check 'NK_Traktor_Live.app' > Lock > Re-run app
 
 Run #" & appRunCount buttons {"Cancel", "Fix"} cancel button 1 default button 2
 		if button returned of alertReply is equal to "Fix" then
@@ -212,7 +198,6 @@ Run #" & appRunCount buttons {"Cancel", "Fix"} cancel button 1 default button 2
 					end tell
 				end if
 
-				#tell application "Finder"
 				set source to quoted form of ((POSIX path of input) & "loopback/Devices.plist")
 
 				# https://stackoverflow.com/questions/23632885/open-users-library-folder-using-applescript

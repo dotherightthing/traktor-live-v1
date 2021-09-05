@@ -83,10 +83,9 @@ Some web tutorials use Jack Audio instead. I prefer Loopback’s routing UI.
 
 ##### Project file
 
-1. Make sure Loopback is installed but not running
-2. Finder > Go > Go to Folder > `~/Library/Application Support/Loopback/`
-3. Replace `~/Library/Application Support/Loopback/Devices.plist` with the project file `loopback/Devices.plist`
-4. Launch Loopback to load the device
+* `loopback/Devices.plist`
+
+Automatically loaded by the app.
 
 In order to be able to choose which Traktor Pro deck to sample from, both decks are routed to Ableton Live.
 

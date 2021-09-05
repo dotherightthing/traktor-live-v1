@@ -88,11 +88,11 @@ on run
 	set appVersion to getAppVersion(appFileName)
 
 	# flags for testing
-	set audiohijack to false
-	set bome to false
-	set live to false
+	set audiohijack to true
+	set bome to true
+	set live to true
 	set loopback to true
-	set traktor to false
+	set traktor to true
 
 	set appHasPermissions to true
 

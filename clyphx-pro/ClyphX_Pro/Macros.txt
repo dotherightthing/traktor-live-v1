@@ -253,8 +253,8 @@ $LOOP_HALVE$ =
  MSG "Halved loop size"
 
 $LOOP_LEFT$ =
- SEL/CLIP START <1B;
- MSG "Moved clip start back 1 bar"
+ SEL/CLIP LOOP <;
+ MSG "Moved clip start back by loop length"
 
 $LOOP_NUDGE_LEFT$ =
  SEL/JUMP <;
@@ -286,8 +286,8 @@ $LOOP_RECORD$ =
  MSG "Recorded new clip"
 
 $LOOP_RIGHT$ =
- SEL/CLIP START >1B;
- MSG "Moved clip start forward 1 bar"
+ SEL/CLIP LOOP >;
+ MSG "Moved clip start forward by loop length"
 
 $LOOP_STOP$ = SEL/STOP
 

@@ -87,7 +87,7 @@ In order to be able to choose which Traktor Pro deck to sample from, both decks 
 
 * `loopback/Devices.plist`
 
-Automatically loaded by the AppleScript app, otherwise double-click to load.
+Automatically loaded by the AppleScript app.
 
 ---
 

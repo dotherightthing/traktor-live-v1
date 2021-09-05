@@ -542,17 +542,6 @@ When prompted to give NK_Traktor_Live assistive access:
 
 `System Preferences > Security & Privacy > Privacy > Accessibility > NK_Traktor_Live.app` (add and enable)
 
-###### System Events: 'send keystrokes' or 'assistive access' error messages
-
-Sometimes System Events error messages will appear regardless of the settings you have agreed to set.
-
-To resolve this:
-
-1. Reset the Accessibility Privacy category: `sudo tccutil reset Accessibility`
-2. Restart the computer
-3. Run the app
-4. When prompted for access, add NK_Traktor_Live.app to the Accessibility Privacy category following the instructions above.
-
 #### References
 
 1. [How to Sync Ableton Live and Traktor Pro - The Right Way | DJ Endo](https://www.youtube.com/watch?v=4xzldehIsCE)

@@ -3,9 +3,7 @@
 # Traktor Pro mix template for the KORG nanoKEY/nanoKONTROL Studio MIDI controllers.
 # https://github.com/dotherightthing/nk-traktor-live
 #
-# After re-exporting to NK_Traktor_Live.app:
-# 1. sudo tccutil reset Accessibility
-# 2. restart.
+# Note: when re-exporting, update the Short Version in the Bundle Info
 
 property appRunCount : 0
 
@@ -63,6 +61,24 @@ on removeAppFromAccessibilityPermissionsList(appFileName)
 	do shell script "tccutil reset Accessibility `osascript -e 'id of app " & appFileName & "'`"
 end removeAppFromAccessibilityPermissionsList
 
+on getAppBundleId(appName)
+	set appBundleId to do shell script "osascript -e " & ("id of application \"" & appName & "\"")'s quoted form & " || osascript -e " & ("id of application id \"" & appName & "\"")'s quoted form & " || :"
+
+	return appBundleId
+end getAppBundleId
+
+on isAppInstalled(appBundleId)
+	set doesExist to (appBundleId ≠ "")
+
+	return doesExist
+end isAppInstalled
+
+on isAppRunning(appBundleId)
+	tell application "System Events"
+		set processIsRunning to ((bundle identifier of processes) contains appBundleId)
+	end tell
+end isAppRunning
+
 on run
 	set appFileName to "NK_Traktor_Live.app"
 
@@ -72,11 +88,11 @@ on run
 	set appVersion to getAppVersion(appFileName)
 
 	# flags for testing
-	set audiohijack to true
-	set bome to true
-	set live to true
+	set audiohijack to false
+	set bome to false
+	set live to false
 	set loopback to true
-	set traktor to true
+	set traktor to false
 
 	set appHasPermissions to true
 
@@ -123,12 +139,25 @@ needs permission to run:
 
 System Preferences > Security & Privacy > Privacy > Accessibility
 
-If " & appFileName & " is checked:
+If " & appFileName & " is missing:
+
+1. Click 'Cancel'
+2. Click the lock to make changes
+3. Click '+'
+4. Browse to nk-traktor-live/applescripts/NK_Traktor_Live.app
+5. Click the lock to prevent further changes
+6. Run the app again
+
+If " & appFileName & " is present and checked:
 
 1. Click 'Fix'
-2. Run the app again
+2. Click the lock to make changes
+3. Click '+'
+4. Browse to nk-traktor-live/applescripts/NK_Traktor_Live.app
+5. Click the lock to prevent further changes
+6. Run the app again
 
-If " & appFileName & " is NOT checked:
+If " & appFileName & "  is present and unchecked:
 
 1. Click 'Cancel'
 2. Click the lock to make changes
@@ -174,9 +203,27 @@ Run #" & appRunCount buttons {"Cancel", "Fix"} cancel button 1 default button 2
 		# --------------------------------------------------
 
 		if loopback then
-			tell application "Loopback"
-				activate
-			end tell
+			set loopbackBundleId to getAppBundleId("Loopback")
+
+			if isAppInstalled(loopbackBundleId) then
+				if isAppRunning(loopbackBundleId) then
+					tell application "Loopback"
+						quit
+					end tell
+				end if
+
+				#tell application "Finder"
+				set source to quoted form of ((POSIX path of input) & "loopback/Devices.plist")
+
+				# https://stackoverflow.com/questions/23632885/open-users-library-folder-using-applescript
+				set dest to quoted form of ((POSIX path of (path to application support folder from user domain as alias)) & "loopback")
+
+				do shell script "cp " & source & " " & dest
+
+				tell application "Loopback"
+					activate
+				end tell
+			end if
 		end if
 
 		# --------------------------------------------------

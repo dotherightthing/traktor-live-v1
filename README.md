@@ -81,13 +81,13 @@ Loopback allows additional stereo pairs to be added to an existing sound card. T
 
 Some web tutorials use Jack Audio instead. I prefer Loopback’s routing UI.
 
+In order to be able to choose which Traktor Pro deck to sample from, both decks are routed to Ableton Live.
+
 ##### Project file
 
 * `loopback/Devices.plist`
 
-Automatically loaded by the app.
-
-In order to be able to choose which Traktor Pro deck to sample from, both decks are routed to Ableton Live.
+Automatically loaded by the AppleScript app, otherwise double-click to load.
 
 ---
 

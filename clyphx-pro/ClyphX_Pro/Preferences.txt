@@ -16,8 +16,9 @@ VERSION = 1.0.9
 # This setting defines an Action List to trigger when a set is loaded.
 
 # The possible settings are NONE or an Action List to trigger.
+# Disabled ALL/SEND A 0; ALL/VOL 0; as this affects regular Live sets
 
-STARTUP_ACTIONS = ALL/SEND A 0; ALL/VOL 0; "1FX"/VOL 108; "4FX"/VOL 108; ALL/DEV("Traktor-FX1") P1 0; ALL/DEV("Traktor-FX2") P1 0; ALL/DEV("Traktor-FX3") P1 0; ALL/DEV("Traktor-EQ+Utility") P1 50%; MST/XFADER 50%; MST/VOL 108; MIDI CC 16 62 127; ALL/XFADE OFF
+STARTUP_ACTIONS ="1FX"/VOL 108; "4FX"/VOL 108; ALL/DEV("Traktor-FX1") P1 0; ALL/DEV("Traktor-FX2") P1 0; ALL/DEV("Traktor-FX3") P1 0; ALL/DEV("Traktor-EQ+Utility") P1 50%; MST/XFADER 50%; MST/VOL 108; MIDI CC 16 62 127; ALL/XFADE OFF
 
 
 # This setting determines whether or not a colored border should be shown around the

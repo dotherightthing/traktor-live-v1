@@ -214,8 +214,8 @@ Control surface editor.
 
 ##### KORG KONTROL Editor configuration files
 
-1. Set: `korg-kontrol-editor/nk-traktor-live.nanokey_st_set`
-2. Data: `korg-kontrol-editor/nk-traktor-live.nanokey_st_data`
+1. The scene's data: `korg-kontrol-editor/nk-traktor-live.nanokey_st_data`
+2. Set containing all scenes: `korg-kontrol-editor/nk-traktor-live.nanokey_st_set`
 
 Double-click to open the set files, then select Communication > Write Scene Data.
 

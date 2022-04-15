@@ -105,3 +105,7 @@ LOOP_MOVE_RIGHT = CC, 1, 59, 0, 127, $LOOP_RIGHT$
 # Left and right arrows on second row of buttons
 LOOP_NUDGE_LEFT = CC, 1, 60, 0, 127, $LOOP_NUDGE_LEFT$
 LOOP_NUDGE_RIGHT = CC, 1, 61, 0, 127, $LOOP_NUDGE_RIGHT$
+
+# Back-to-start button
+# Trigger shift on when pressed and shift off when released
+SHIFT_BUTTON = CC, 1, 62, 0, 127, shift on : shift off

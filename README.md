@@ -319,7 +319,7 @@ Note: `MIDI Clock Sync Delay` was initially set using Traktor Pro's internal mix
 * **X-Scene** (Global?) - X-Trigger in the form of a Live scene, triggers actions when launched
 * **X-Control** (Controller) - X-Trigger defined in `X-Controls.txt`, targetting a MIDI control which triggers an actions when used
 * **X-OSC** (Controller?) - X-Trigger defined in `X-OSC.txt`, targetting an OSC address which triggers when receiving a value
-* **X-Trigger** - Event that triggers scripted Action Lists. These can include MIDI commands which can affect both Live and Traktor
+* **X-Trigger** - Event that triggers scripted Action Lists. These can include MIDI commands which affect Live (and Traktor, via the MIDI Channel set up to output to the *Traktor Pro Virtual Input*)
 * **XT Script** - Adds support for an additional MIDI controller, defined in a sub folder containing ClyphX Pro scripts for that controller
 
 ##### Ableton Live MIDI setup

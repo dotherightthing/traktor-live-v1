@@ -296,12 +296,31 @@ The following files cannot be symlinked and need to be manually copied over:
   * Product: <https://isotonikstudios.com/product/clyphx-pro-bindings/>
 * ClyphX Pro G-Controls
   * Product: <https://forum.nativekontrol.com/thread/3906/beta-controls-accessory-clyphx-pro>
+* ClyphX Pro Shift Action
+  * Product: <https://forum.nativekontrol.com/thread/3562/adding-shift-functionality-controls-oscs>
 
 The default ClyphX Pro 'controller' is primarily used to sync MIDI clock between Traktor Pro and Ableton Live.
 
 Additionally, ClyphX Pro is sometimes used to send scripted MIDI messages to Traktor Pro. When this is done, channel `16` is used to make it clear that Traktor Pro is being targetted.
 
 Note: `MIDI Clock Sync Delay` was initially set using Traktor Pro's internal mixer, with *Cue out* used to sync Traktor Pro and Ableton Live's metronomes. Ableton Live now functions as the external mixer and syncing does not appear to be an issue anymore.
+
+##### ClyphX Pro terminology
+
+* **Button Binding** (Controller) - Defined in `Button Bindings.txt`, binds a MIDI control to a Live parameter (without specifying an Action List); supports LED feedback (which an X-Control doesn't)
+* **Encoder Binding** (Controller) - Defined in `Encoder Bindings.txt`, binds a continuous MIDI control to a continuous Live parameter (without specifying an Action List)
+* **G-Control** (Controller) - Defined in `G-Controls.txt`, similar to an X-Control, but supports additional gestures; doesn't support Variables
+* **Macro** (Global) - Defined in `Macros.txt`, shorthand for a list of actions; supports Variables
+* **Startup Actions** (Global) - X-Trigger defined in `Preferences.txt`, triggers actions when Live opens
+* **User Actions** (Global) - Custom Python scripts which allow for conditional creation and triggering of Actions / Action Lists based on the state of the LOM (Live Object Model); supports Variables
+* **Variable** (Global) - Defined in `Variables.txt`, shorthand for a string value
+* **X-Clip** (Global) - X-Trigger in the form of a Live clip, triggers actions when launched
+* **X-Cue** (Global?) - X-Trigger in the form of a Live locator, triggers actions when passed
+* **X-Scene** (Global?) - X-Trigger in the form of a Live scene, triggers actions when launched
+* **X-Control** (Controller) - X-Trigger defined in `X-Controls.txt`, targetting a MIDI control which triggers an actions when used
+* **X-OSC** (Controller?) - X-Trigger defined in `X-OSC.txt`, targetting an OSC address which triggers when receiving a value
+* **X-Trigger** - Event that triggers scripted Action Lists. These can include MIDI commands which can affect both Live and Traktor
+* **XT Script** - Adds support for an additional MIDI controller, defined in a sub folder containing ClyphX Pro scripts for that controller
 
 ##### Ableton Live MIDI setup
 

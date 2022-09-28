@@ -42,7 +42,7 @@ TESTING:
 
 ```sh
 # note: the version string will change if Live auto-updates itself
-tail -f '/Users/dan/Library/Preferences/Ableton/Live 10.1.41/Log.txt'
+tail -f '/Users/dan/Library/Preferences/Ableton/Live 10.1.42/Log.txt'
 ```
 
 ```py

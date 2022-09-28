@@ -6,7 +6,7 @@
 <Entry Name="Audio.ChannelFX.4.Type" Type="1" Value="6"></Entry>
 <Entry Name="Audio.DeviceName" Type="3" Value=""></Entry>
 <Entry Name="Audio.DeviceName.BuiltIn.Win" Type="3" Value=""></Entry>
-<Entry Name="Audio.DeviceName.Mac" Type="3" Value="NK Traktor Live"></Entry>
+<Entry Name="Audio.DeviceName.Mac" Type="3" Value="Traktor Live v1"></Entry>
 <Entry Name="Audio.DeviceName.Win" Type="3" Value=""></Entry>
 <Entry Name="Audio.DriverName" Type="3" Value="CoreAudio"></Entry>
 <Entry Name="Audio.FS.Latency" Type="1" Value="512"></Entry>

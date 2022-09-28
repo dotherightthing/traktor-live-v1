@@ -1,6 +1,6 @@
-# NK Traktor Live
+# Traktor Live v1
 
-[![GitHub release](https://img.shields.io/github/v/tag/dotherightthing/nk-traktor-live)](https://github.com/dotherightthing/nk-traktor-live/releases) [![GitHub issues](https://img.shields.io/github/issues/dotherightthing/nk-traktor-live.svg)](https://github.com/dotherightthing/nk-traktor-live/issues)
+[![GitHub release](https://img.shields.io/github/v/tag/dotherightthing/traktor-live-v1)](https://github.com/dotherightthing/traktor-live-v1/releases) [![GitHub issues](https://img.shields.io/github/issues/dotherightthing/traktor-live-v1.svg)](https://github.com/dotherightthing/traktor-live-v1/issues)
 
 Traktor Pro mix template for the KORG nanoKEY/nanoKONTROL Studio MIDI controllers.
 
@@ -124,8 +124,8 @@ Automatically loaded by the AppleScript app, otherwise double-click to load.
 <img src="ableton-live/screenshots/output-config.png" alt="Screenshot of Ableton Live's Output Config window" width="500">
 
 1. Driver Type: `CoreAudio`
-2. Audio Input Device: `NK Traktor Live (6 In, 6 Out)`
-3. Audio Output Device: `NK Traktor Live (6 In, 6 Out)`
+2. Audio Input Device: `Traktor Live v1 (6 In, 6 Out)`
+3. Audio Output Device: `Traktor Live v1 (6 In, 6 Out)`
 4. Channel Configuration
    1. Input Config:
       * `3/4: Traktor Pro Deck A`
@@ -214,8 +214,8 @@ Control surface editor.
 
 ##### KORG KONTROL Editor configuration files
 
-1. The scene's data: `korg-kontrol-editor/nk-traktor-live.nanokey_st_data`
-2. Set containing all scenes: `korg-kontrol-editor/nk-traktor-live.nanokey_st_set`
+1. The scene's data: `korg-kontrol-editor/traktor-live-v1.nanokey_st_data`
+2. Set containing all scenes: `korg-kontrol-editor/traktor-live-v1.nanokey_st_set`
 
 Double-click to open the set files, then select Communication > Write Scene Data.
 
@@ -250,8 +250,8 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 
 ##### KORG KONTROL Editor configuration files
 
-1. Set: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
-2. Data: `korg-kontrol-editor/nk-traktor-live.nktrl_st_data`
+1. Set: `korg-kontrol-editor/traktor-live-v1.nktrl_st_data`
+2. Data: `korg-kontrol-editor/traktor-live-v1.nktrl_st_data`
 
 Double-click to open the set files, then select Communication > Write Scene Data.
 
@@ -277,10 +277,10 @@ I [symlink](https://gist.github.com/dotherightthing/3cbf17fe882dc8131eb8e9b9a501
 The following files cannot be symlinked and need to be manually copied over:
 
 1. `SelectedTrackLedStates.py`
-    * Source: `nk-traktor-live/clyphx-pro/user_actions/SelectedTrackLedStates.py`
+    * Source: `traktor-live-v1/clyphx-pro/user_actions/SelectedTrackLedStates.py`
     * Target: `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectedTrackLedStates.py`
 1. `SelectTraktor ProDeck.py`
-    * Source: `nk-traktor-live/clyphx-pro/user_actions/SelectTraktor ProDeck.py`
+    * Source: `traktor-live-v1/clyphx-pro/user_actions/SelectTraktor ProDeck.py`
     * Target: `/Applications/Ableton Live 10 Standard.app/Contents/App-Resources/MIDI Remote Scripts/ClyphX_Pro/clyphx_pro/user_actions/SelectTraktor ProDeck.py`
 
 ---
@@ -363,7 +363,7 @@ Various `.tsi` templates map the control surfaces and supporting software to Tra
 
 ##### Project file
 
-1. Preferences > Import > `traktor-pro/nk-traktor-live.tsi`
+1. Preferences > Import > `traktor-pro/traktor-live-v1.tsi`
 
 ##### Miscellaneous settings
 
@@ -502,7 +502,7 @@ In addition Audio Hijack makes it clear *when* it is recording, by optionally di
 
 ##### Project file
 
-1. `audio-hijack/nk-traktor-live.ahsession`
+1. `audio-hijack/traktor-live-v1.ahsession`
 
 Automatically loaded by the AppleScript app, otherwise double-click to load.
 
@@ -517,7 +517,7 @@ Automatically loaded by the AppleScript app, otherwise double-click to load.
 
 ##### Project file
 
-1. `applescripts/NK_Traktor_Live.app`
+1. `applescripts/Traktor_Live_v1.app`
 
 Double-click to run and:
 
@@ -544,21 +544,21 @@ Press the sync button to sync playback with Traktor Pro.
 
 ###### System Events: 'send keystrokes' error message
 
-> System Events got an error: NK_Traktor_Live is not allowed to send keystrokes.
+> System Events got an error: Traktor_Live_v1 is not allowed to send keystrokes.
 
 System Events are used to send keystrokes to apps and find out how big to make windows when they are 'maximised'.
 
-When prompted to allow NK_Traktor_Live to access System Events.app, click 'OK'.
+When prompted to allow Traktor_Live_v1 to access System Events.app, click 'OK'.
 
 ###### System Events: 'assistive access' error message
 
-> System Events got an error: NK_Traktor_Live is not allowed assistive access.
+> System Events got an error: Traktor_Live_v1 is not allowed assistive access.
 
 The *Accessibility* screen in *System Preferences* allows apps to control your computer.
 
-When prompted to give NK_Traktor_Live assistive access:
+When prompted to give Traktor_Live_v1 assistive access:
 
-`System Preferences > Security & Privacy > Privacy > Accessibility > NK_Traktor_Live.app` (add and enable)
+`System Preferences > Security & Privacy > Privacy > Accessibility > Traktor_Live_v1.app` (add and enable)
 
 #### References
 

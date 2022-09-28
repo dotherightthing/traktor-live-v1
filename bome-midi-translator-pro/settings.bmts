@@ -9,7 +9,7 @@ ColumnWidthIn=114
 ColumnWidthName=220
 ColumnWidthOptions=150
 ColumnWidthOut=418
-CurrentProject=/Users/dan/Websites/nk-traktor-live/bome-midi-translator-pro/nanoKONTROL Studio.bmtp
+CurrentProject=/Users/dan/Websites/traktor-live-v1/bome-midi-translator-pro/nanoKONTROL Studio.bmtp
 CurrentVersion=1.9.0.1020
 DoNotShowLoggerWarning=1
 DontAskForClose=1
@@ -21,7 +21,7 @@ EditWindowIndex=2
 EventMonitor=1
 ExportedAutoStartState=0
 FirstTime=0
-LastProjectDir=/Users/dan/Websites/nk-traktor-live/bome-midi-translator-pro
+LastProjectDir=/Users/dan/Websites/traktor-live-v1/bome-midi-translator-pro
 MainEditorPanelWidth=543
 MainHeight=1027
 MainLTabPanelHeight=550
@@ -102,7 +102,7 @@ MIDIOutActionValue2Expanded=1
 
 [MRUList]
 File0=/Users/dan/Documents/Bome MIDI Translator/Presets/nanoKONTROL Studio.bmtp
-File1=/Users/dan/Websites/nk-traktor-live/bome-midi-translator-pro/nanoKONTROL Studio.bmtp
+File1=/Users/dan/Websites/traktor-live-v1/bome-midi-translator-pro/nanoKONTROL Studio.bmtp
 File2=
 File3=
 MaxEntries=16

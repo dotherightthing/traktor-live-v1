@@ -9,7 +9,7 @@ property appRunCount : 0
 
 on showAccessibilityPermissions()
 	# See: https://forum.latenightsw.com/t/get-set-accessibility-permissions/1510/5
-	tell application "System Preferences"
+	tell application "System Settings"
 		activate
 
 		set accessibilityPane to pane id "com.apple.preference.security"
